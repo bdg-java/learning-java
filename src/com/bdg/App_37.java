@@ -8,8 +8,7 @@ public class App_37 {
         int a = 4;
         int b = 6;
         int c = 8;
-        int d = 10;
-
+        int d = 12;
 
 
         int de = b - a;
@@ -17,11 +16,11 @@ public class App_37 {
         if (b + de == c) {
             if (c + de == d) {
                 System.out.println("TRUE");
+            } else {
+                System.out.println("FALSE");
             }
         } else {
             System.out.println("FALSE");
         }
-
-
     }
 }
