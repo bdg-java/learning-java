@@ -6,7 +6,7 @@ public class App_27 {
 
         int a = 0;
         int b = 100;
-        int c = 200;
+        int c = 400;
 
         int tarberutyun = b - a;
 
