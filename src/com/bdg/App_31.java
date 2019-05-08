@@ -3,16 +3,17 @@ package com.bdg;
 public class App_31 {
 
     public static void main(String args[]) {
-    int a = 17, b = 51, c = 55, d = 96;
+        int a = 17, b = 99, c = 55, d = 96;
+        int max = a;
+        if(b>max){
+            max = b;
+        }if(c>max){
+            max = c;
+        }
+        if(d>max){
+            max = d;
+        }
+        System.out.println(max);
 
-    if (a > b && a > c && a > d) {
-        System.out.println(a);
-    } else if (b > c && b > d) {
-        System.out.println(b);
-    } else if (c > d) {
-        System.out.println(c);
-    } else {
-        System.out.println(d);
     }
-}
 }
