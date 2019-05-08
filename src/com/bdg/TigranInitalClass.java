@@ -6,4 +6,5 @@ public class TigranInitalClass {
         System.out.println("DDDD");
     }
 
-}
+int x = 10
+        dnncs 
