@@ -11,6 +11,7 @@ public class App_39 {
 
 
    if(a > b){
+
        if(b > c && b > d){
            if(c > d){
                System.out.println("a,b,c,d");
