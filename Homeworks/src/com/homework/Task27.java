@@ -4,13 +4,6 @@ import java.util.Scanner;
 
 public class Task27 {
 
-    public static void swap(int a, int b) {
-        int temp = a;
-        a = b;
-        b = temp;
-
-    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
