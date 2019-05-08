@@ -2,6 +2,7 @@ package com.bdg;
 
 public class App_40 {
 
+
     public static void main (String [] orgs){
 
         int a = 1;
