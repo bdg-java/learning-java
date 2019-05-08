@@ -7,4 +7,4 @@ public class TigranInitalClass {
     }
 
 int x = 10
-        dnncs
+        dn
