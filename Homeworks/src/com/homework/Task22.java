@@ -2,20 +2,21 @@ package com.homework;
 
 import java.util.Scanner;
 
-public class Task21 {
+public class Task22 {
 
-    public static void maxNumber(int a, int b, int c) {
-        if (a > b) {
-            if (a > c)
-                System.out.println("The biggest is: " + a);
+    public static void minNumber(int a, int b, int c) {
+
+        if (a < b) {
+            if (a < c)
+                System.out.println("The smallest is: " + a);
             else
-                System.out.println("The biggest is: " + c);
+                System.out.println("The smallest is: " + c);
         }
         else {
-            if (b < c)
-                System.out.println("The biggest is: " + c);
+            if (b > c)
+                System.out.println("The smallest is: " + c);
             else
-                System.out.println("The biggest is: " + b);
+                System.out.println("The smallest is: " + b);
         }
 
     }
@@ -30,6 +31,6 @@ public class Task21 {
         System.out.println("Insert c");
         int c = scanner.nextInt();
 
-        maxNumber(a, b, c);
+        minNumber(a, b, c);
     }
 }
