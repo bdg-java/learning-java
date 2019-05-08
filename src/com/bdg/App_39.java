@@ -60,30 +60,30 @@ public class App_39 {
            }
        }
    }
-//   else if(d > a){
-//       if(a > b && a > c){
-//           if(b > c){
-//               System.out.println("d,a,b,c");
-//           }else{
-//               System.out.println("d,a,c,b");
-//           }
-//       }
-//       else if(b> a && b>c){
-//
-//           if(a > c){
-//               System.out.println("d,b,a,c");
-//           }else{
-//               System.out.println("d,b,c,a");
-//           }
-//       }else{
-//
-//           if(a > b){
-//               System.out.println("d,c,a,b");
-//           }else{
-//               System.out.println("d,c,b,a");
-//           }
-//       }
-//   }
+   else if(d > a){
+       if(a > b && a > c){
+           if(b > c){
+               System.out.println("d,a,b,c");
+           }else{
+               System.out.println("d,a,c,b");
+           }
+       }
+       else if(b> a && b>c){
+
+           if(a > c){
+               System.out.println("d,b,a,c");
+           }else{
+               System.out.println("d,b,c,a");
+           }
+       }else{
+
+           if(a > b){
+               System.out.println("d,c,a,b");
+           }else{
+               System.out.println("d,c,b,a");
+           }
+       }
+   }
    else{
        if(a > c && a > d){
            if(a > d){
