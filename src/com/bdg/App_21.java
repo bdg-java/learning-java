@@ -2,25 +2,14 @@ package com.bdg;
 
 public class App_21 {
 
-    public static void main (String [] args) {
-
-    int a = 60;
-    int b = 20;
-    int c = 40;
-
-    if ( a > b){
-        if (a > c) {
-        System.out.println("Maximum :" + a);
+    public static void main(String args[]) {
+        int a = 12, b = 121, c = 38;
+        if (a > b && a > c) {
+            System.out.println("Maximum is " + a);
+        } else if (b > c) {
+            System.out.println("Maximum is " + b);
         } else {
-        System.out.println("Maximum :" + c);
+            System.out.println("Maximum is " + c);
         }
-        }
-    else {
-        if ( b > c){
-            System.out.println("Maximum :" + b);
-        } else {
-            System.out.println ("Maximum :" + c);
-        }
-        }
-        }
+    }
 }

@@ -1,9 +1,12 @@
 package com.bdg;
 
-public class App_23 {
+public class App_28 {
     public static void main(String args[]) {
-        int a = 1, b = 121, c = 38;
-        if (a == 1 || b == 1 || c == 1) {
+        float a = 8, b = 16, c = 32;
+        float div = b / a;
+        float divC = c / b;
+        if (div == divC) {
+
             System.out.println(true);
         } else {
             System.out.println(false);

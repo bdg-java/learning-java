@@ -1,27 +1,13 @@
 package com.bdg;
 
 public class App_37 {
-
-    public static void main(String[] args) {
-
-
-        int a = 4;
-        int b = 6;
-        int c = 8;
-        int d = 10;
-
-
-
-        int de = b - a;
-
-        if (b + de == c) {
-            if (c + de == d) {
-                System.out.println("TRUE");
-            }
+    public static void main(String args[]) {
+        int a = 37, b = 39, c = 41, d = 43;
+        int diff = b - a;
+        if (c - b == diff && d - c == diff) {
+            System.out.println(true);
         } else {
-            System.out.println("FALSE");
+            System.out.println(false);
         }
-
-
     }
 }
