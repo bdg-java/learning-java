@@ -1,7 +1,6 @@
 package com.bdg;
 
 
-
 /**
  * @author William Arustamyan
  */
@@ -11,22 +10,36 @@ public class Application {
 
     public static void main(String[] args) {
 
-        int a = 333333333;
-        boolean b = false;
-        char c = 'c';
-        long L = 2343434;
-        double d = 34.5;
-        float f = 556.7f;
-        byte fff = 127;
-        short sh = 443;
+        int x = 300;
 
-
-
-
-        if (a < 10) {
-            System.out.println("TRUE");
+        if (x == 200) {
+            System.out.println("OK");
+        } else if (x == 300) {
+            System.out.println("Multiple Choice");
+        } else if (x == 404) {
+            System.out.println("Not Found");
+        } else if (x == 500) {
+            System.out.println("Internal Server Error");
         } else {
-            System.out.println("FALSE");
+            System.out.println("Unexpected response");
+        }
+
+
+        switch (x) {
+            case 200:
+                System.out.println("OK");
+                break;
+            case 300:
+                System.out.println("Multiple Choice");
+                break;
+            case 404:
+                System.out.println("Not Found");
+                break;
+            case 500:
+                System.out.println("Internal Server Error");
+                break;
+            default:
+                System.out.println("Unexpected response");
         }
     }
 }
