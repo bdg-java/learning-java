@@ -1,9 +1,9 @@
-package com.bdg;
+package com.bdg.exercises_21_40;
 
-public class App_27 {
+public class App_33 {
     public static void main(String args[]){
-        int a = 8, b =5, c = 2;
-        if(b-a == c-b){
+        int a = 37, b = 1, c = 55, d = 96;
+        if (a == 1 || b == 1 || c == 1 || d == 1) {
             System.out.println(true);
 
         }else {

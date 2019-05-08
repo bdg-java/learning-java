@@ -1,4 +1,4 @@
-package com.bdg;
+package com.bdg.exercises_21_40;
 
 public class App_36 {
     public static void main(String args[]) {
