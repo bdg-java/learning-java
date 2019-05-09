@@ -24,7 +24,7 @@ public class Task59 {
             s = t;
             t= p;
         }
-        System.out.print(f*100 + s*10 + t);
+        System.out.print(f + " " + s + " " + t);
 
 
 
