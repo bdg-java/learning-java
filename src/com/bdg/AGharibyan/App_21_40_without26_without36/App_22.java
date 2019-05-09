@@ -1,5 +1,8 @@
 package com.bdg.AGharibyan.App_21_40_without26_without36;
 
+/**
+ * @author William Arustamyan
+ */
 public class App_22 {
 
 
