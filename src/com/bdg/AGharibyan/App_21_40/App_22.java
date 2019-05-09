@@ -1,4 +1,4 @@
-package com.bdg.AGharibyan.App_21_40_without26_without36;
+package com.bdg.AGharibyan.App_21_40;
 
 /**
  * @author William Arustamyan
