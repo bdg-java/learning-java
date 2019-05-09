@@ -1,6 +1,6 @@
-package com.bdg;
+package com.bdg.Lesson1;
 
-public class App_34 {
+public class App_35 {
     public static void main(String[] args) {
 
         int a = 23;
@@ -8,10 +8,10 @@ public class App_34 {
         int c = 75;
         int d = 44;
 
-        if ((a + b == c + d)||(a + c == b + d)|| (a + d == b + c)) {
+        if ((a == b + c + d)||(b == a + c +d)||(c == a + b +d)||(d == a + b + c) ){
             System.out.println("TRUE");
         }
-        else {
+        else{
             System.out.println("FALSE");
         }
     }
