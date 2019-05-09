@@ -11,12 +11,19 @@ public class App_38 {
 
         int q = b/a;
 
-        if ( c == b * q ) {
+     /*   if ( c == b * q ) {
             if ( d == c * q ) {
                 System.out.println("true");
             } else {
                 System.out.println("false");
             }
+        } else {
+            System.out.println("false");
+        }
+     */
+
+        if ( b * q == c && c * q == d ){
+            System.out.println("true");
         } else {
             System.out.println("false");
         }

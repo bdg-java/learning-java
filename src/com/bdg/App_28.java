@@ -8,13 +8,12 @@ public class App_28 {
         int b = -10;
         int c = 10;
 
-        int x = b/a;
+        int q = b/a;
 
-        if ( c == b * x) {
+        if ( c == b * q) {
             System.out.println("true");
         } else {
             System.out.println("false");
         }
-
     }
 }

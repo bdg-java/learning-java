@@ -9,7 +9,7 @@ public class App_31 {
         int c = 0;
         int d = 99999;
 
-        if ( a < b ) {
+    /*    if ( a < b ) {
             if ( b < c ) {
                 if ( c < d ) {
                     System.out.println("Maximum :" + d);
@@ -37,6 +37,20 @@ public class App_31 {
                     System.out.println("Maximum :" + a);
                 }
             }
+        }
+     */
+
+        if ( a > b && a > c && a > d ){
+            System.out.println("Maximum : " + a);
+        }
+        if ( b > a && b > c && b > d ){
+            System.out.println("Maximum : " + b);
+        }
+        if ( c > a && c > b && c > d ){
+            System.out.println("Maximum : " + c);
+        }
+        if ( d > a && d > b && d > c ){
+            System.out.println("Maximum : " + d);
         }
     }
 }

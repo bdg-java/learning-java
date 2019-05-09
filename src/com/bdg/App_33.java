@@ -9,7 +9,7 @@ public class App_33 {
         int c = 0;
         int d = 2;
 
-        if ( a == 1 ) {
+    /*    if ( a == 1 ) {
             System.out.println("true");
             } else {
                 if ( b == 1 ) {
@@ -25,6 +25,13 @@ public class App_33 {
                         }
                     }
             }
+        }
+     */
+
+        if ( a == 1 || b == 1 || c == 1 || d == 1 ){
+            System.out.print("true");
+        } else {
+            System.out.print("false");
         }
     }
 }

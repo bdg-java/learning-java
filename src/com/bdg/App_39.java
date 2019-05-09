@@ -9,6 +9,7 @@ public class App_39 {
         int c = 10;
         int d = 0;
 
+
         if ( a < b ){
             if ( b < c ){
                 if ( c < d ){
@@ -57,53 +58,51 @@ public class App_39 {
                 }
             }
         } else {
-            if ( a < c ){
-                if ( c < d ){
-                    System.out.println( b +","+ a +","+ c +","+ d );
+            if (a < c) {
+                if (c < d) {
+                    System.out.println(b + "," + a + "," + c + "," + d);
                 } else {
-                    if ( a < d ) {
-                        System.out.println( b +","+ a +","+ d +","+ c );
+                    if (a < d) {
+                        System.out.println(b + "," + a + "," + d + "," + c);
                     } else {
-                        if ( b < d ){
-                            System.out.println( b +","+ d +","+ a +","+ c );
+                        if (b < d) {
+                            System.out.println(b + "," + d + "," + a + "," + c);
                         } else {
-                            System.out.println( d +","+ b +","+ a +","+ c );
+                            System.out.println(d + "," + b + "," + a + "," + c);
                         }
                     }
                 }
             } else {
-                if ( b < c ){
-                    if ( a < d ){
-                        System.out.println( b +""+ c +""+ a +""+ d );
+                if (b < c) {
+                    if (a < d) {
+                        System.out.println(b + "" + c + "" + a + "" + d);
                     } else {
-                        if ( c < d ){
-                            System.out.println( b +""+ c +""+ d +""+ a );
+                        if (c < d) {
+                            System.out.println(b + "" + c + "" + d + "" + a);
                         } else {
-                            if ( b < d ){
-                                System.out.println( b +""+ d +""+ c +""+ a );
+                            if (b < d) {
+                                System.out.println(b + "" + d + "" + c + "" + a);
                             } else {
-                                System.out.println( d +""+ b +""+ c +""+ a );
+                                System.out.println(d + "" + b + "" + c + "" + a);
                             }
                         }
                     }
                 } else {
-                    if ( a < d ){
-                        System.out.println( c +","+ b +","+ a +","+ d );
+                    if (a < d) {
+                        System.out.println(c + "," + b + "," + a + "," + d);
                     } else {
-                            if ( b < d ){
-                                System.out.println( c +","+ b +","+ d +","+ a );
+                        if (b < d) {
+                            System.out.println(c + "," + b + "," + d + "," + a);
+                        } else {
+                            if (c < d) {
+                                System.out.println(c + "," + d + "," + b + "," + a);
                             } else {
-                                if ( c < d ) {
-                                    System.out.println( c +","+ d +","+ b +","+ a );
-                                } else {
-                                    System.out.println( d +","+ c +","+ b +","+ a );
-                                }
+                                System.out.println(d + "," + c + "," + b + "," + a);
                             }
+                        }
                     }
                 }
             }
-
         }
-
     }
 }

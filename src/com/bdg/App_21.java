@@ -8,7 +8,7 @@ public class App_21 {
     int b = 20;
     int c = 40;
 
-    if ( a > b){
+ /*   if ( a > b){
         if (a > c) {
         System.out.println("Maximum :" + a);
         } else {
@@ -22,5 +22,16 @@ public class App_21 {
             System.out.println ("Maximum :" + c);
         }
         }
+  */
+
+    if ( a > b && a > c){
+        System.out.println("Maximum :" + a);
+    }
+    if ( b > a && b > c ){
+        System.out.println("Maximum :" + b);
+    }
+    if ( c > a && c > b ){
+        System.out.println("Maximum :" + c);
+    }
         }
 }

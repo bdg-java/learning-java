@@ -16,7 +16,7 @@ public class App_34 {
         int bd = b + d;
         int cd = c + d;
 
-        if ( ab == cd ) {
+    /*    if ( ab == cd ) {
             System.out.println("true");
         } else {
             if ( ac == bd ) {
@@ -28,6 +28,13 @@ public class App_34 {
                     System.out.println("false");
                 }
             }
+        }
+     */
+
+        if ( ab == cd || ac == bd || ad == bc ){
+            System.out.println("true");
+        } else {
+            System.out.println("false");
         }
     }
 }

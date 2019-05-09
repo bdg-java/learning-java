@@ -6,18 +6,21 @@ public class App_24 {
 
         int a = 2;
         int b = 2;
-        int c = 100;
+        int c = 2;
 
-        if ( a == 2 ) {
+     /*   if ( a == 2 ) {
             if ( b == 2 ) {
-                System.out.println ("true");
+               if ( c == 2 ){
+                   System.out.println ("false");
+               } else {
+                   System.out.println ("true");
+               }
             } else {
                 if ( c == 2 ) {
                     System.out.println ("true");
                 } else {
                     System.out.println ("false");
                 }
-
             }
         } else {
             if ( b == 2 ) {
@@ -30,6 +33,26 @@ public class App_24 {
                 System.out.println ("false");
             }
         }
+    */
 
+        if ( a == b && b == 2 ){
+            if ( c == 2 ){
+                System.out.println("false");
+            } else {
+                System.out.println("true");
+            }
+        } else if ( a == c && c == 2 ){
+            if ( b == 2 ){
+                System.out.println("false");
+            } else {
+                System.out.println("true");
+            }
+        } else if ( b == 2 && c == 2 ){
+            if ( a == 2 ){
+                System.out.println("false");
+            } else{
+                System.out.println("true");
+            }
+        }
     }
 }
