@@ -12,7 +12,7 @@ public class App_36 {
         int tb = b%2;
         int tc = c%2;
         int dd = d%2;
-
+        System.out.println( a%2);
         if(((t == 0 && tb ==0)) || (tc == 0 && dd ==0 )){
             System.out.println(1);
         } else if((tb ==0 && tc == 0 )|| (dd ==0 && t == 0)){
