@@ -1,8 +1,5 @@
-package com.bdg.AGharibyan.App_21_40_without26_without36;
+package com.bdg.nhakobyan.lesson_3;
 
-/**
- * @author Ani Gharibyan
- */
 public class App_37 {
 
     public static void main(String[] args) {

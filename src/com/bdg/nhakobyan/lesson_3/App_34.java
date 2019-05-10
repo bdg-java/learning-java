@@ -1,4 +1,4 @@
-package com.bdg;
+package com.bdg.nhakobyan.lesson_3;
 
 public class App_34 {
 
