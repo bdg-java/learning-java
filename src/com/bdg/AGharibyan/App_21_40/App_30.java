@@ -36,20 +36,15 @@ public class App_30 {
 
         if ( a > b && b > c){
             System.out.println(a +","+ b +","+ c);
-        }
-        if ( a > b && c > b && a > c ){
+        } else if ( a > b && c > b && a > c ){
             System.out.println(a +","+ c +","+ b);
-        }
-        if ( b > a && a > c){
+        } else if ( b > a && a > c){
             System.out.println(b +","+ a +","+ c);
-        }
-        if ( b > a && c > a && b > c ){
+        } else if ( b > a && c > a && b > c ){
             System.out.println(b +","+ c +","+ a);
-        }
-        if ( c > a && a > b){
+        } else if ( c > a && a > b){
             System.out.println(c +","+ a +","+ b);
-        }
-        if ( c > a && b > a && c > b ){
+        } else{
             System.out.println(c +","+ b +","+ a);
         }
     }

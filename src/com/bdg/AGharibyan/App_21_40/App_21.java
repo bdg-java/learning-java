@@ -7,9 +7,9 @@ public class App_21 {
 
     public static void main (String [] args) {
 
-    int a = 60;
-    int b = 20;
-    int c = 40;
+        int a = 60;
+        int b = 20;
+        int c = 80;
 
  /*   if ( a > b){
         if (a > c) {
@@ -26,15 +26,13 @@ public class App_21 {
         }
         }
   */
-
-    if ( a > b && a > c){
-        System.out.println("Maximum :" + a);
-    }
-    if ( b > a && b > c ){
-        System.out.println("Maximum :" + b);
-    }
-    if ( c > a && c > b ){
-        System.out.println("Maximum :" + c);
-    }
+        if ( a > b && a > c){
+            System.out.println("Maximum :" + a);
+        } else if ( b > a && b > c ){
+            System.out.println("Maximum :" + b);
+        } else {
+            System.out.println("Maximum :" + c);
         }
+
+    }
 }
