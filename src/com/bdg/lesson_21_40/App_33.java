@@ -1,10 +1,10 @@
-package com.bdg;
+package com.bdg.lesson_21_40;
 
-public class App_34 {
+public class App_33 {
     public static void main(String[] args) {
-        int a = 4, b = 3, c = 4, d = 3;
+        int a = 1, b = 2, c = 3, d = 4;
 
-        if ((a + b == c + d) || (a + c == b + d) || (a + d == b + c) ) {
+        if (a == 1 || b == 1 || c == 1 || d == 1) {
             System.out.println("TRUE");
         } else {
             System.out.println("FALSE");
