@@ -6,14 +6,14 @@ package com.bdg.AGharibyan.App_51_70;
 public class App_52 {
     public static void main(String[] args) {
 
-        int a = 120;
+        int a = 110;
         boolean t = true;
 
-        int miavor = a%10;
-        int tasnavor = a%100/10;
-        int haryuravor = a%1000/100;
+        int miavor = a % 10;
+        int tasnavor = a % 100 / 10;
+        int haryuravor = a % 1000 / 100;
 
-        if ( miavor == tasnavor || tasnavor == haryuravor || miavor == haryuravor ){
+        if (miavor == tasnavor || tasnavor == haryuravor || miavor == haryuravor) {
             t = true;
         } else {
             t = false;
@@ -21,3 +21,4 @@ public class App_52 {
         System.out.println(t);
     }
 }
+

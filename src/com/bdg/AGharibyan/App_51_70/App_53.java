@@ -15,6 +15,7 @@ public class App_53 {
         int h = a/(x+y+z);
         int j = x/a;
 
+
         if ( a > k ){
             System.out.println(h);
         } else {
