@@ -1,4 +1,4 @@
-public class Task55 {
+public class Task56 {
 	public static void main(String[] args){
 		int a = 123;
 		
