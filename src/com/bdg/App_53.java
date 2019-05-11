@@ -12,17 +12,15 @@ public class App_53 {
     public static void main(String[] args) {
 
         int number = 723;
-        int k = 888;
-
-        int miavor = number % 10;
-        int tasnavor = (number / 10) % 10;
-        int har = number / 100;
+        int k = 3;
+        int miavor = NumberManipulation.miavor(number);
+        int tasnavor = NumberManipulation.tasnavor(number);
+        int har = NumberManipulation.haryuravor(number);
 
         if (number > k) {
-            System.out.println((double) number / (miavor + tasnavor + har));
+            System.out.println(number / (miavor + tasnavor + har));
         } else {
             System.out.println(miavor / number);
         }
     }
-
 }
