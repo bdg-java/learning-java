@@ -1,3 +1,5 @@
+package com.homework;
+
 public class Task58 {
 	public static void main(String[] args){
 		int a = 321;

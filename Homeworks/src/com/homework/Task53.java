@@ -1,3 +1,5 @@
+package com.homework;
+
 public class Task53 {
 	public static void main(String[] args){
 		double a = 123.0;

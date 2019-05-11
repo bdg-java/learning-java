@@ -1,3 +1,5 @@
+package com.homework;
+
 public class Task52 {
 	public static void main(String[] args){
 		int a = 123;
