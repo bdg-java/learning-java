@@ -8,10 +8,10 @@ public class App_23 {
         int c = 40;
 
         if (a ==1 || b == 1 || c == 1) {
-            System.out.println("true")
+            System.out.println("true");
 
         } else {
-            System.out.print("false")
+            System.out.print("false");
         }
 
 
