@@ -2,7 +2,9 @@ package com.bdg;
 
 public class Task1 {
     public static void main(String[] args) {
-        int a = 5 ;
-        System.out.print(a);
-    }
+       int i = 0;
+        while(i<10) {
+            system.out.println("i : " + 1);
+            i = i + 1;
+        }
 }
