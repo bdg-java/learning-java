@@ -8,6 +8,6 @@ public class exercise_71 {
         for (x = 2.4; x <= 7.6 ; x += 0.2 ) {
                 y = Math.tan(2*x + x * x);
         }
-        System.out.println("x is : "+x + " " + "y is : "+ y);
+         System.out.println("x is : "+x + " " + "y is : "+ y);
     }
 }

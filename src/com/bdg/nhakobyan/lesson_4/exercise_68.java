@@ -12,7 +12,7 @@ public class exercise_68 {
 
         if (miavor > tasnavor)
             System.out.println(miavor * haryuravor);
-        else{
+        else {
             System.out.println(1);
         }
     }

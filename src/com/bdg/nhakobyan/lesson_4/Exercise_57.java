@@ -9,7 +9,7 @@ public class Exercise_57 {
         int tasnavor = (num / 10)% 10;
         int haryuravor = num / 100 ;
 
-        if (num > 300){
+        if  (num > 300){
             System.out.println(" b / c " + tasnavor / miavor);
         }
         else{

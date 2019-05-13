@@ -10,7 +10,7 @@ public class exercise_76 {
                 else{
                     y = 0;
                 }
-            System.out.println("x is : " + x + " y is : " + y);
+             System.out.println("x is : " + x + " y is : " + y);
         }
 
     }

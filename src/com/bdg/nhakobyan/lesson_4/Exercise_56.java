@@ -9,7 +9,7 @@ public class Exercise_56 {
         int tasnavor = (num / 10)% 10;
         int haryuravor = num / 100 ;
 
-        if (miavor > tasnavor) System.out.println((double) (miavor + tasnavor + haryuravor) / num);
+        if  (miavor > tasnavor) System.out.println((double) (miavor + tasnavor + haryuravor) / num);
         else{
             System.out.println(num);
         }

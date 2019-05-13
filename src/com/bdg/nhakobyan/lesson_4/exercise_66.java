@@ -8,7 +8,7 @@ public class exercise_66 {
         int tasnavor = (num / 10)% 10;
         int haryuravor = (num / 100) % 10 ;
 
-        if (tasnavor == 4 || haryuravor == 4)
+        if  (tasnavor == 4 || haryuravor == 4)
             System.out.println("YES");
         else{ System.out.println("NO"); }
     }

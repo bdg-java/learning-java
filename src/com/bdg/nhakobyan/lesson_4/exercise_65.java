@@ -10,7 +10,7 @@ public class exercise_65 {
         int haryuravor = (num / 100) % 10 ;
         int hazaravor = num / 1000;
 
-        if (miavor * tasnavor == 12)
+        if (miavor *  tasnavor == 12)
             System.out.println("y = 12");
         else{
             System.out.println("y = 0");

@@ -10,7 +10,7 @@ public class exercise_67 {
         int haryuravor = (num / 100) % 10 ;
         int hazaravor = num / 1000;
 
-        if (Math.sqrt(num) == miavor + tasnavor + haryuravor + hazaravor)
+        if  (Math.sqrt(num) == miavor + tasnavor + haryuravor + hazaravor)
             System.out.println("YES");
         else{
             System.out.println("NO");

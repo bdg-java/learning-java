@@ -13,7 +13,7 @@ public class exercise_61 {
 
         boolean t = false;
 
-        if(miavor + tasnavor == haryuravor + hazaravor){
+        if (miavor + tasnavor == haryuravor + hazaravor){
             t = true;
             System.out.println(t);
         }

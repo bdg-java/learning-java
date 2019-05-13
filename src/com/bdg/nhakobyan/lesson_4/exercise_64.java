@@ -10,7 +10,7 @@ public class exercise_64 {
         int haryuravor = (num / 100) % 10 ;
         int hazaravor = num / 1000;
 
-        char y = 'd';
+        char y =  'd';
         if (miavor + tasnavor == 5){
             y = 's';
             System.out.println(y);

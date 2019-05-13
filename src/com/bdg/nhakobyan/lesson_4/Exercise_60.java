@@ -9,7 +9,7 @@ public class Exercise_60 {
         int tasnavor = (num / 10)% 10;
         int haryuravor = num / 100 ;
 //նվազման կարգով
-        if (miavor > tasnavor && miavor > haryuravor ){
+        if  (miavor > tasnavor && miavor > haryuravor ){
             if (tasnavor > haryuravor )
                 System.out.println(miavor + " " + tasnavor +" " + haryuravor );
             else{

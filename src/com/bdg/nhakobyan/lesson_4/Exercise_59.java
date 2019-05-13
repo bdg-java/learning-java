@@ -16,7 +16,7 @@ public class Exercise_59 {
                 System.out.println(miavor + " " + haryuravor + " "+ tasnavor );
             }
         }
-        else if ( miavor < tasnavor && miavor > haryuravor){
+        else if  ( miavor < tasnavor && miavor > haryuravor){
             System.out.println(haryuravor +" "+ miavor +" "+ tasnavor );
         }
         else if (miavor > tasnavor && miavor < haryuravor)

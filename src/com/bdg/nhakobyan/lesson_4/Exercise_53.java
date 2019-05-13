@@ -2,7 +2,7 @@ package com.bdg.nhakobyan.lesson_4;
 
 public class Exercise_53 {
     public static void main(String[] args) {
-        int from = 100 , to = 999;
+        int from  = 100 , to = 999;
         int num = from + (int)(Math.random() * to);
         int k = from + (int)(Math.random()*to);
         System.out.println("The number is "+num);

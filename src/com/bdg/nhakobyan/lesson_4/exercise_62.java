@@ -10,7 +10,7 @@ public class exercise_62 {
         int haryuravor = (num / 100) % 10 ;
         int hazaravor = num / 1000;
 
-        if (num < 5000){
+        if (num < 5000) {
             System.out.println(num / (miavor + haryuravor));
         }
         else{

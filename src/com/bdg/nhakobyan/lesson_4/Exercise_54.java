@@ -9,7 +9,7 @@ public class Exercise_54 {
         int tasnavor = (num / 10)% 10;
         int haryuravor = num / 100 ;
 
-        int max =miavor;
+        int  max =miavor;
         if (max > tasnavor && max > haryuravor)
              System.out.println("Max is " +max);
         else if (max > tasnavor && max < haryuravor ){

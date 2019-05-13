@@ -10,7 +10,7 @@ public class exrecise_90 {
             else{
                 y = Math.cos(x);
             }
-            System.out.println("x is : " + x + " y is : " + y);
+            System.out.println("x is : "  + x + " y is : " + y);
         }
     }
 }

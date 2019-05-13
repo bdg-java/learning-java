@@ -10,7 +10,7 @@ public class Exercise_58 {
         int miavor = num %10 ;
 
         String f = "a";
-        if ((tasnavor + haryuravor) < 5) System.out.println(f);
+        if  ((tasnavor + haryuravor) < 5) System.out.println(f);
         else{
             f = "b";
             System.out.println(f);

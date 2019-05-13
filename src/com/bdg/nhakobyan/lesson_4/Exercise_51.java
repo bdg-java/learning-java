@@ -6,7 +6,7 @@ public class Exercise_51 {
         int num = from + (int)(Math.random() * to);
         System.out.println("The number is "+num);
         boolean bool ;
-        int miavor = num % 10;
+        int miavor  = num % 10;
         int tasnavor = (num / 10)% 10;
         int haryuravor = num / 100 ;
 

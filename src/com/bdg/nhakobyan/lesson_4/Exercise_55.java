@@ -1,6 +1,6 @@
 package com.bdg.nhakobyan.lesson_4;
 
-public class Exercise_55 {
+public class  Exercise_55 {
     public static void main(String[] args) {
         int from = 100 , to = 999;
         int num = from + (int)(Math.random() * to);
