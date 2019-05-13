@@ -5,23 +5,23 @@ public class Exercise_54 {
         int from = 100 , to = 999;
         int num = from + (int)(Math.random() * to);
         System.out.println("The number is "+num);
-        int a = num / 100;
-        int b = (num % 100-num % 10)/10;
-        int c = num %10 ;
+        int miavor = num % 10;//a b c
+        int tasnavor = (num / 10)% 10;
+        int haryuravor = num / 100 ;
 
-        int max = a;
-        if (max > b && max > c)
+        int max =miavor;
+        if (max > tasnavor && max > haryuravor)
              System.out.println("Max is " +max);
-        else if (max > b && max < c ){
-             max = c ;
-             System.out.println("Max is " + c);
+        else if (max > tasnavor && max < haryuravor ){
+             max = haryuravor ;
+             System.out.println("Max is " + haryuravor);
         }
-        else if (max < b ){
-                max = b;
-                if (max > c)
+        else if (max < tasnavor ){
+                max = tasnavor;
+                if (max > haryuravor)
                     System.out.println("Max is " + max);
                 else{
-                    max = c;
+                    max = haryuravor;
                     System.out.println("Max is " + max);
                 }
 

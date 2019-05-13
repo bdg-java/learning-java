@@ -5,23 +5,23 @@ public class Exercise_55 {
         int from = 100 , to = 999;
         int num = from + (int)(Math.random() * to);
         System.out.println("The number is " + num);
-        int a = num / 100;
-        int b = (num % 100-num % 10)/10;
-        int c = num %10 ;
+        int miavor = num % 10;
+        int tasnavor = (num / 10)% 10;
+        int haryuravor = num / 100 ;
 
-        int min = a;
-        if (min < b && min < c)
+        int min = miavor;
+        if (min < tasnavor && min < haryuravor)
             System.out.println("Min is " +min);
-        else if (min < b && min > c ){
-            min = c ;
-            System.out.println("Min is " + c);
+        else if (min < tasnavor && min > haryuravor ){
+            min = haryuravor ;
+            System.out.println("Min is " + haryuravor);
         }
-        else if (min > b ){
-            min = b;
-            if (min < c)
+        else if (min > tasnavor ){
+            min = tasnavor;
+            if (min < haryuravor)
                 System.out.println("Min is " + min);
             else{
-                min = c;
+                min = haryuravor;
                 System.out.println("Min is " + min);
             }
 

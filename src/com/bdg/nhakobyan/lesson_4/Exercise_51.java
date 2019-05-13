@@ -6,11 +6,11 @@ public class Exercise_51 {
         int num = from + (int)(Math.random() * to);
         System.out.println("The number is "+num);
         boolean bool ;
-        int a = num / 100;
-        int b = (num % 100-num % 10)/10;
-        int c = num %10 ;
+        int miavor = num % 10;
+        int tasnavor = (num / 10)% 10;
+        int haryuravor = num / 100 ;
 
-        if ( a == b + c ){
+        if ( miavor == tasnavor + haryuravor ){
             bool = true;
             System.out.println(bool);
         }
