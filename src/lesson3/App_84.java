@@ -11,6 +11,5 @@ public class App_84 {
             System.out.println(y);
 
         }
-
     }
 }
