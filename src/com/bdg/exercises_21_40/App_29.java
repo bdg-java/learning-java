@@ -1,6 +1,7 @@
 package com.bdg.exercises_21_40;
 
 public class App_29 {
+    
     public static void main(String args[]){
         int a = 89, b =9, c = 0;
         if(a<b && a<c){
