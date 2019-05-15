@@ -6,9 +6,9 @@ public class App_152 {
         int n = 179;
         int mul = 1;
 
-        for (int  i = 0; i <= 10000; i++){
+        for (int  i = 1; i <= 10000; i++){
             if (i % n == 0){
-                mul = mul + i;
+                mul = mul * i;
 
 
                 System.out.println(mul);
