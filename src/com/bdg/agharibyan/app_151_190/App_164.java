@@ -9,9 +9,17 @@ public class App_164 {
         int n = 15;
         int min = -1;
 
-        for ( int i = 999; i>=100; i--){
+//        for ( int i = 999; i>=100; i--){
+//            if (Math.sqrt(i)>n){
+//                min = i;
+//            }
+//        }
+//        System.out.print(min);
+
+        for ( int i = 100; i<=999; i++){
             if (Math.sqrt(i)>n){
                 min = i;
+                break;
             }
         }
         System.out.print(min);
