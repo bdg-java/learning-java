@@ -6,26 +6,22 @@ public class App_21 {
     public static void main(String[] args) {
 
 
-        int a = 10;
-        int b = 20;
-        int c = 2;
+        int a = 3;
+        int b = 7;
+        int c = 12;
 
 
         if (a < b) {
             if (a < c) {
-                //a - n erkusic el poqra => poqraguyna
-                System.out.println("MINIMUM : " + a);
+                System.out.println("Minimum : " + a);
             } else {
-                // c - n poqrna
-                System.out.println("MINIMUM : " + c);
+                System.out.println("Minimum : " + c);
             }
         } else {
             if (b < c) {
-                //b - n poqrna
-                System.out.println("MINIMUM : " + b);
+                System.out.println("Minimum : " + b);
             } else {
-                // c - n poqrna
-                System.out.println("MINIMUM : " + c);
+                System.out.println("Minimum : " + c);
             }
         }
 
