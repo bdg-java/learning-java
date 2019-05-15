@@ -1,0 +1,16 @@
+package com.bdg;
+
+public class App_151 {
+    public static void main(String[] args) {
+
+        int n = 167;
+
+        for (int i = 0; i <= 1000; i++){
+            if( i % n == 0){
+                System.out.println(i);
+
+            }
+        }
+
+    }
+}
