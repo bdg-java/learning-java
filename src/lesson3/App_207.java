@@ -8,11 +8,11 @@ public class App_207 {
         while (a > 0) {
             if (a % 10 == 2) {
                 t = true;
+
                 break;
             }
             a = a / 10;
         }
         System.out.println(t);
-
     }
 }
