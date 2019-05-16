@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class IntegerArrayoperations {
-    private static final int[] def_array = {1, 9, -5, 10, -5, 10, 3, 4, 2};
+    private static final int[] def_array = {1, 9, -5, 10, -5, 0, 10, 3, 4, 2, 0};
 
 
     public static void displayArray(int[] array) {
