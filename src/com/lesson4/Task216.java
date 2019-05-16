@@ -5,8 +5,7 @@ public class Task216 {
         int mul = 1;
         int[] a = IntegerArrayoperations.getDefaultArray();
         int i = 0;
-        for (i = 0; i < a.length; i++) {
-            if ((i & 1) == 0)
+        for (i = 0; i < a.length; i += 2) {
                 mul *= a[i];
         }
         System.out.println(mul);
