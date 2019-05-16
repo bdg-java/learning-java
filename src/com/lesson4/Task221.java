@@ -7,7 +7,7 @@ public class Task221 {
         int mul = 1;
         int[] a = IntegerArrayoperations.getDefaultArray();
         if (c >= 0 && d <= a.length - 1) {
-            for (int i = c; i < d; i++) {
+            for (int i = c; i <= d; i++) {
                 if (a[i] != 0)
                     mul *= a[i];
             }
