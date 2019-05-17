@@ -11,6 +11,4 @@ public class Task257 {
         }
         System.out.println(i);
     }
-
-
 }
