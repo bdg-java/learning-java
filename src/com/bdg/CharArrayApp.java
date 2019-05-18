@@ -12,5 +12,20 @@ public class CharArrayApp {
             }
         }
         System.out.println(c);
+
+
+        int matrix[][] = {
+                {2, 3, 6, 7},
+                {2, 3, 6, 7},
+                {2, 3, 6, 7},
+        };
+
+        for (int i = 0; i < 3; i++) {
+            for (int k = 0; k < 4; k++) {
+                System.out.print(matrix[i][k] + ", ");
+            }
+            System.out.println();
+        }
+
     }
 }
