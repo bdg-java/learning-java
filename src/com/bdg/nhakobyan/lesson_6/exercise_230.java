@@ -8,7 +8,7 @@ public class exercise_230 {
         int sum = 0;
         int counter = 0;
         for (int i = 0; i < arr.length ; i++) {
-            amboxch =  (int)(arr[i]*10) % 10 ;
+            amboxch =  (arr[i]*10) % 10 ;
             if (amboxch % k == 0) {
                 sum += Math.pow(arr[i],2);
                 counter++;
