@@ -5,8 +5,8 @@ public class Task421 {
         int[][] m = MatrixDefaultDeclaration.GetDefaultMatrix();
         int k = 2;
         int c = 0;
-        for (int i = 0; i < m.length; i++) {
-            for (int j = 0; j <= i; j++) {
+        for (int i = 1; i < m.length; i++) {
+            for (int j = 0; j < i; j++) {
                 if (m[i][j] % k == 0)
                     c++;
             }
