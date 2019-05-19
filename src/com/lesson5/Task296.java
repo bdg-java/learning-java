@@ -12,11 +12,11 @@ public class Task296 {
         int c = 0;
         for (int i = 0; i < a.length; i++) {
             if (a[i] % k != 2) {
-                c++;
+                c = c + 1;
             }
         }
-        int[] b = new int[c - 1];
-        for (int i = 1; i < a.length; i++) {
+        int[] b = new int[c];
+        for (int i = 0; i < a.length; i++) {
             if (a[i] % k != 2) {
                 b[j] = a[i];
                 j++;
