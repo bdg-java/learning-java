@@ -9,12 +9,7 @@ public class Task291 {
         int[] a = IntegerArrayoperations.getDefaultArray();
 
         int j = 0;
-        int c = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] <= 0) {
-                c++;
-            }
-        }
+        int c = GetIntegerArrayPositiveElCount(a);
         int[] b = new int[c];
         for (int i = 0; i < a.length; i++) {
             if (a[i] <= 0) {
@@ -25,4 +20,15 @@ public class Task291 {
         }
         System.out.println(Arrays.toString(b));
     }
+
+    public static int GetIntegerArrayPositiveElCount(int a[]) {
+        int c = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] <= 0) {
+                c++;
+            }
+        }
+        return c;
+    }
+
 }
