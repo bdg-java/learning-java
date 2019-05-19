@@ -7,7 +7,6 @@ import java.util.Arrays;
 public class Task292 {
     public static void main(String[] args) {
         int[] a = IntegerArrayoperations.getDefaultArray();
-
         int j = 0;
         int c = GetIntegerArrayElMultipleSevenCount(a);
         int[] b = new int[c];
