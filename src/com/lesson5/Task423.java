@@ -13,7 +13,8 @@ public class Task423 {
                 }
             }
         }
-        sum = Math.sqrt(sum / c);
+        if (c > 0)
+            sum = Math.sqrt(sum / c);
         System.out.println(sum);
     }
 }
