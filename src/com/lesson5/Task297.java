@@ -15,8 +15,9 @@ public class Task297 {
                 c++;
             }
         }
-        int[] b = new int[c - 1];
-        for (int i = 1; i < a.length; i++) {
+        System.out.println(c);
+        int[] b = new int[c];
+        for (int i = 0; i < a.length; i++) {
             if (Math.abs(a[i]) <= k) {
                 b[j] = a[i];
                 j++;
