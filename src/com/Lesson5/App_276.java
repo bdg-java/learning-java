@@ -3,7 +3,6 @@ package com.Lesson5;
 public class App_276 {
     public static void main(String[] args) {
         int n = 10;
-
         int c = 0;
 
         char[] a = {'s', 'b', 'c', 'k', 'j', 'b', 'r', '4', 'h', 'q'};
@@ -14,7 +13,7 @@ public class App_276 {
             } else {
                 boolean t = false;
             }
-            System.out.println(t);
+            System.out.println(c);
         }
     }
 }
