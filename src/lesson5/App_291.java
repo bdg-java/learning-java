@@ -16,7 +16,7 @@ public class App_291 {
                 x++;
             }
         }
-        System.out.println(array.toString(newarray));
+        System.out.println(array.toString());
 
     }
     private static int getCountOfNegativeValues(int[] array) {
