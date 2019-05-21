@@ -8,7 +8,6 @@ public class App_211 {
 
 
         int[] arr = {10, 23, 45, -21, 57, 49, 98, 8, -28, 76};
-        System.out.println(arr.length);
 
         int sum = 0;
 
