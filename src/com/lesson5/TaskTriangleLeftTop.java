@@ -1,6 +1,6 @@
 package com.lesson5;
 
-public class TaskRectangleLeftTop {
+public class TaskTriangleLeftTop {
     public static void main(String[] args) {
         int n = 10;
         char[][] m = CharStarMatrixArrayDeclaration.getDefaultMatrix();
