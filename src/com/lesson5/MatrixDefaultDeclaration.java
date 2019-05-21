@@ -7,8 +7,11 @@ public class MatrixDefaultDeclaration {
             {1, 2, 8, 16}
     };
 
+
     //according java method convention method names should be male case :)
     public static int[][] GetDefaultMatrix() {
         return def_matrix;
     }
+
+
 }
