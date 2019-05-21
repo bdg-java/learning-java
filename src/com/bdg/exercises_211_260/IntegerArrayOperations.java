@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class IntegerArrayOperations {
 
-    private static final int[] DEFAULT_ARRAY = {905, 909, -3, 1000, 899, 100, 5, 1000, -3, 9};
+    private static final int[] DEFAULT_ARRAY = {905, 14, -3, 1000, 899, 100, 5, 49, -3, 9,2};
 
     public static int[] generateArrayWithRandomNumbers(int size) {
         int[] array = new int[size];
