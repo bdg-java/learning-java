@@ -1,24 +1,27 @@
-package com.bdg.nhakobyan.lesson_7.exercises;
+package com.bdg.nhakobyan.lesson_7.exercises_from_271_to_300;
 
 import java.util.Arrays;
 
-public class exercise_294 {
+public class exercise_293 {
     public static void main(String[] args) {
         int n = 8;
         int [] x = new int[n];
+        int a = 33;
+        int b = 65;
         int count = 0;
         int num = 0;
+
         for (int i = 0; i < n ; i++) {
-            x[i] = (int)(Math.random()*(99-23+1)+23);
-            if (i % 2 != 0){
+            x[i] = (int)(Math.random()*(99-14+1)+14);
+            if (x[i] >= a && x[i] <= b){
                 count++;
             }
         }
+        int [] y = new int[n-count];
         System.out.print(Arrays.toString(x));
         System.out.println();
-        int [] y = new int[n-count];
-        for (int i = 0; i < n ; i++) {
-            if (i % 2 == 0){
+        for (int i = 0; i < x.length ; i++) {
+            if (x[i] < a || x[i] > b ){
                 y[num] = x[i];
                 num++;
             }

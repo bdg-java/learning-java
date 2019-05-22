@@ -1,30 +1,29 @@
-package com.bdg.nhakobyan.lesson_7.exercises;
+package com.bdg.nhakobyan.lesson_7.exercises_from_271_to_300;
 
 import java.util.Arrays;
 
-public class exercise_279 {
+public class exercise_278 {
     public static void main(String[] args) {
         int n = 15;
         char array [] = new char[n];
+
         int count = 0;
         for (int i = 0; i < n ; i++) {
             array[i] = (char) (Math.random() * (122 - 97 + 1) + 97);
-            if (array[i]> 'k'){
+            if (i % 2 != 0){
                 count++;
             }
         }
         System.out.print(Arrays.toString(array));
-        System.out.println();
+        char[] arr = new char[array.length-count];
         int num = 0;
-        char[] arr = new char[count];
+        System.out.println();
         for (int i = 0; i < array.length ; i++) {
-            if (array[i] > 'k' ){
+            if (i % 2 != 0){
                 arr[num] = array[i];
                 num++;
             }
         }
-        System.out.print(Arrays.toString(arr));
-
-
+        System.out.print(Arrays.toString(arr) );
     }
 }

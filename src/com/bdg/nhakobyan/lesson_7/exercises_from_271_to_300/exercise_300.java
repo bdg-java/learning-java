@@ -1,26 +1,26 @@
-package com.bdg.nhakobyan.lesson_7.exercises;
+package com.bdg.nhakobyan.lesson_7.exercises_from_271_to_300;
 
 import java.util.Arrays;
 
-public class exercise_292 {
+public class exercise_300 {
     public static void main(String[] args) {
         int n = 8;
         int [] x = new int[n];
-        int count = 0;
+        int k = 80;
         int num = 0;
+        int count = 0;
 
         for (int i = 0; i < n ; i++) {
-            x[i] = (int)(Math.random()*(70-14+1)+14);
-            if (x[i] % 7 ==0){
+            x[i] = (int)(Math.random()*(14-3+1)+3);
+            if (Math.pow(x[i],2) < k){
                 count++;
             }
         }
         System.out.print(Arrays.toString(x));
-
         System.out.println();
         int [] y = new int[n-count];
         for (int i = 0; i < n ; i++) {
-            if (x[i] % 7 != 0){
+            if (Math.pow(x[i],2) > k){
                 y[num] = x[i];
                 num++;
             }

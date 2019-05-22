@@ -1,4 +1,4 @@
-package com.bdg.nhakobyan.lesson_7.exercises;
+package com.bdg.nhakobyan.lesson_7.exercises_from_271_to_300;
 
 public class exercise_276 {
     public static void main(String[] args) {
