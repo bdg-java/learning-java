@@ -11,7 +11,7 @@ public class Task260 {
             System.out.printf("%d, ", x);
         }
 
-        System.out.println();
+//        System.out.println();
 
         int minNumber = ArrayManypulations.minNumber(randomArray);
         int minNumberIndex = 0;
@@ -23,7 +23,7 @@ public class Task260 {
             }
         }
 
-        System.out.printf("Max number index is: %d", minNumberIndex);
+        System.out.printf("\nMax number index is: %d", minNumberIndex);
     }
 
 }
