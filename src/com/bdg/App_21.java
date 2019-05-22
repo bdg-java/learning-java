@@ -14,18 +14,18 @@ public class App_21 {
         if (a < b) {
             if (a < c) {
                 //a - n erkusic el poqra => poqraguyna
-                System.out.println("MINIMUM : " + a);
+//                System.out.println("MINIMUM : " + a);
             } else {
                 // c - n poqrna
-                System.out.println("MINIMUM : " + c);
+//                System.out.println("MINIMUM : " + c);
             }
         } else {
             if (b < c) {
                 //b - n poqrna
-                System.out.println("MINIMUM : " + b);
+//                System.out.println("MINIMUM : " + b);
             } else {
                 // c - n poqrna
-                System.out.println("MINIMUM : " + c);
+//                System.out.println("MINIMUM : " + c);
             }
         }
 
