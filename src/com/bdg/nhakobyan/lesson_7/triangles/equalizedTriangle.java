@@ -2,7 +2,7 @@ package com.bdg.nhakobyan.lesson_7.triangles;
 
 public class equalizedTriangle {
     public static void main(String[] args) {
-        int [][]  triangle = new int[4][4];
+        int [][]  triangle = new int[4][6];
         int starQuantity = 1;
         int space = triangle.length;
         for (int i = 0; i < triangle.length ; i++) {
