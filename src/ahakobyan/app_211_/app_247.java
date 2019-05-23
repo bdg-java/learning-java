@@ -9,7 +9,7 @@ public class app_247 {
         int a = 1;
         int i;
 
-        for (i = 0; i <= x.length; i++)
+        for (i = 0; i < x.length; i++)
             if (i < x[i]){
                 a = x[i] * x [i];
             }

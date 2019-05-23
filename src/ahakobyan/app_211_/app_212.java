@@ -11,7 +11,7 @@ public class app_212 {
         double a = 1;
         int i;
 
-        for (i = 1; i <= x.length; i++) {
+        for (i = 1; i < x.length; i++) {
             if (x[1] > 0) {
                 a = x[i] * x[i];
             }

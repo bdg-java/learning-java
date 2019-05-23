@@ -9,7 +9,7 @@ public class app_216 {
         double a = 1;
         int i;
 
-        for (i = 0; i <= x.length; i++){
+        for (i = 0; i < x.length; i++){
             if ((i & 1) == 0){
                 a = a *x[i];
             }

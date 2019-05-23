@@ -10,7 +10,7 @@ public class app_254 {
         int b = x[0];
         int i;
 
-        for (i = 0; i <= x.length; i++) {
+        for (i = 0; i < x.length; i++) {
             if (x[i] > a) {
                 a = x[i];
                 if (x[i] < b) {

@@ -10,7 +10,7 @@ public class app_241 {
         int k = 4;
         int i;
 
-        for (i = 0; i <= x.length; i++)
+        for (i = 0; i < x.length; i++)
             if (x[i] % k == 0){
                 a = a+ x[i];
             }

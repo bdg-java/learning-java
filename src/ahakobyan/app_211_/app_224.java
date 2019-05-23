@@ -9,7 +9,7 @@ public class app_224 {
         int t = 16;
         int a = 0;
 
-        for (int i = 0; i <= x.length; i++) {
+        for (int i = 0; i < x.length; i++) {
             if (x[i] < t) {
                 a++;
             }

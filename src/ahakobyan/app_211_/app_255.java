@@ -10,7 +10,7 @@ public class app_255 {
         int b = x[0];
         int i;
 
-        for (i = 0; i <= x.length; i++){
+        for (i = 0; i < x.length; i++){
             if (x[i] > b) {
                 b = x[i];
                 a = a+ 1;

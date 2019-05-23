@@ -9,7 +9,7 @@ public class app_232 {
         int a = 0;
         int i;
 
-        for (i =0; i <= x.length; i++) {
+        for (i =0; i < x.length; i++) {
             if ( x[i] % 2 == 0){
                 a++;
             }

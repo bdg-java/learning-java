@@ -10,7 +10,7 @@ public class app_243 {
         int m =7;
         int i;
 
-        for (i =0; i <=x.length; i++)
+        for (i =0; i < x.length; i++)
             if (x[i] % m == 0){
                 a++;
             }

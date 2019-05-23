@@ -9,7 +9,7 @@ public class app_213 {
         double a = 1;
         int i;
 
-        for (i = 1; i<=x.length; i++){
+        for (i = 1; i<x.length; i++){
             if (x[i] < 0){
                 a +=x[i] * x[i];
             }
