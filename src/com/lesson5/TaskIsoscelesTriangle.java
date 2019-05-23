@@ -2,11 +2,12 @@ package com.lesson5;
 
 public class TaskIsoscelesTriangle {
     public static void main(String[] args) {
-        int n = 10;
         char[][] m = CharStarMatrixArrayDeclaration.getDefaultMatrix();
-        for (int i = 0; i < n / 2; i++) {
+        int n = m.length;
+        int h = n / 2;
+        for (int i = 0; i < h; i++) {
             for (int j = 0; j < n; j++) {
-                if (j >= (n / 2) - i && j <= ((n / 2) + i))
+                if (j >= h - i && j <= h + i)
                     System.out.print(m[i][j]);
                 else System.out.print(" ");
             }
