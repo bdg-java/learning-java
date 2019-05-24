@@ -7,14 +7,13 @@ public class Task650 {
         int c = 0;
         char[] a = CharArrayDeclaration.getDef_array();
         boolean t = true;
-        char[] b = new char[]{'a', 'b', 'b', 'a', 'H'};
+        char[] b = new char[]{'a', 'b', 'z', 'b', 'a', 'H'};
         for (int i = 0; i < a.length; i++) {
             for (int p = i - 1; p >= 0; p--) {
                 if (a[i] == a[p]) {
                     t = false;
                     break;
                 }
-                p--;
             }
             if (t == true) {
                 for (int j = 0; j < b.length; j++) {
