@@ -7,7 +7,7 @@ public class Task652 {
         boolean t = true;
         char[] a = CharArrayDeclaration.getDef_array();
         int n = a.length - 1;
-        char[] b = new char[]{'A', 'a', 'b', 'z', 'b', 'a', 'H'};
+        char[] b = new char[]{'A', 'a', '5', 'b', 'z', 'b', '2', 'a', 'H', '3'};
         char[] narr = new char[n];
         int nsize = 0;
         for (int i = 0; i < n; i++) {
