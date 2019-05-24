@@ -1,3 +1,4 @@
+
 package com.Lesson6;
 
 import com.lesson5.CharArrayDeclaration;
