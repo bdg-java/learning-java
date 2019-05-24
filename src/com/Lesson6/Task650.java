@@ -6,7 +6,6 @@ public class Task650 {
     public static void main(String[] args) {
         int c = 0;
         char[] a = CharArrayDeclaration.getDef_array();
-        int n = a.length;
         boolean t = true;
         char[] b = new char[]{'b', 'b', 'z', 'H'};
         for (int i = 0; i < a.length; i++) {
