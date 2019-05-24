@@ -7,20 +7,21 @@ public class Task650 {
         int c = 0;
         char[] a = CharArrayDeclaration.getDef_array();
         boolean t = true;
-        char[] b = new char[]{'b', 'b', 'z', 'H'};
+        char[] b = new char[]{'a', 'b', 'b', 'a', 'H'};
         for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < b.length; j++) {
-                int p = i - 1;
-                while (p >= 0) {
-                    if (a[i] == a[p]) {
-                        t = false;
+            for (int p = i - 1; p >= 0; p--) {
+                if (a[i] == a[p]) {
+                    t = false;
+                    break;
+                }
+                p--;
+            }
+            if (t == true) {
+                for (int j = 0; j < b.length; j++) {
+                    if (a[i] == b[j]) {
+                        c++;
                         break;
                     }
-                    p--;
-                }
-                if (t == true && a[i] == b[j]) {
-                    c++;
-                    break;
                 }
             }
         }
