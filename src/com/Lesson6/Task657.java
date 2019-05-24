@@ -8,8 +8,7 @@ public class Task657 {
         int n = a.length - 1;
         char[] b = new char[n / 2 + 1];
         int j = 0;
-        int i = 0;
-        for (i = 0; i < n; i += 2) {
+        for (int i = 0; i < n; i += 2) {
             if (a[i] > a[i + 1])
                 b[j] = a[i];
             else b[j] = a[i + 1];
