@@ -15,11 +15,10 @@ public class Task664 {
             }
         }
         for (int i = 0; i < a.length; i++) {
-            if (t == true) {
-                if (a[i] == 'c')
+            if (t == true && (a[i] == 'c')) {
                     c++;
-            } else {
-                if (a[i] == 'd')
+            }
+            if (t == false && (a[i] == 'd')) {
                     c++;
             }
         }
