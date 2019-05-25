@@ -15,7 +15,18 @@ public class Point {
         this.y = y;
     }
 
+    public boolean equals(Object obj) {
 
+        if (obj == this) {
+            return true;
+        }
+
+        if (obj instanceof Point) {
+            System.out.println("ESA");
+            Point p = (Point) obj;
+            return x == p.x && y == p.y;
+        }
+        System.out.println("THE LAST LINE");
+        return false;
+    }
 }
-
-
