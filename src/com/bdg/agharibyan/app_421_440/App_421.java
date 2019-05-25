@@ -4,7 +4,7 @@ public class App_421 {
 
     public static void main(String[] args) {
 
-        int matrix[][] = {
+        int [][] matrix = new int [][]{
                 {0, 1, 2, 3, 4},
                 {91, 82, 73, 64, 55},
                 {10, 20, 30, 40, 50},
@@ -15,26 +15,37 @@ public class App_421 {
         int k = 2;
         int qanak = 0;
 
-        for (int i = 1; i < m; i++){
-            if (matrix[i][0]%k == 0){
-                qanak++;
+//        for (int i = 1; i < m; i++){
+//            if (matrix[i][0]%k == 0){
+//                qanak++;
+//            }
+//        }
+//        for (int i = 2; i < m; i++){
+//            if (matrix[i][1]%k == 0){
+//                qanak++;
+//            }
+//        }
+//        for (int i = 3; i < m; i++){
+//            if (matrix[i][2]%k == 0){
+//                qanak++;
+//            }
+//        }
+//        for (int i = 4; i < m; i++){
+//            if (matrix[i][3]%k == 0){
+//                qanak++;
+//            }
+//        }
+//        System.out.print(qanak);
+
+        for (int i = 0; i < m; i++){
+            for (int j = 0; j < m; j++){
+                if (j < i){
+                    if (matrix[i][j]%k == 0){
+                        qanak++;
+                    }
+                }
             }
         }
-        for (int i = 2; i < m; i++){
-            if (matrix[i][1]%k == 0){
-                qanak++;
-            }
-        }
-        for (int i = 3; i < m; i++){
-            if (matrix[i][2]%k == 0){
-                qanak++;
-            }
-        }
-        for (int i = 4; i < m; i++){
-            if (matrix[i][3]%k == 0){
-                qanak++;
-            }
-        }
-        System.out.print(qanak);
+        System.out.println(qanak);
     }
 }
