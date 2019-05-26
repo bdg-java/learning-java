@@ -8,10 +8,9 @@ public class Task651 {
         int n = a.length - 1;
         char[] b = new char[n];
         int c = 0;
-        boolean t = true;
+        boolean t = false;
         int k = 0;
         for (int i = 0; i < n; ++i) {
-            t = false;
             for (int j = 0; j < n; j++) {
                 if (i == j)
                     continue;
