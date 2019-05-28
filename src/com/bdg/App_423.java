@@ -1,0 +1,49 @@
+package com.bdg;
+
+public class App_423 {
+
+    public static void main(String[] args) {
+
+
+        int[][] matrix = new int[][]{
+
+               {0, 1, 2, 3, 4},
+
+                {54, 32, 96, 39, 45},
+
+                {54, 15, 20, 59, 14}};
+
+        double average = 0;
+        int m = 3;
+
+
+
+        for ( int i = 0; i < m ;i++ ){
+            for ( int j = 0; j < m ; j ++){
+
+                if (j < m){
+                    if ( matrix [i][j] % 2 == 0){
+
+                        average ++;
+
+                        average = Math.sqrt (matrix [i] [j]);
+
+
+
+
+                        System.out.println( average );
+
+
+
+                    }
+                }
+
+            }
+        }
+
+
+
+    }
+
+    }
+
