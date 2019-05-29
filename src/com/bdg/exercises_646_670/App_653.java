@@ -23,7 +23,6 @@ public class App_653 {
             }
             index++;
         }
-
         System.out.println(newChar);
     }
 }
