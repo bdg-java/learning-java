@@ -11,7 +11,7 @@ public class demonstrational {
         int sum = 0;
         int k = 5;
 
-       /* for (int i = 0; i < numOfArrayCols; i++) {
+       for (int i = 0; i < numOfArrayCols; i++) {
             if (matrix[i][i] % 2 == 0)
                 sum += matrix[i][i];
             for (int j = 0; j < numOfArrayCols; j++) {
@@ -20,7 +20,7 @@ public class demonstrational {
                 }
             }
 
-        }*/
+        }
 
         for (int i = 0; i < numOfArrayCols; i++){
             for (int j = 0; j < numOfArrayCols; j++){

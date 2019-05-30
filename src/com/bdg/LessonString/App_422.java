@@ -13,7 +13,7 @@ public class App_422 {
             for (int j = 0; j < i; j++) {
                 if (matrix[i][j] % 5 == 0)
                     count++;
-                //System.out.println(matrix[i][j]);
+                System.out.println(matrix[i][j]);
             }
         }
         System.out.println(count);
