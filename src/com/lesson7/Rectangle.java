@@ -1,12 +1,12 @@
 package com.lesson7;
 
 public class Rectangle {
-    private float length;
-    private float width;
+    private float length = 1.0f;
+    ;
+    private float width = 1.0f;
+    ;
 
     public Rectangle() {
-        this.length = 1.0f;
-        this.width = 1.0f;
     }
 
     private Rectangle(float length, float width) {
