@@ -1,9 +1,12 @@
 package com.lesson7;
 
 public class Rectangle {
-    private float length = 1.0f;
+    private float length = 1.0f; // <-- MB use here default instance field values?
+
     private float width = 1.0f;
 
+
+    //I think we should remove this constructor to prevent object creation without parameters.
     public Rectangle() {
     }
 
@@ -51,7 +54,3 @@ public class Rectangle {
         return "Length: " + this.length + " Width: " + this.width;
     }
 }
-
-
-
-
