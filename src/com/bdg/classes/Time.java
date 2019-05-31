@@ -70,9 +70,9 @@ public class Time {
         return previousSecond();
     }
 
-    /*public String toString(){
-        return System.out.print(getHour()+":"+ getMinute()+":"+""+getSecond());
-    }*/ //
+    public String toString(){
+        return getHour()+":"+ getMinute()+":"+""+getSecond();
+    }
 
 
 }
