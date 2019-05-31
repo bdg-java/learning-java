@@ -1,4 +1,4 @@
-package com.bdg.nhakobyan.classes;
+package com.bdg.classes;
 
 public class Time {
     private int [] hour = {0,23};
