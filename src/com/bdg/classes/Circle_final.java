@@ -34,6 +34,6 @@ public class Circle_final {
         return "Circle[ radius = "+ getRadius()+", color = "+ getColor();
     }
     public double getArea(){
-        return Math.pow(getRadius()*Math.PI,2);
+        return Math.pow(getRadius(),2)*Math.PI;
     }
 }
