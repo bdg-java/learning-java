@@ -2,14 +2,21 @@ package com.bdg.classlessons;
 
 public class Rectangle {
 
-    private float length = 1.0f;
-    private float width = 1.0f;
-    public Rectangle(){
+    private float length;
+    private float width;
 
-    }
-    public Rectangle(float length,float width){
+    private Rectangle(float length, float width) {
         this.length = length;
         this.width = width;
+    }
+
+    private Rectangle createRectangle(float length, float width) {
+        if (length <= 0 || width <= 0) {
+            System.out.println("Invalid parameters");
+            return null;
+        }
+        return new Rectangle(length, width);
+
     }
 
     public float getLength() {
@@ -28,17 +35,16 @@ public class Rectangle {
         this.width = width;
     }
 
-    public double getArea()
-    {
-        return width*length;
+    public double getArea() {
+        return width * length;
     }
 
-    public double getPerimeter(){
-        return 2*(width+length);
+    public double getPerimeter() {
+        return 2 * (width + length);
     }
 
-    public String toString(){
-        return "Rectangle[length="+length+"width="+width+"]";
+    public String toString() {
+        return "Rectangle[length=" + length + "width=" + width + "]";
     }
 
 }
