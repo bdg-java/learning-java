@@ -10,7 +10,7 @@ public class Rectangle {
         this.width = width;
     }
 
-    private Rectangle createRectangle(float length, float width) {
+    public static Rectangle createRectangle(float length, float width) {
         if (length <= 0 || width <= 0) {
             System.out.println("Invalid parameters");
             return null;
