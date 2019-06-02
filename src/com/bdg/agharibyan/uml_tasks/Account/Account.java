@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.uml_tasks;
+package com.bdg.agharibyan.uml_tasks.Account;
 
 import org.jetbrains.annotations.Contract;
 
@@ -10,12 +10,12 @@ public class Account {
 
     private int anotherAccountBalance;
 
-    @Contract(pure = true)// Idea-n arajarkec, vor import anem
+    @Contract(pure = true) // Idea-n arajarkec, vor import anem - bayc inchi hamar e chem haskanum
     public Account(String id, String Name){
         this.id = id;
         this.Name = Name;
     }
-    @Contract(pure = true) // Idea-n arajarkec, vor import anem
+    @Contract(pure = true) // Idea-n arajarkec, vor import anem - bayc inchi hamar e chem haskanum
     public Account(String id, String Name, int balance){
         this.id = id;
         this.Name = Name;
@@ -42,7 +42,7 @@ public class Account {
         }
         return balance;
     }
-    public int transferTo(String[] anotherAcount, int amount){
+    public int transferTo(Account another, int amount){
         if(amount <= balance){
             balance = this.balance - amount;
             anotherAccountBalance = this.anotherAccountBalance + amount;
@@ -52,9 +52,7 @@ public class Account {
         return balance;
     }
     public String toString(){
-        return("Account[id="+ this.id + ",name="+ this.Name +",balance="+ balance + "]");
+        return("Account[id="+ id + ",name="+ Name +",balance="+ balance + "]");
     }
-
-    // William jan, chisht em arel, vor verjin toghum balance-ic araj this chem grel?
-    // Mtatsum em, qani vor balancey pokhvum e,petq e stacatsy return anem.
+//toStringum this-er petq e grel? erb grum em, krkin popokhvats balancen e grum(qani vor creditn u debitn ashkhatacnum em), ayd patcharov chem grel.
 }
