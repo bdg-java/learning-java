@@ -2,7 +2,9 @@ package Classed;
 
 public class Date {
 
-    private int [] day = { 1, 31};
+    private int [] day = { 1, 31}; //stex petqa menak int lini
+    //private int day;
+    //{ 1, 31} petqa nra hamar vor stugenq ardyoq poxancvac tivy et range-i meja
     private int [] month = { 1, 12};
     private int  [] year = { 1900 , 9999};
 
@@ -45,7 +47,7 @@ public class Date {
 
      }
       public String  toString () {
-          return "Date: " + this.day + " , " + this.month + " , " + this.year + ;
+          return "Date: " + this.day + " , " + this.month + " , " + this.year ;
 
       }
 
