@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.uml_tasks;
+package com.bdg.agharibyan.uml_tasks.InvoiceItem;
 
 public class InvoiceItem {
 
@@ -8,6 +8,10 @@ public class InvoiceItem {
     private double unitPrice;
 
     public InvoiceItem(String id, String desc, int qty, double unitPrice){
+        this.id = id;
+        this.desc = desc;
+        this.qty = qty;
+        this.unitPrice = unitPrice;
     }
     public String getID(){
         return this.id;

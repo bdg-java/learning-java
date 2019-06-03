@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.uml_tasks;
+package com.bdg.agharibyan.uml_tasks.Employee;
 
 public class Employee {
 
@@ -25,7 +25,7 @@ public class Employee {
     public String getName(){
         return this.firstName + this.lastName;
     } // chisht em grel? +ov OK e?
-    public int GetSalary(){
+    public int getSalary(){
         return this.salary;
     }
     public void setSalary(int salary){

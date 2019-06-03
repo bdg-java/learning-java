@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.uml_tasks;
+package com.bdg.agharibyan.uml_tasks.time;
 
 public class Time {
 
@@ -6,18 +6,26 @@ public class Time {
     private int minute;
     private int second;
 
-    public Time(int hour, int minute, int second){
-        if(hour >= 0 && hour <= 23){
+    private Time(int hour, int minute, int second){
             this.hour = hour;
-        }
-        if(minute >= 0 && minute <= 59){
             this.minute = minute;
-        }
-        if(second >= 0 && second <= 59){
             this.second = second;
-        }
     }
-    // chisht em anum, vor construktori mej em payman grum?
+    public static Time createInstance(int hour, int minute, int second){
+        if( isValidHour(hour) && isValidMinute(minute) && isValidSecond(second)){
+            return new Time(hour, minute, second);
+        }
+        return null;
+    }
+    private static boolean isValidHour(int hour){
+        return hour >= 0 && hour <= 23;
+    }
+    private static boolean isValidMinute(int minute){
+        return minute >= 0 && minute <= 59;
+    }
+    private static boolean isValidSecond(int second){
+        return second >= 0 && second <= 59;
+    }
     public int getHour(){
         return this.hour;
     }
@@ -37,38 +45,29 @@ public class Time {
         this.second = second;
     }
     public void setTime(int hour, int minute, int second){
-        int [] time = new int[3];
-        time[0] = hour;
-        time[1] = minute;
-        time[2] = second;
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
     }
-    // chisht em anum, vor interi zangvatsov em grum?
     public String toString(){
-        int [] newHour = new int[2];
-        if(this.hour < 10){
-            newHour[0] = 0;
-            newHour[1] = this.hour;
-        } else{
-            newHour[0] = this.hour/10%10;
-            newHour[1] = this.hour%10;
-        }
+        String newHour = null;
+        String newMinute = null;
+        String newSecond = null;
 
-        int [] newMinute = new int[2];
-        if(this.minute < 10){
-            newMinute[0] = 0;
-            newMinute[1] = this.minute;
+        if (hour < 10){
+           newHour = "0"+ this.hour;
         } else{
-            newMinute[0] = this.minute/10%10;
-            newMinute[1] = this.minute%10;
+           newHour = this.hour + "";
         }
-
-        int [] newSecond = new int[2];
-        if(this.second < 10){
-            newSecond[0] = 0;
-            newSecond[1] = this.second;
+        if (minute < 10){
+            newMinute = "0"+ this.minute;
         } else{
-            newSecond[0] = this.second/10%10;
-            newSecond[1] = this.second%10;
+            newMinute = this.minute + "";
+        }
+        if (second < 10){
+            newSecond = "0" + this.second;
+        } else{
+            newSecond = this.second + "";
         }
         return(newHour +":"+ newMinute +":"+ newSecond);
     }
@@ -118,5 +117,4 @@ public class Time {
         }
         return new Time(previoushour, previousminute, previoussecond);
     }
-    // ifers lriv skhal en? :)
 }

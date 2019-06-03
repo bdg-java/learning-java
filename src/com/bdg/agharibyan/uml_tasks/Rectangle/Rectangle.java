@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.uml_tasks;
+package com.bdg.agharibyan.uml_tasks.Rectangle;
 
 public class Rectangle {
 

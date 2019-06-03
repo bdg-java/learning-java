@@ -1,15 +1,11 @@
-package com.bdg.agharibyan.uml_tasks;
-
-import org.jetbrains.annotations.Contract;
+package com.bdg.agharibyan.uml_tasks.circleSimplified;
 
 public class CircleSimplified {
 
     private double radius = 1.0;
 
-    @Contract(pure = true)
     public CircleSimplified(){
     }
-    @Contract(pure = true)
     public CircleSimplified(double radius){
         this.radius = radius;
     }
