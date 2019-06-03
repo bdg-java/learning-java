@@ -1,6 +1,5 @@
 package com.bdg.agharibyan.uml_tasks;
 
-import org.jetbrains.annotations.Contract;
 
 public class Date {
 
@@ -8,9 +7,8 @@ public class Date {
     private int month;
     private int year;
 
-    @Contract(pure = true)
-    public Date(int day, int month, int year){
-        if (day >=1 && day <= 31) {
+    public Date(int day, int month, int year) {
+        if (day >= 1 && day <= 31) {
             this.day = day;
         }
         if (month >= 1 && month <= 12) {
@@ -20,37 +18,45 @@ public class Date {
             this.year = year;
         }
     }
-    public int getDay(){
+
+    public int getDay() {
         return this.day;
     }
-    public int getMonth(){
+
+    public int getMonth() {
         return this.month;
     }
-    public int getYear(){
+
+    public int getYear() {
         return this.year;
     }
-    public void setDay(int day){
+
+    public void setDay(int day) {
         this.day = day;
     }
-    public void setMonth(int month){
+
+    public void setMonth(int month) {
         this.month = month;
     }
-    public void setYear(int year){
+
+    public void setYear(int year) {
         this.year = year;
     }
-    public void setDate(int day, int month, int year){
+
+    public void setDate(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
     }
+
     public String toString() {
         int[] newDay = new int[2];
         if (this.day < 10) {
             newDay[0] = 0;
             newDay[1] = this.day;
         } else {
-            newDay[0] = this.day/10%10;
-            newDay[1] = this.day%10;
+            newDay[0] = this.day / 10 % 10;
+            newDay[1] = this.day % 10;
         }
 
         int[] newMonth = new int[2];
@@ -58,11 +64,11 @@ public class Date {
             newMonth[0] = 0;
             newMonth[1] = this.month;
         } else {
-            newMonth[0] = this.month/10%10;
-            newMonth[1] = this.month%10;
+            newMonth[0] = this.month / 10 % 10;
+            newMonth[1] = this.month % 10;
         }
 
-        return(newDay +"/"+ newMonth +"/"+ this.year);
+        return (newDay + "/" + newMonth + "/" + this.year);
     }
     //kartsum em toStringi mej chpetq e interi zangvats grei, bayc 0neri greln ayspes patkeracreci
     //khndrum em asel ka ayl tarberak?
