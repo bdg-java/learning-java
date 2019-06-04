@@ -2,22 +2,14 @@ package com.bdg.Lesson_8;
 
 
 public class Account {
-
-    private String id; //<- field should be camel case
-    private String name; //Fields should starts from lower case
+    private String id;
+    private String name;
     private int balance;
 
-
-    //Missing constructors
-
     public Account(String id, String name) {
-//        this.id = id;
-//        this.name = name;
-        //We can use another constructor here :)
-        this(id, name, 0);
+        this.id = id;
+        this.name = name;
     }
-
-    //And second constructor with balance as parameter
 
     public Account(String id, String name, int balance) {
         this.id = id;
@@ -26,47 +18,44 @@ public class Account {
     }
 
     public String getId() {
-        return this.id;
+        return id;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
-    public int getBalance() {  //<--- Balance is int type so method should return integer not a void
-//        if (balance < 0) { //<- getter so it just return balance value, also we can check balance before object creation :)
-//            System.out.println("Balance error");
-//        } else System.out.println(balance);;
-
-        return this.balance;
+    public int getBalance() {
+        return balance;
     }
 
     public int credit(int amount) {
-        this.balance = this.balance + amount;
-        return this.balance;
+        balance += amount;
+        return balance;
     }
 
     public int debit(int amount) {
-        if (amount < this.balance) {
-            this.balance = this.balance - amount;
-            return this.balance;
+        if (amount <= balance) {
+            balance -= amount;
+        } else {
+            System.out.println("Amount exceed balance");
         }
-        System.out.println("Amount exceeded balance");
-        return this.balance;
+        return balance;
     }
-
-    public int transferTo(Account account, int amount) {
-        if (amount <= this.balance) {
-            this.balance = this.balance - amount;
-            account.credit(amount);
-            return this.balance;
+    public int transferTo(Account another, int amount) {
+        if (amount <= balance) {
+            balance = this.balance - amount;
+            transferTo(another, amount);
+        } else {
+            System.out.print("Amount exceeded balance");
         }
-        System.out.println("Amount exceeded balance");
-        return this.balance;
+        return balance;
+    }
+
+        public String toString(){
+            return("Account[id="+ id + ",name="+ name +",balance="+ balance + "]");
+        }
     }
 
 
-    public String toString() {
-        return "Account [ id : " + this.id + ", name : " + this.name + ", balance : " + this.balance + " ]";
-    }
-}
+
