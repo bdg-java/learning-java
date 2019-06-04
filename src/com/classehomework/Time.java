@@ -61,11 +61,11 @@ public class Time {
                 ", second=" + second +
                 '}';
     }
-
-    public Time nextSecond() {
-        this.second += 1;
-        return;
-    }
+//
+//    public Time nextSecond() {
+//        this.second += 1;
+//        return;
+//    }
 
 
 }
