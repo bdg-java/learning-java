@@ -21,6 +21,6 @@ public class Circle {
     }
 
     public String toString(){
-        return "Circle[radius = "+ getRadious()+"]";
+        return "Circle[radius = "+ this.radius+"]";
     }
 }

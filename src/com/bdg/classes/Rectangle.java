@@ -38,7 +38,7 @@ public class Rectangle {
     }
 
     public String toString(){
-        return "Rectangle[ length = "+getLength()+" ,width = "+getWidth()+"]";
+        return "Rectangle[ length = "+this.length+" ,width = "+this.width+"]";
     }
 
 

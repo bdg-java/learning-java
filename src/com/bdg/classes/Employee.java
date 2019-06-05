@@ -53,6 +53,6 @@ public class Employee {
     }
 
     public String toString(){
-        return "Employee[ id = "+ getId()+" , name = "+getFirstName()+getLastName()+" , sallary = "+ getSalary();
+        return "Employee[ id = "+ this.id+" , name = "+this.firstName+"  "+this.lastName+" , sallary = "+ this.salary;
     }
 }

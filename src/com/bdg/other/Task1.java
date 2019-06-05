@@ -1,4 +1,4 @@
-package com.bdg;
+package com.bdg.other;
 
 public class Task1 {
     public static void main(String[] args) {

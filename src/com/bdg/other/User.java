@@ -1,4 +1,4 @@
-package com.bdg;
+package com.bdg.other;
 
 import java.util.Arrays;
 

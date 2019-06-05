@@ -1,4 +1,4 @@
-package com.bdg;
+package com.bdg.nhakobyan.lesson_5;
 
 
 /**

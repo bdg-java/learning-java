@@ -48,7 +48,7 @@ public class InvoiceItem {
     }
 
     public String toString(){
-        return "InvoiceItem[id = "+getId()+", desc = "+ getDesc()+", qty = "+getQty()+", unitPrice = "+getUnitPrice();
+        return "InvoiceItem[id = "+this.id+", desc = "+ this.desc+", qty = "+this.qty+", unitPrice = "+this.unitPrice;
     }
 
 }

@@ -1,40 +1,49 @@
 package com.bdg.classes;
 
 public class Time {
-    private int [] hour = {0,23};
-    private int [] minute = {0,59};
-    private  int [] second = {0,59};
+    private int  hour ;
+    private int  minute ;
+    private  int  second ;
 
-    public  void  Time(int [] hour , int [] minute ,int [] second){
+    public  void  Time(int  hour , int  minute ,int  second){
         this.hour =hour;
         this.minute = minute;
         this.second = second;
     }
 
-    public int[] getHour() {
+    public int getHour() {
         return hour;
     }
 
-    public void setHour(int[] hour) {
+    public void setHour(int hour) {
+        if (this.hour > 24 || this.hour < 0){
+            System.out.println("Not valid time");
+        }
         this.hour = hour;
     }
 
-    public int[] getMinute() {
+    public int getMinute() {
         return minute;
     }
 
-    public void setMinute(int[] minute) {
+    public void setMinute(int minute) {
+        if (this.minute > 60 || this.minute< 0){
+            System.out.println("Not valid time");
+        }
         this.minute = minute;
     }
 
-    public int[] getSecond() {
+    public int getSecond() {
         return second;
     }
 
-    public void setSecond(int[] second) {
+    public void setSecond(int second) {
+        if (this.second > 60 || this.second < 0){
+            System.out.println("Not valid time");
+        }
         this.second = second;
     }
-    public void setTime(int [] hour , int [] minute ,int [] second) {
+    public void setTime(int  hour , int  minute ,int  second) {
 
         this.hour  = hour;
         this.minute = minute;
@@ -42,36 +51,36 @@ public class Time {
     }
 
     public Time nextSecond(){
-        this.second[1]++;
-        if (this.second[1] > 59 ){
-            this.second[1] = 0;
-            this.minute[1]++;
-            if (this.minute[1] > 59){
-                this.minute[1] = 0;
-                this.hour[1]++;
-                if (this.hour[1]>23)
-                    this.hour[1]=0;
+        this.second++;
+        if (this.second > 59 ){
+            this.second = 0;
+            this.minute++;
+            if (this.minute > 59){
+                this.minute = 0;
+                this.hour++;
+                if (this.hour>23)
+                    this.hour=0;
             }
         }
         return nextSecond();
     }
     public Time previousSecond(){
-        this.second[1]--;
-        if (this.second[1] < 1 ){
-            this.second[1] = 59;
-            this.minute[1]--;
-            if (this.minute[1] < 1){
-                this.minute[1] = 59;
-                this.hour[1]--;
-                if (this.hour[1] < 1)
-                    this.hour[1]= 23;
+        this.second--;
+        if (this.second < 1 ){
+            this.second = 59;
+            this.minute--;
+            if (this.minute < 1){
+                this.minute = 59;
+                this.hour--;
+                if (this.hour < 1)
+                    this.hour= 23;
             }
         }
         return previousSecond();
     }
 
     public String toString(){
-        return getHour()+":"+ getMinute()+":"+""+getSecond();
+        return this.hour+":"+ this.minute+":"+""+this.second;
     }
 
 
