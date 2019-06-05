@@ -1,12 +1,13 @@
 package com.bdg.classlessons;
 
+import com.bdg.inheritance.Developer;
+
 public class Application {
 
     public static void main(String[] args) {
 
-        char[] password = {'3', 'y'};
-        boolean isValidPassword = Validator.validatePassword(password, User.validPasswordSize);
+        Developer developer = new Developer("xxxx", 333, "java");
 
-        System.out.println(isValidPassword);
+        developer.getName();
     }
 }
