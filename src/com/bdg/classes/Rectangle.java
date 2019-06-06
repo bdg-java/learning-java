@@ -1,20 +1,20 @@
 package com.bdg.classes;
 
-import com.bdg.Inheritance.Shape;
+import com.bdg.Inheritance.Shape.Shape;
 
-public class Rectangle extends Shape {
-    private float length = 1.0f;
-    private float width = 1.0f;
+public class Rectangle  {
+    private double length = 1.0f;
+    private double width = 1.0f;
     public Rectangle(){
 
     }
-    public Rectangle(float width , float length){
+    public Rectangle(double width , double length){
         this.length = length;
         this.width = width;
     }
 
 
-    public float getLength() {
+    public double getLength() {
         return length;
     }
 
@@ -22,7 +22,7 @@ public class Rectangle extends Shape {
         this.length = length;
     }
 
-    public float getWidth() {
+    public double getWidth() {
         return width;
     }
 
