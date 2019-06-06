@@ -1,6 +1,8 @@
 package com.bdg.classes;
 
-public class Rectangle {
+import com.bdg.Inheritance.Shape;
+
+public class Rectangle extends Shape {
     private float length = 1.0f;
     private float width = 1.0f;
     public Rectangle(){

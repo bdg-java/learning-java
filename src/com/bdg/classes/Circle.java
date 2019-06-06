@@ -1,6 +1,8 @@
 package com.bdg.classes;
 
-public class Circle {
+import com.bdg.Inheritance.Shape;
+
+public class Circle extends Shape {
     private double radius = 1.0;
     public Circle(){
 
