@@ -1,8 +1,8 @@
-package com.bdg.HomeworkInheritance;
+package com.bdg.ShapeInheritance;
 
 public class Shape {
-    protected String color = "red";
-    protected boolean filled = true;
+    protected String color ;
+    protected boolean filled ;
 
 
     public Shape(String color, boolean filled){
