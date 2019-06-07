@@ -1,14 +1,14 @@
-package com.bdg.Lesson_9.Point_2D;
+package com.bdg.Lesson_9.MovablePoint;
 
-public class Point_2D {
+public class Point {
     protected float x = 0;
     protected float y = 0;
 
-    public Point_2D() {
+    public Point() {
 
     }
 
-    public Point_2D(float x, float y) {
+    public Point(float x, float y) {
         this.x = x;
         this.y = y;
     }
@@ -44,3 +44,4 @@ public class Point_2D {
         return "X: " + x + "Y: " + y;
     }
 }
+

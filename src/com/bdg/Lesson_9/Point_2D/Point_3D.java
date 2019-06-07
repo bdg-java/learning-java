@@ -25,8 +25,9 @@ public class Point_3D extends Point_2D {
         this.y = y;
         this.z = z;
     }
-    public float getXYZ(){
-        return x*y*z;
+    public float [] getXYZ(){
+        float[] array = {this.x,this.y,this.z};
+        return array;
     }
 
     @Override
