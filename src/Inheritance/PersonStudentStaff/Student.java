@@ -30,6 +30,6 @@ public class Student extends Person {
         this.fee = fee;
     }
     public String toString() {
-        return "Name: " + name + " Address " + address + " Program: " + program + " Year: " + year + " Fee: " + fee;
+        return "Name: " + name + " Address: " + address + " Program: " + program + " Year: " + year + " Fee: " + fee;
     }
 }
