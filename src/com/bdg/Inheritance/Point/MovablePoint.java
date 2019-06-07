@@ -38,10 +38,9 @@ public class MovablePoint extends Point {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }
-    public float getSpeed(){
-        xSpeed++;
-        ySpeed++;
-        return xSpeed * ySpeed;
+    public float [] getSpeed(){
+        float[] array = {xSpeed,ySpeed};
+        return array;
     }
     public MovablePoint move(){
         x += xSpeed;
