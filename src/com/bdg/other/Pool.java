@@ -1,4 +1,4 @@
-package com.bdg.Inheritance.Point;
+package com.bdg.other;
 
 public class Pool {
     public static void main(String[] args) {

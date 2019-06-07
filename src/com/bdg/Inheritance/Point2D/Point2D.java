@@ -31,5 +31,9 @@ public class Point2D {
         this.x = x;
         this.y = y;
     }
+    public float [] getXY(){
+        float[] array = {this.x,this.y};
+        return array;
+    }
 
 }
