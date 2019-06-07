@@ -105,7 +105,7 @@ public class Clock {
         return new Clock(nexthour, nextminute, nextsecond);
     }
 
-    Clock demoClock = Clock.creatClock(5, 20, 30);
+//    Clock demoClock = Clock.creatClock(5, 20, 30); //Es inch toxa Ani jan? :)
 
     public Clock addClock(Clock demoClock) {
         return new Clock(this.hour + demoClock.hour, this.minute + demoClock.minute, this.second + demoClock.second);
