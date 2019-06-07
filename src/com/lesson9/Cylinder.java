@@ -26,6 +26,6 @@ public class Cylinder extends Circle {
     }
 
     public String ToString() {
-        return "Cylinder[ radius =" + this.radius + ", color = " + this.color + " height " + this.height + " ]";
+        return "Cylinder[" + super.toString() + this.height + " ]";
     }
 }
