@@ -1,4 +1,4 @@
-package com.bdg.Lesson_9.CircleCylinder;
+package com.bdg.Lesson_9.Circle;
 
 public class Circle {
     private double radius = 1.0;

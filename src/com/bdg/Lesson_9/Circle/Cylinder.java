@@ -1,4 +1,4 @@
-package com.bdg.Lesson_9.CircleCylinder;
+package com.bdg.Lesson_9.Circle;
 
 public class Cylinder extends Circle {
     private double height = 1.0;
