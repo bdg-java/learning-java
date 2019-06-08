@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.inheritancehomework.shapesndsubclasses;
+package com.bdg.agharibyan.inheritancehomework.shapeandsubclasses;
 
 public class Circle extends Shape{
 
@@ -33,7 +33,6 @@ public class Circle extends Shape{
     }
 
     public String toString(){
-        return "circle";
+        return "Circle:["+ radius + "]";
     }
 }
-//inch petq e grei toStringi mej?

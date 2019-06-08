@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.inheritancehomework.shapesndsubclasses;
+package com.bdg.agharibyan.inheritancehomework.shapeandsubclasses;
 
 public class Rectangle extends Shape {
 
@@ -44,7 +44,6 @@ public class Rectangle extends Shape {
     }
 
     public String toString(){
-        return "rectangle";
+        return "Rectangle:[" + width +","+ length +"]";
     }
 }
-//inch petq e grei toStringi mej?

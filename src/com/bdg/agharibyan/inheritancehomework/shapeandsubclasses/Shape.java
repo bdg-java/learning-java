@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.inheritancehomework.shapesndsubclasses;
+package com.bdg.agharibyan.inheritancehomework.shapeandsubclasses;
 
 public class Shape {
 
@@ -30,8 +30,6 @@ public class Shape {
     }
 
     public String toString(){
-        return "Shape";
+        return "Shape:[" + color + ","+ filled + "]";
     }
 }
-
-//inch petq e grei toStringi mej?
