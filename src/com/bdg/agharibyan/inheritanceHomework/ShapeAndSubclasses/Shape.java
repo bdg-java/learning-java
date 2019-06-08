@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.inheritanceHomwork.ShapeAndSubclasses;
+package com.bdg.agharibyan.inheritanceHomework.ShapeAndSubclasses;
 
 public class Shape {
 
