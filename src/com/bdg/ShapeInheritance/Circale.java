@@ -17,10 +17,10 @@ public class Circale extends Shape{
     }
 
     public double getArea(){
-        return radius;
+        return radius * radius * Math.PI;
     }
     public double getPerimeter(){
-        return radius;
+        return 2 * Math.PI * radius;
     }
 
     public String toString(){

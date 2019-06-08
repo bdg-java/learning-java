@@ -1,4 +1,4 @@
-//package com.bdg.ShapeInheritance;
+package com.bdg.ShapeInheritance;
 //
 //public class Square  extends Rectangle{
 //    private double side;
@@ -8,3 +8,15 @@
 ////        this.side = side;
 ////    }
 //}
+
+public class Square extends Rectangle {
+
+
+    public Square(double side, String color, boolean filled) {
+        super(side, side, color, filled);
+    }
+
+    public double getSide() {
+        return super.length;
+    }
+}
