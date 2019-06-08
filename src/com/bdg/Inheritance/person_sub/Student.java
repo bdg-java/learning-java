@@ -1,4 +1,4 @@
-package com.bdg.Inheritance.Person_sub;
+package com.bdg.Inheritance.person_sub;
 
 public class Student extends Person {
 

@@ -1,4 +1,4 @@
-package com.bdg.Inheritance.CircleCylinder;
+package com.bdg.Inheritance.circle_cylinder;
 
 public class Circle {
     protected double radious = 1;

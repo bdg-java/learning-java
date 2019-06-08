@@ -1,4 +1,4 @@
-package com.bdg.Inheritance.Point2D;
+package com.bdg.Inheritance.point2d;
 
 public class Point2D {
     protected float x = 0;
