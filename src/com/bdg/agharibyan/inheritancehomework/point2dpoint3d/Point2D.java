@@ -2,8 +2,8 @@ package com.bdg.agharibyan.inheritancehomework.point2dpoint3d;
 
 public class Point2D {
 
-    private float x = 0.0f;
-    private float y = 0.0f;
+    protected float x = 0.0f;
+    protected float y = 0.0f;
 
     public Point2D(float x, float y){
         this.x = x;
@@ -29,7 +29,6 @@ public class Point2D {
         this.y = y;
     }
 
-    float [] array = new float[]{this.x, this.y};
 
     public void setXY(float x, float y){
         this.x = x;
@@ -37,6 +36,9 @@ public class Point2D {
     }
 
     public float[] getXY(){
+        float [] array = new float[2];
+        array[0] = this.x;
+        array[1] = this.y;
         return array;
     }
 
