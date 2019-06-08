@@ -1,20 +1,17 @@
 package com.bdg.agharibyan.inheritanceHomwork.Point2DPoint3D;
 
-import java.awt.geom.Point2D;
-
-public class Poin2D {
+public class Point2D {
 
     private float x = 0.0f;
     private float y = 0.0f;
 
-    public Poin2D(float x, float y){
+    public Point2D(float x, float y){
         this.x = x;
         this.y = y;
     }
 
-//    public Point2D(){
-//    }
-    //inchu e error berum?
+    public Point2D(){
+    }
 
     public float getX(){
         return x;
@@ -32,7 +29,7 @@ public class Poin2D {
         this.y = y;
     }
 
-    float [] Array = {this.x, this.y};
+    float [] array = new float[]{this.x, this.y};
 
     public void setXY(float x, float y){
         this.x = x;
@@ -40,7 +37,7 @@ public class Poin2D {
     }
 
     public float[] getXY(){
-        return Array;
+        return array;
     }
 
     public String toString(){

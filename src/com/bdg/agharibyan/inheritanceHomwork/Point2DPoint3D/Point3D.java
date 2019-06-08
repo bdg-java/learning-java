@@ -1,6 +1,6 @@
 package com.bdg.agharibyan.inheritanceHomwork.Point2DPoint3D;
 
-public class Point3D extends Poin2D {
+public class Point3D extends Point2D {
     private float z = 0.0f;
 
     public Point3D(float x, float y, float z){
@@ -8,9 +8,8 @@ public class Point3D extends Poin2D {
         this.z = z;
     }
 
-//    public Point3D(){
-//    }
-    //inchu e error berum?
+    public Point3D(){
+    }
 
     public float getZ(){
         return z;
@@ -27,8 +26,8 @@ public class Point3D extends Poin2D {
     }
 
     public float [] getXYZ(){
-        float[] Array = new float []{super.getX(), super.getY(), z};
-        return Array;
+        float[] array = new float []{super.getX(), super.getY(), z};
+        return array;
     }
 
     public String toString (){
