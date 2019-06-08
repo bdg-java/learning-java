@@ -1,5 +1,12 @@
 package com.bdg.hr;
 
+
+
+
+//Add employee classes, Accouter, HumanResource, MarketSpecialist
+
+
+
 public class HRManagementTool {
 
     private Employee[] employees;
@@ -16,6 +23,11 @@ public class HRManagementTool {
     public boolean addEmployee(Employee employee) {
         //implement this
         return false;
+    }
+
+    public Employee[] findByProfession(Profession profession) {
+        //implement this
+        return null;
     }
 
     public boolean removeEmployee(Employee employee) {
