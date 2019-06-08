@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.inheritanceHomwork.Circle;
+package com.bdg.agharibyan.inheritanceHomework.Circle;
 
 public class Application {
     public static void main(String[] args) {

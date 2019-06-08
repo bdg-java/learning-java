@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.inheritanceHomwork.PersonAndSubclasses;
+package com.bdg.agharibyan.inheritanceHomework.PersonAndSubclasses;
 
 public class Person {
 

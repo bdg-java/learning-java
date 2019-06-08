@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.inheritanceHomwork.Point2DPoint3D;
+package com.bdg.agharibyan.inheritanceHomework.Point2DPoint3D;
 
 public class Application {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.inheritanceHomwork.Point2DPoint3D;
+package com.bdg.agharibyan.inheritanceHomework.Point2DPoint3D;
 
 public class Point3D extends Point2D {
     private float z = 0.0f;
