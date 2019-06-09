@@ -30,6 +30,8 @@ public class Circle {
             this.color = color;
         }
 
+
+        //Get arean petqa parameter chstana, ayl ogtvi ir nerqin field-eric
         Double getArea(Double radius, String color) {
             return Math.PI * Math.pow(radius,2);
         }
