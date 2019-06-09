@@ -24,18 +24,10 @@ public class Clock {
         return second >= 0 && second <= 59;
     }
 
-    public static Clock createClockHoursmall12(int hour, int minute, int second) {
-        if (isHoursmall12(hour)) {
-            return new Clock(hour, minute, second);
-        }
-        return null;
-    }
-
-    private static boolean isHoursmall12(int hour) {
-        return hour <= 11;
-    }
-
-    private Clock() {
+    public Clock(){
+        this.hour = 12;
+        this.minute = 0;
+        this.second = 0;
     }
 
     public Clock(int hour, int minute, int second) {
@@ -44,7 +36,7 @@ public class Clock {
         this.second = second;
     }
 
-    private Clock(int second) {
+    public Clock(int second) {
         this.second = second;
     }
 
@@ -52,9 +44,9 @@ public class Clock {
         int newhour;
         int newminute;
         int newsecond;
-        newhour = second / 60 / 12 % 10;
-        newminute = (second - newhour * 12 * 60) / 60 % 10;
-        newsecond = second - newhour * 12 * 60 - newminute * 60;
+        newhour = (int)second / 60 / 60;
+        newminute = (int)(second - newhour * 60 * 60) / 60;
+        newsecond = (int)second - newhour * 60 * 60 - newminute * 60;
         return new Clock(newhour, newminute, newsecond);
     }
 
@@ -83,32 +75,23 @@ public class Clock {
     }
 
     public Clock tick() {
-        int nextsecond = this.second + 1;
-        int nextminute;
-        int nexthour;
-        if (nextsecond == 60) {
-            nextsecond = 0;
-            nextminute = this.minute + 1;
-            nexthour = this.hour;
-            if (nextminute == 60) {
-                nextminute = 0;
-                nexthour = this.hour + 1;
-                if (nexthour == 24) {
-                    nexthour = 0;
+        this.second ++;
+        if (this.second == 60) {
+            this.second = 0;
+            this.minute = this.minute + 1;
+            if (this.minute == 60) {
+                this.minute = 0;
+                this.hour = this.hour + 1;
+                if (this.hour == 24) {
+                    this.hour = 0;
                 }
             }
-        } else {
-            nextminute = this.minute;
-            nexthour = this.hour;
         }
-
-        return new Clock(nexthour, nextminute, nextsecond);
+        return creatClock(this.hour, this.minute, this.second);
     }
 
-    Clock demoClock = Clock.creatClock(5, 20, 30);
-
     public Clock addClock(Clock demoClock) {
-        return new Clock(this.hour + demoClock.hour, this.minute + demoClock.minute, this.second + demoClock.second);
+        return creatClock(this.hour + demoClock.hour, this.minute + demoClock.minute, this.second + demoClock.second);
     }
 
     public String toString() {
@@ -128,37 +111,29 @@ public class Clock {
         }
         if (second < 10) {
             Seconds = "0" + this.second;
-        } else {
-            Seconds = "" + this.second;
-        }
+        } else Seconds = "" + this.second;
         return ("(" + Hours + ":" + Minutes + ":" + Seconds + ")");
     }
 
     public Clock tickDown(){
-        int previoussecond = second -1;
-        int previousminute;
-        int previoushour;
+        this.second --;
 
-        if(previoussecond == -1){
-            previoussecond = 59;
-            previousminute = minute - 1;
-            previoushour = hour;
-            if(previousminute == -1){
-                previousminute = 59;
-                previoushour = hour - 1;
-                if(previoushour == -1){
-                    previoushour = 23;
+        if(this.second == -1){
+            this.second = 59;
+            this.minute = minute - 1;
+            this.hour = hour;
+            if(this.minute == -1){
+                this.minute = 59;
+                this.hour = hour - 1;
+                if(this.hour == -1){
+                    this.hour = 23;
                 }
             }
-        } else {
-            previousminute = minute;
-            previoushour = hour;
         }
-        return new Clock(previoushour,previousminute,previoussecond);
+        return creatClock(this.hour, this.minute, this.second);
     }
 
     public Clock subtrackClock(Clock demoClock){
-        return new Clock(this.hour - demoClock.hour, this.minute - demoClock.minute, this.second - demoClock.second);
+        return creatClock(Math.abs(this.hour - demoClock.hour), Math.abs(this.minute - demoClock.minute), Math.abs(this.second - demoClock.second));
     }
-
 }
