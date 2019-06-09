@@ -5,11 +5,18 @@ public class Cylinder  extends Circle {
     private double height = 1.0;
 
     public Cylinder (){
+
+        public Circle(double radius, String color) {
+
+
+            this.radius = 1.0;
+            this.color =  " red ";
+
         //stex evs petqa kanchel circle-i constructor-y, ete jarangum es u parent class-y uni constructor petqa kanches
     }
 
-    public Cylinder ( double radius){
-        super(radius); //Circle -i constructory 2 parameter-a stanum radius u collor, dra hamara xndir talis
+    public Cylinder ( double radius, String color){
+        super(radius, color); //Circle -i constructory 2 parameter-a stanum radius u collor, dra hamara xndir talis
 
     }
 
@@ -19,7 +26,7 @@ public class Cylinder  extends Circle {
     }
 
     public Cylinder ( double radius, double hight , String color){
-        super(height,color); //height>? radiusa stanum
+        super(radius,color); //height>? radiusa stanum
         this.height = hight;
     }
 
