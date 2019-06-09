@@ -1,17 +1,16 @@
 package com.bdg.LessonClass;
 
-public class Date {
-    int day  ;
-    int  month;
-    int  year;
+public class Datee {
+    int [] day  ;
+    int [] month;
+    int [] year;
 
 
-    public Date(int  day, int  month, int year){
-        day = this.day;
-        month = this.month;
-        year = this.year;
+    public Datee(int []  day, int [] month, int [] year){
+         this.day = new int [31];
 
     }
+
 //    public int getDay(){
 //        return this.day;
 //    }
@@ -21,10 +20,10 @@ public class Date {
 //    public int getYear(){
 //        return this.year;
 //    }
-//
-//    public void setDay(int day){
-//      this.day = day;
-//    }
+
+    public void setDay(int [] day){
+        this.day = day;
+    }
 //    public void setMonth(int month){
 //        this.month = month;
 //
@@ -34,13 +33,15 @@ public class Date {
 //
 //    }
     public void setDate(int day, int month, int year){
-        this.day = day;
-        this.month = month;
-        this.year = year;
+//        this.day = day;
+//        this.month = month;
+//        this.year = year;
+
     }
-    public String toString() {
-        return  "[day + ,+ month + ,+ year";
-    }
+//    public String toString() {
+//        return setDate();
+//    }
+
 
 
 }

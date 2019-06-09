@@ -1,6 +1,7 @@
-package com.bdg.ClockHomework;
-
+package com.bdg;
+  import java.time.LocalDateTime;
 public class Clock {
+
     int hours;
     int minutes;
     int seconds;
@@ -23,10 +24,16 @@ public class Clock {
         seconds = (time - hours * 3600 - minutes) * 60;
     }
 
-    public void setClock(int time) {
-        hours = hours / time;
-        minutes = (time - hours * 3600) / 60;
-        seconds = (time - hours * 3600 - minutes) * 60;
+    public void setClock(int hours, int minutes, int seconds) {
+        if (this.hours >= 0 && this.hours <= 23) {
+            this.hours = hours;
+        }
+        if (this.minutes >= 0 && this.minutes <= 59) {
+            this.minutes = minutes;
+        }
+        if (this.seconds >= 0 && this.seconds <= 59) {
+            this.seconds = seconds;
+        }
     }
 
     public int getHours() {
@@ -54,31 +61,20 @@ public class Clock {
     }
 
     public int tick() {
-        return this.seconds + 1;
-    }
-
-    public Clock addClock(int hours, int minutes, int seconds){
-       hours = this.hours + hours;
-       minutes = this.minutes + minutes;
-       seconds = this.seconds + seconds;
-        return this ;
-    }
-    public int tickDown() {
-        return this.seconds + 1;
+        return this.seconds - 1;
     }
 
     public String toString() {
         return String.format("d%:d%:d%", this.hours, this.minutes, this.seconds);
     }
 
-    public Clock subTracktClock(Clock minus){
-        Clock clockOne = new Clock();
-        clockOne.hours = this.hours - minus.hours;
-        clockOne.minutes = this.minutes - minus.minutes;
-        clockOne.seconds = this.seconds - minus.seconds;
-        return this ;
-
+    public Clock subtractClock(Clock clock) {
+        hours = this.hours - clock.hours;
+        minutes = this.minutes - clock.minutes;
+        seconds = this.seconds - clock.seconds;
+        return this;
     }
+
 
 
 
