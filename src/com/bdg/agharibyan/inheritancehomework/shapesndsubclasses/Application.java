@@ -1,5 +1,10 @@
 package com.bdg.agharibyan.inheritancehomework.shapesndsubclasses;
 
+import com.bdg.agharibyan.inheritancehomework.shapeandsubclasses.Circle;
+import com.bdg.agharibyan.inheritancehomework.shapeandsubclasses.Rectangle;
+import com.bdg.agharibyan.inheritancehomework.shapeandsubclasses.Shape;
+import com.bdg.agharibyan.inheritancehomework.shapeandsubclasses.Square;
+
 public class Application {
     public static void main(String[] args) {
 
