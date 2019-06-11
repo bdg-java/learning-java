@@ -13,6 +13,6 @@ public class Cylinder extends GeometricFigure {
 
     @Override
     public double volume() {
-        return baseCircle.area() * height;
+        return baseCircle.getArea()* height;
     }
 }

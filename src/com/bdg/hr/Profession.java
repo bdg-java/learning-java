@@ -8,7 +8,11 @@ public class Profession {
         this.professionName = professionName;
     }
 
-    public String name() {
+    public String getProfessionName() {
         return this.professionName;
+    }
+
+    public String toString(){
+        return  "professionName: " + professionName;
     }
 }

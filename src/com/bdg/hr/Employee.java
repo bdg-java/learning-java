@@ -2,12 +2,12 @@ package com.bdg.hr;
 
 public abstract class Employee extends Person {
 
-    protected SalaryInfo info;
+    protected SalaryInfo salaryInfo;
     protected int referenceNumber;
 
     public Employee(SalaryInfo info, String name, String surname, int age) {
         super(name, surname, age);
-        this.info = info;
+        this.salaryInfo = info;
     }
 
     public abstract Profession profession();
@@ -15,4 +15,5 @@ public abstract class Employee extends Person {
     public void addReferenceNumber(int ref) {
         this.referenceNumber = ref;
     }
+
 }

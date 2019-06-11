@@ -11,4 +11,8 @@ public abstract class Person {
         this.surname = surname;
         this.age = age;
     }
+
+    public String toString(){
+        return "name: "+ name + " surname: "+ surname+ " age: "+ age;
+    }
 }
