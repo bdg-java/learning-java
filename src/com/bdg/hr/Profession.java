@@ -11,4 +11,12 @@ public class Profession {
     public String name() {
         return this.professionName;
     }
+
+    public boolean equals(Object profession) {
+        if (profession == this) {
+            return true;
+        }
+        Profession that = (Profession) profession;
+        return that.name().equals(this.name());
+    }
 }

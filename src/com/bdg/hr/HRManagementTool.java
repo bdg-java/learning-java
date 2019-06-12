@@ -1,16 +1,14 @@
 package com.bdg.hr;
 
 
-
-
 //Add employee classes, Accouter, HumanResource, MarketSpecialist
-
 
 
 public class HRManagementTool {
 
     private Employee[] employees;
     private static final int DEFAULT_CONTAINER_SIZE = 10;
+    private int currentIndex = 0;
 
     public HRManagementTool(int initialSize) {
         this.employees = new Employee[initialSize];
@@ -22,16 +20,37 @@ public class HRManagementTool {
 
     public boolean addEmployee(Employee employee) {
         //implement this
-        return false;
+        if (employees.length == currentIndex) {
+            this.increaseSize();
+        }
+        this.employees[currentIndex] = employee;
+        currentIndex++;
+        return true;
     }
 
     public Employee[] findByProfession(Profession profession) {
         //implement this
+        Employee[] foundEmpl = new Employee[this.currentIndex];
+        int k = 0;
+        for (Employee employee : this.employees) {
+            if (employee.profession().equals(profession)) {
+                foundEmpl[k] = employee;
+                k = k + 1;
+            }
+        }
+        if (k > 0) {
+            Employee[] returnEmpl = new Employee[k];
+            for (int i = 0; i < k; i++) {
+                returnEmpl[i] = foundEmpl[i];
+            }
+            return returnEmpl;
+        }
         return null;
     }
 
     public boolean removeEmployee(Employee employee) {
         //implement this
+
         return false;
     }
 
@@ -83,6 +102,12 @@ public class HRManagementTool {
 
     private void increaseSize() {
         //implement this
+        Employee[] newArray = new Employee[this.employees.length + this.employees.length / 2];
+//        for (int i = 0; i < employees.length; i++) {
+//            newArray[i] = this.employees[i];
+//        }
+        System.arraycopy(this.employees, 0, newArray, 0, this.employees.length);
+        this.employees = newArray;
     }
 
 }
