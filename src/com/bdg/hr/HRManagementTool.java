@@ -98,19 +98,39 @@ public class HRManagementTool {
     }
 
     public boolean contains(Employee employee) {
-        //implement this
-        //check with first Name and lastName
-        return false;
+       boolean status = false;
+        for (int i = 0; i < employees.length; i++) {
+            if(employees[i].name.equals(employee.name) &&
+                employees[i].surname.equals(employee.surname)
+            ){
+                status = true;
+                break;
+            }
+        }
+        return status;
     }
 
     public Employee[] findByName(String employeeName) {
-        //implement this
-        return null;
+        Employee[] employeeByName = new Employee[employees.length];
+        for (int i = 0; i < employees.length; i++) {
+            if(employees[i] != null && employees[i].name.equals(employeeName))
+            {
+                employeeByName[i] = employees[i];
+            }
+        }
+        return employeeByName;
     }
 
     public Employee findByCardNumber(String cardNumber) {
-        //implement this
-        return null;
+        Employee employeeByCardNumber =null;
+        for (int i = 0; i < employees.length; i++) {
+            if(employees[i] != null && employees[i].salaryInfo.getCardNumber().
+                    equals(cardNumber))
+            {
+                employeeByCardNumber = employees[i];
+            }
+        }
+        return employeeByCardNumber;
     }
 
     public Employee[] findEmployeeWithSalaryRange(int from, int to) {

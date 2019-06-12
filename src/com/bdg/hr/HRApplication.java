@@ -33,9 +33,10 @@ public class HRApplication {
 
 
         //                --------  REMOVE BY SALARY RANGE-----------
-      Employee removeByRange[] = hrManagementTool.removeWithSalaryRange(10000,20000);
+//      Employee removeByRange[] = hrManagementTool.removeWithSalaryRange(10000,20000);
+//        System.out.println(Arrays.toString(removeByRange));
+        Employee removeByRange[] = hrManagementTool.findByName("Araks");
         System.out.println(Arrays.toString(removeByRange));
-
 
 
     }
