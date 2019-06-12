@@ -1,8 +1,5 @@
 package com.bdg.hr;
 
-
-//Add employee classes, Accouter, HumanResource, MarketSpecialist
-
 public class HRManagementTool {
 
     private Employee[] employees;
@@ -134,18 +131,37 @@ public class HRManagementTool {
     }
 
     public Employee[] findEmployeeWithSalaryRange(int from, int to) {
-        //implement this
-        return null;
+        Employee employeesByRange[] =  new Employee[employees.length];
+        for (int i = 0; i < employees.length; i++) {
+            if(employees[i] != null && (employees[i].salaryInfo.getSalary()>from
+                && employees[i].salaryInfo.getSalary()<to))
+            {
+                employeesByRange[i] = employees[i];
+            }
+        }
+        return employeesByRange;
     }
 
     public Employee increaseSalary(Employee employee, int newSalarySize) {
-        //implement this
-        return null;
+
+        for (int i = 0; i < employees.length; i++) {
+            if(employees[i] == employee){
+
+                employees[i].salaryInfo.setSalary(
+                        employees[i].salaryInfo.getSalary()+newSalarySize);
+            }
+        }
+        return employee;
     }
 
     public int totalSalary() {
-        //implement this
-        return -1;
+        int totalSalary=0;
+        for (int i = 0; i < employees.length; i++) {
+            if(employees[i] != null){
+                totalSalary+=employees[i].salaryInfo.getSalary();
+            }
+        }
+        return totalSalary;
     }
 
 

@@ -10,4 +10,6 @@ public class Developer extends Employee {
     public Profession profession() {
         return new Profession("Developer");
     }
+
+
 }
