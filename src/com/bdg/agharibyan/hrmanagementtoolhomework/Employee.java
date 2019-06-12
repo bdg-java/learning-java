@@ -15,4 +15,9 @@ public abstract class Employee extends Person {
     public void addReferenceNumber(int referenceNumber){
         this.referenceNumber = referenceNumber;
     }
+
+    public SalaryInfo getSalaryInfo(){
+        return info;
+    }
+
 }
