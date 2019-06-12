@@ -122,8 +122,11 @@ public class HRManagementTool {
 
     public int totalSalary() {
         int total = 0;
+
         for (int i = 0; i <employees.length ; i++) {
-            total += employees[i].info.getSalary();
+            if (employees[i] != null) {
+                total += employees[i].info.getSalary();
+            }
         }
         return total;
     }
