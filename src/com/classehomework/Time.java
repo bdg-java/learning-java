@@ -42,18 +42,17 @@ public class Time {
 
     @Override
     public String toString() {
-        String hour = null;
-        String minute = null;
-        String second = null;
-
-        if (this.hour < 10)
-            hour = "0" + this.hour;
-
-        if (this.minute < 10)
-            minute = "0" + this.minute;
-
-        if (this.second < 10)
-            second = "0" + this.second;
+//        String hour = null;
+//        String minute = null;
+//        String second = null;
+//
+//        if (this.hour < 10)
+//            hour = "0" + this.hour;
+//        if (this.minute < 10)
+//            minute = "0" + this.minute;
+//
+//        if (this.second < 10)
+//            second = "0" + this.second;
 
         return "Time{" +
                 "hour=" + hour +
@@ -61,11 +60,11 @@ public class Time {
                 ", second=" + second +
                 '}';
     }
-//
-//    public Time nextSecond() {
-//        this.second += 1;
-//        return;
-//    }
+
+    public Time nextSecond() {
+        this.second += 1;
+        return this;
+    }
 
 
 }
