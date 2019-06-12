@@ -15,13 +15,15 @@ public class HRManagementTool {
     public boolean addEmployee(Employee employee) {
         employees[count] = employee;
         count++;
+        if (count == employees.length)this.increaseSize();
         return false;
     }
 
     private void increaseSize() {
-        if (count == employees.length ){
+
             Employee [] employees1 = new Employee[employees.length+employees.length/2];
-        }
+            System.arraycopy(employees,0,employees1,this.count,employees.length);
+
     }
 
     public Employee[] findByProfession(Profession profession) {
@@ -38,7 +40,7 @@ public class HRManagementTool {
         for (int i = 0; i < employees.length ; i++) {
             if (!employees[i].equals(employee)){
                 employee1[i] = employees[i];
-                System.out.println("this index is empty :"+i);
+                System.out.println("this index is empty : "+i);
             }
         }
 
