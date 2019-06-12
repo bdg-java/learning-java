@@ -33,5 +33,6 @@ public class App_21 {
     if ( c > a && c > b ){
         System.out.println("Maximum :" + c);
     }
-        }
+
+    }
 }
