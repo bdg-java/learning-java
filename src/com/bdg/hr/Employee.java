@@ -19,4 +19,7 @@ public abstract class Employee extends Person {
     public void addReferenceNumber(int ref) {
         this.referenceNumber = ref;
     }
+    public boolean equals(Object obj){
+        return true;
+    }
 }

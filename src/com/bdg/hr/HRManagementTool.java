@@ -13,22 +13,25 @@ public class HRManagementTool {
     }
     private int count= 0;
     public boolean addEmployee(Employee employee) {
+        if (count == employees.length){
+            this.increaseSize();
+        }
         employees[count] = employee;
         count++;
-        if (count == employees.length)this.increaseSize();
-        return false;
+        return true;
     }
 
     private void increaseSize() {
 
-            Employee [] employees1 = new Employee[employees.length+employees.length/2];
-            System.arraycopy(employees,0,employees1,this.count,employees.length);
+            Employee [] newArray = new Employee[employees.length+employees.length/2];
+            System.arraycopy(employees,0,newArray,this.count,employees.length);
+            this.employees = newArray;
 
     }
 
     public Employee[] findByProfession(Profession profession) {
         for (int i = 0; i < employees.length ; i++) {
-            if (employees[i].profession().equals(profession)){
+            if (employees[i].profession().name()== profession.name()){
                 System.out.println("Found match" +"\n"+"profession name : "+profession+",index: "+i);
             }
         }
