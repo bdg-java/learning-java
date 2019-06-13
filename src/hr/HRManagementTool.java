@@ -1,8 +1,5 @@
 package hr;
 
-//Add employee classes, Accouter, HumanResource, MarketSpecialist
-
-
 
 public class HRManagementTool {
 
@@ -16,9 +13,11 @@ public class HRManagementTool {
     public HRManagementTool() {
         this(DEFAULT_CONTAINER_SIZE);
     }
-
+    private int c = 0;
     public boolean addEmployee(Employee employee) {
-        //implement this
+        employees[c] = employee;
+        c++;
+        if (c == employees.length)this.increaseSize();
         return false;
     }
 

@@ -15,4 +15,7 @@ public abstract class Employee extends Person {
     public void addReferenceNumber(int ref) {
         this.referenceNumber = ref;
     }
+    public String toString() {
+        return "Employee [" + name + " " + surname + " " + age + "]";
+    }
 }
