@@ -6,7 +6,9 @@ public class Accounter extends Employee{
         super(info, name, surname, age);
     }
 
-    public Profession profession(){
+    public Profession profession()
+    {
         return new Profession("Accounter");
     }
+
 }

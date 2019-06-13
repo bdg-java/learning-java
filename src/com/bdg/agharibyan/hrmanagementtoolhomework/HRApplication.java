@@ -1,6 +1,6 @@
 package com.bdg.agharibyan.hrmanagementtoolhomework;
 
-import com.bdg.agharibyan.umlhomework.employee.Employee;
+import java.util.Arrays;
 
 public class HRApplication {
 
@@ -23,20 +23,16 @@ public class HRApplication {
         tool.addEmployee(marketSpecialist1);
         tool.addEmployee(marketSpecialist2);
 
-        tool.findByProfession(accounter.profession());
+//        System.out.println(Arrays.toString(tool.)); - inch grem, vorpeszi employeeneris arrayy tesnem?
+//  inchpes grem, vor storev grvatsi ardyunqum hascen chtesnem?
+        System.out.println(Arrays.toString(tool.findByProfession(accounter.profession())));
+        System.out.println(tool.removeEmployee(marketSpecialist2));
 
-        tool.removeEmployee(marketSpecialist2);
-
-        tool.removeByName("MarketSpecialist Name");
+        System.out.println(Arrays.toString(tool.removeByName("MarketSpecialist Name")));
 
         tool.removeByNames("Developer Name","Account Name", "Ani");
 
         tool.removeWithSalaryRange(2000,22222222);
-
-//        tool.contains(new Employee(new SalaryInfo("card-2", 3333), "Account Name", "Account Surname", 30));
-//ayspes error e talis, SalaryInfoyi pokharen ID e uzum,
-//        tool.contains(new Employee(111111, "Account Name", "Account Surname", 30));
-//ayspes error e talis, can not be aaplied
 
         tool.findByName("Account Name");
 
