@@ -9,13 +9,13 @@ public class HrManagementToolApplication {
         Developer dev2 = new Developer(new SalaryInfo("121213", 220000), "Narine", "Sargsyan", 26);
         Developer dev3 = new Developer(new SalaryInfo("121214", 500000), "Levon", "Shahnazaryan", 32);
         Developer dev4 = new Developer(new SalaryInfo("121215", 300000), "Irina", "Shahnazaryan", 32);
+        Accounter dev5 = new Accounter(new SalaryInfo("121216", 300000), "Hasmik", "Petrosyan", 32);
 //-------------------------------------addEmployee-------------------------------------------------
-        System.out.println(hr1.addEmployee(dev1));
-        System.out.println(hr1.addEmployee(dev2));
-        System.out.println(hr1.addEmployee(dev3));
-        System.out.println(hr1.addEmployee(dev4));
-        System.out.println(hr1.addEmployee(dev2));
-        System.out.println(hr1.addEmployee(dev3));
+        hr1.addEmployee(dev1);
+        hr1.addEmployee(dev2);
+        hr1.addEmployee(dev3);
+        hr1.addEmployee(dev4);
+        hr1.addEmployee(dev5);
 
         for (int i = 0; i < hr1.getEmployees().length; i++) {
             if (hr1.getEmployees()[i] != null)
@@ -83,11 +83,14 @@ public class HrManagementToolApplication {
             if (hr1.getEmployees()[i] != null)
                 System.out.println(hr1.getEmployees()[i]);
         }
-        // -------------------------------findByprofession-----------------------------------------------
+
+
+        // -------------------------------findByprofession------------------------------------------
+        Employee[] emp = hr1.findByProfession(new Profession("Accounter"));
         System.out.println(".............. findByprofession..........................");
-        for (int i = 0; i < hr1.findByProfession(new Profession("Developer")).length; i++) {
-            if (hr1.getEmployees()[i] != null)
-                System.out.println(hr1.getEmployees()[i]);
+        for (int i = 0; i < emp.length; i++) {
+            if (emp[i] != null)
+                System.out.println(emp[i]);
         }
 
 

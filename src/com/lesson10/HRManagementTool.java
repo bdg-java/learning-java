@@ -10,6 +10,7 @@ public class HRManagementTool {
     private Employee[] employees;
     private static final int DEFAULT_CONTAINER_SIZE = 5;
 
+    private int currentIndex = 0;
     public HRManagementTool(int initialSize) {
         this.employees = new Employee[initialSize];
     }
@@ -19,24 +20,22 @@ public class HRManagementTool {
     }
 
     private int getCountEmployeeByProfession(Profession profession) {
-        Employee[] employee = new Employee[10];
         int j = 0;
         for (Employee emp : employees) {
             if (emp != null) {
-                if (emp.profession().name() == profession.name())
+                if (emp.profession().equals(profession))
                     j++;
             }
         }
         return j;
     }
-
     public Employee[] findByProfession(Profession profession) {
         int j = getCountEmployeeByProfession(profession);
         Employee[] employee = new Employee[j];
         int i = 0;
         for (Employee emp : employees) {
             if (emp != null) {
-                if (emp.profession().name() == profession.name())
+                if (emp.profession().equals(profession))
                     employee[i++] = emp;
             }
         }
@@ -45,28 +44,17 @@ public class HRManagementTool {
 
     private void ensureSize() {
         int length = this.employees.length;
-        if (this.employees[length - 1] != null) {
-            Employee[] prevemployee = this.employees;
+        if (currentIndex == length - 1) {
+            Employee[] newemployee = this.employees;
             increaseSize();
             length = this.employees.length;
-            this.employees = Arrays.copyOf(prevemployee, length);
+            this.employees = Arrays.copyOf(newemployee, length);
         }
-    }
-
-    private int getEmptyPozition() {
-        int length = this.employees.length;
-        int i = 0;
-        for (i = 0; i < length; i++) {
-            if (this.employees[i] != null)
-                continue;
-            else break;
-        }
-        return i;
     }
 
     public boolean addEmployee(Employee employee) {
         ensureSize();
-        this.employees[getEmptyPozition()] = employee;
+        this.employees[++currentIndex] = employee;
         return true;
     }
 
@@ -82,12 +70,13 @@ public class HRManagementTool {
 
     private void replaceArray(int position) {
         int length = this.employees.length;
-        Employee[] temp = new Employee[length - 1];
+        Employee[] temp = new Employee[length];
         int j = 0;
         for (int i = 0; i < length; i++)
             if (i != position)
                 temp[j++] = this.employees[i];
         this.employees = temp;
+        this.currentIndex--;
     }
 
     public boolean removeEmployee(Employee employee) {
@@ -115,7 +104,6 @@ public class HRManagementTool {
                     this.employees = removeByName(emp.name);
                 }
             }
-
         }
         return this.employees;
     }
