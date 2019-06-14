@@ -1,11 +1,6 @@
 package com.bdg.hr;
 
-
-
-
 //Add employee classes, Accouter, HumanResource, MarketSpecialist
-
-
 
 public class HRManagementTool {
 
