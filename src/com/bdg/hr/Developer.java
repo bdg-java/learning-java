@@ -8,7 +8,7 @@ public class Developer extends Employee {
         super(info, name, surname, age);
     }
 
-    @Override
+//    @Override
     public Profession profession() {
         return this.profession;
     }

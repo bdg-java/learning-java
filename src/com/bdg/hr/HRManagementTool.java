@@ -1,14 +1,7 @@
 package com.bdg.hr;
 
-<<<<<<< HEAD
 //Add employee classes, Accouter, HumanResource, MarketSpecialist
 
-=======
-
-//Add employee classes, Accouter, HumanResource, MarketSpecialist
-
-
->>>>>>> cc0ea979183e2492dac5e93356b05a3bd25970d8
 public class HRManagementTool {
 
     private Employee[] employees;
@@ -55,55 +48,53 @@ public class HRManagementTool {
 
     public boolean removeEmployee(Employee employee) {
         //implement this
-
         return false;
     }
 
     public Employee[] removeByName(String name) {
         //implement this
-        return null;
+//        Employee[] newArray = new Employee [employees.length];
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && name.equals(employees[i].name)) {
+                employees[i] = null;
+            }
+        }
+        return employees;
     }
 
-    public Employee[] removeByNames(String... names) {
-        //implement this
-        return null;
-    }
-
-    public Employee[] removeWithSalaryRange(int from, int to) {
-        //implement this
-        return null;
-    }
-
-    public boolean contains(Employee employee) {
-        //implement this
-        //check with first Name and lastName
-        return false;
-    }
+//    public Employee[] removeByName2(String name) {
+//        //implement this
+//        Employee[] foundEmpl = new Employee[employees.length];
+//        for (int i = 0; i<employees.length; i++) {
+//            if (employees[i] != null && employees[i].equals(name)) {
+//                foundEmpl[i] = employees[i];
+//            }
+//        } foundEmpl = employees;
+//        return foundEmpl;
+//    }
 
     public Employee[] findByName(String employeeName) {
         //implement this
-        return null;
-    }
-
-    public Employee findByCardNumber(String cardNumber) {
-        //implement this
-        return null;
-    }
-
-    public Employee[] findEmployeeWithSalaryRange(int from, int to) {
-        //implement this
-        return null;
-    }
-
-    public Employee increaseSalary(Employee employee, int newSalarySize) {
-        //implement this
-        return null;
+        Employee[] foundEmpl = new Employee[employees.length];
+        for (int i = 0; i<employees.length; i++) {
+            if (employees[i]!=null && employees[i].name.equals(employeeName)) {
+                foundEmpl[i] = employees[i];
+            }
+        }
+        return foundEmpl;
     }
 
     public int totalSalary() {
         //implement this
-        return -1;
+        int totalsal = 0;
+        for (int i = 0; i<employees.length;i++) {
+            if (employees[i] != null) {
+                totalsal = totalsal + employees[i].getInfo().getSalary();
+            }
+        }
+        return totalsal;
     }
+
 
     private void increaseSize() {
         //implement this
@@ -114,5 +105,38 @@ public class HRManagementTool {
         System.arraycopy(this.employees, 0, newArray, 0, this.employees.length);
         this.employees = newArray;
     }
+
+
+//    public Employee[] removeByNames(String... names) {
+//        //implement this
+//        return null;
+//    }
+//
+//    public Employee[] removeWithSalaryRange(int from, int to) {
+//        //implement this
+//        return null;
+//    }
+//
+//    public boolean contains(Employee employee) {
+//        //implement this
+//        //check with first Name and lastName
+//        return false;
+//    }
+//
+
+//    public Employee findByCardNumber(String cardNumber) {
+//        //implement this
+//        return null;
+//    }
+//
+//    public Employee[] findEmployeeWithSalaryRange(int from, int to) {
+//        //implement this
+//        return null;
+//    }
+//
+//    public Employee increaseSalary(Employee employee, int newSalarySize) {
+//        //implement this
+//        return null;
+//    }
 
 }

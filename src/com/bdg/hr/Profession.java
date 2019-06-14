@@ -19,4 +19,10 @@ public class Profession {
         Profession that = (Profession) profession;
         return that.name().equals(this.name());
     }
+
+
+
+//    public String getProfession() {
+//        return this.professionName;
+//    }
 }
