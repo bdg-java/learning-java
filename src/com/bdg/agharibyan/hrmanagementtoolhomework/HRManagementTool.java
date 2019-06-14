@@ -21,13 +21,13 @@ public class HRManagementTool {
             this.resize();
         }
         this.employees[this.currentEmployeeCount] = employee;
-        this.currentEmployeeCount++;
+        currentEmployeeCount ++;
         return true;
     }
 
     private void resize() {
         Employee[] resizedEmployee = new Employee[this.employees.length + this.employees.length / 2]; //mecacnum enq 0.5 angam
-        int k = 0;
+//        int k = 0;
 //        for (Employee employee : this.employees) {
 //            resizedEmployee[k] = employee;
 //            k++;
@@ -36,59 +36,50 @@ public class HRManagementTool {
         this.employees = resizedEmployee;
     }
 
-    public Employee[] findByProfession(Profession profession){
+    public Employee[] findByProfession(Profession profession) {
         Employee[] employeesSearchByProfession = new Employee[currentEmployeeCount];
         int k = 0;
-        for(Employee employee: this.employees){
-            if(employee != null && employee.profession().name().equals(profession.name())){
+        for (Employee employee : this.employees) {
+            if (employee != null && employee.profession().equals(profession)) {
                 employeesSearchByProfession[k] = employee;
-                k ++;
+                k++;
             }
         }
-        if(k > 0) {
+        if (k > 0) {
             Employee[] employeesFoundByProfession = new Employee[k];
-            for(int i = 0; i < k; i++){
+            for (int i = 0; i < k; i++) {
                 employeesFoundByProfession[i] = employeesSearchByProfession[i];
             }
             return employeesFoundByProfession;
         }
         return null;
     }
+// William jan,chisht em, vor petq e stugem null e, te voch findByProffesionum?
+// Dasin indz tvac dra kariqy chka, qani vor mi pah aseci grenq ifi mej nullin havasar chi, aseciq ed el a tarberak.
+// Bayc hima inchpes khusapem null chlinelu stugumic chgitem.
 
-    public boolean removeEmployee(Employee employee){
-        Employee[] employeeRemoved = new Employee[currentEmployeeCount];
-        int k = 0;
-        for(Employee removedemployee: this.employees){
-            if(removedemployee != null && removedemployee.referenceNumber != employee.referenceNumber){
-                employeeRemoved[k] = removedemployee;
-                k++;
+    public Employee[] removeEmployee(Employee employee) {
+        int removedEmployeeIndex = 0;
+        for (int i = 0; i < currentEmployeeCount; i++) {
+            if (this.employees[i].referenceNumber == employee.referenceNumber) {
+                removedEmployeeIndex = i;
             }
         }
-        if(k > 0){
-            Employee [] employeesAfterRemovingEmployee = new Employee[currentEmployeeCount - k];
-            for(int i = 0; i < k; i++){
-
-
-
-            }
-            return true;
-        }
-//        int employeesNewSize = 0;
-//        for(int i = 0; i < employees.length; i++){
-//            if(employees[i] != null && employees[i] != employee){
-//                employeeRemove[employeesNewSize] = employee;
-//                 employeesNewSize ++;
-//            }
-//        }
-//        employees[this.currentEmployeeCount] = employeeRemove[employeesNewSize];
-        return false;
+        Employee[] arrayAfterRemoveEmployee = new Employee[currentEmployeeCount-1];
+        System.arraycopy(this.employees, 0, arrayAfterRemoveEmployee, 0, removedEmployeeIndex);
+        System.arraycopy(this.employees, removedEmployeeIndex+1, arrayAfterRemoveEmployee, removedEmployeeIndex, currentEmployeeCount - removedEmployeeIndex - 1);
+        this.employees = arrayAfterRemoveEmployee;
+        return arrayAfterRemoveEmployee;
     }
+//erb e methodi kanchelu zhamanak fielderi mi masy erevum, mi masy che? orinak system.arraycopy 2rdum destPos: chi grvum
+//chisht em haskanum, vor removeemployeei zhamanak referenceNumbery chenq 0acnum, vorpeszi ete het yndunenq nuyny tramadrenq iren
 
     public Employee[] removeByName(String name){
+
         int employeesNewSize = 0;
         Employee[] employeeRemoveByName = new Employee[employees.length];
         for(int i = 0; i < employees.length; i++){
-            if(employees[i] != null && !employees[i].name.equals(name)){
+            if(employees[i] != null && employees[i].name != (name)){
                 employeeRemoveByName[employeesNewSize] = employees[i];
                 employeesNewSize ++;
             }
