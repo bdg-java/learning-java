@@ -66,8 +66,8 @@ public class HRManagementTool {
     public Employee[] findByName(String employeeName) {
         //implement this
         Employee[] foundEmpl = new Employee[employees.length];
-        for (int i = 0; i<employees.length; i++) {
-            if (employees[i]!=null && employees[i].name.equals(employeeName)) {
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].name.equals(employeeName)) {
                 foundEmpl[i] = employees[i];
             }
         }
@@ -77,7 +77,7 @@ public class HRManagementTool {
     public int totalSalary() {
         //implement this
         int totalsal = 0;
-        for (int i = 0; i<employees.length;i++) {
+        for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
                 totalsal = totalsal + employees[i].getInfo().getSalary();
             }
@@ -103,26 +103,38 @@ public class HRManagementTool {
 
     public Employee[] removeWithSalaryRange(int from, int to) {
         //implement this
-        for (int i =0; i<employees.length; i++) {
-            if (from > employees[i].getInfo().getSalary() && employees[i].getInfo().getSalary() > to){
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && (from > employees[i].getInfo().getSalary() && employees[i].getInfo().getSalary() > to)) {
                 employees[i] = null;
             }
         }
         return employees;
     }
 
-//    public boolean contains(Employee employee) {
-//        //implement this
-//        //check with first Name and lastName
-//        return false;
-//    }
-//
 
-//    public Employee findByCardNumber(String cardNumber) {
-//        //implement this
-//        return null;
-//    }
-//
+    public boolean contains(Employee employee) {
+        //implement this
+        //check with first Name and lastName
+
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].name.equals(employee.name) && employees[i].surname.equals(employee.surname)) {
+
+            }
+        }
+        return false;
+    }
+
+
+    public Employee findByCardNumber(String cardNumber) {
+        //implement this
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].getInfo().getCardNumber().equals(cardNumber)) {
+                return employees[i];
+            }
+        }
+        return null;
+    }
+
 //    public Employee[] findEmployeeWithSalaryRange(int from, int to) {
 //        //implement this
 //        return null;
@@ -133,4 +145,4 @@ public class HRManagementTool {
 //        return null;
 //    }
 
-}
+    }

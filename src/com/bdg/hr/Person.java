@@ -19,4 +19,12 @@ public abstract class Person {
         Person that = (Person) name;
         return that.name.equals(this.name);
     }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getSurname() {
+        return this.surname;
+    }
 }
