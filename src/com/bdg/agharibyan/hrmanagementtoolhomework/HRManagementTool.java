@@ -74,6 +74,8 @@ public class HRManagementTool {
 //erb e methodi kanchelu zhamanak fielderi mi masy erevum, mi masy che? orinak system.arraycopy 2rdum destPos: chi grvum
 //chisht em haskanum, vor removeemployeei zhamanak referenceNumbery chenq 0acnum, vorpeszi ete het yndunenq nuyny tramadrenq iren
 
+
+//sranic nerqev der chem veranayel
     public Employee[] removeByName(String name){
 
         int employeesNewSize = 0;
