@@ -5,7 +5,7 @@ public class HRManagementTool {
     private Employee[] employees;
     private static final int DEFAULT_CONTAINER_SIZE = 10;
     private int currentIndex = 0;
-    private int[] freePositionsIds = new int[1];
+    private int[] freePositionsIds = new int[0];
     private int retiredEmployeeReferenceIndex;
 
     public HRManagementTool(int initialSize) {
@@ -39,10 +39,15 @@ public class HRManagementTool {
                 this.increaseSize();
             }
 
+            if (this.freePositionsIds.length > 0) {
+                currentIndex = this.freePositionsIds[0];
+            }
+
             employee.addReferenceNumber(currentIndex + 1);
 
             this.employees[currentIndex] = employee;
-            currentIndex++;
+            currentIndex = this.employees.length - 1;
+            ++currentIndex;
             return true;
         }
         return false;
@@ -72,7 +77,7 @@ public class HRManagementTool {
     public boolean removeEmployee(Employee employee) {
         //implement this
         if (employee != null) {
-            if (retiredEmployeeReferenceIndex == freePositionsIds.length - 1) {
+            if (retiredEmployeeReferenceIndex == freePositionsIds.length) {
                 int[] newArray = new int[this.freePositionsIds.length + 1];
 
                 System.arraycopy(this.freePositionsIds, 0, newArray, 0, this.freePositionsIds.length);
