@@ -40,9 +40,9 @@ public class HRApplication {
         System.out.println(button.addEmployee(acc1));
         System.out.println(button.totalSalary());
 //        System.out.println(Arrays.toString(button.findByProfession(manager1.profession())));
-//        System.out.println(Arrays.toString(button.removeByName2("Jane")));
-        System.out.println(Arrays.toString(button.removeByName("Jane")));
-        System.out.println(Arrays.toString(button.findByName("Ann")));
+//        System.out.println(Arrays.toString(button.removeByName("Jane")));
+//        System.out.println(Arrays.toString(button.findByName("Ann")));
+        System.out.println(Arrays.toString(button.removeWithSalaryRange(50, 100)));
 
     }
 }

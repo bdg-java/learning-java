@@ -62,16 +62,6 @@ public class HRManagementTool {
         return employees;
     }
 
-//    public Employee[] removeByName2(String name) {
-//        //implement this
-//        Employee[] foundEmpl = new Employee[employees.length];
-//        for (int i = 0; i<employees.length; i++) {
-//            if (employees[i] != null && employees[i].equals(name)) {
-//                foundEmpl[i] = employees[i];
-//            }
-//        } foundEmpl = employees;
-//        return foundEmpl;
-//    }
 
     public Employee[] findByName(String employeeName) {
         //implement this
@@ -95,7 +85,6 @@ public class HRManagementTool {
         return totalsal;
     }
 
-
     private void increaseSize() {
         //implement this
         Employee[] newArray = new Employee[this.employees.length + this.employees.length / 2];
@@ -111,12 +100,17 @@ public class HRManagementTool {
 //        //implement this
 //        return null;
 //    }
-//
-//    public Employee[] removeWithSalaryRange(int from, int to) {
-//        //implement this
-//        return null;
-//    }
-//
+
+    public Employee[] removeWithSalaryRange(int from, int to) {
+        //implement this
+        for (int i =0; i<employees.length; i++) {
+            if (from > employees[i].getInfo().getSalary() && employees[i].getInfo().getSalary() > to){
+                employees[i] = null;
+            }
+        }
+        return employees;
+    }
+
 //    public boolean contains(Employee employee) {
 //        //implement this
 //        //check with first Name and lastName
