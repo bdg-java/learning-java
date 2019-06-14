@@ -21,7 +21,7 @@ public class HRManagementTool {
             this.resize();
         }
         this.employees[this.currentEmployeeCount] = employee;
-        currentEmployeeCount ++;
+        currentEmployeeCount++;
         return true;
     }
 
@@ -36,6 +36,8 @@ public class HRManagementTool {
         this.employees = resizedEmployee;
     }
 
+    //Nayi Ani jan employee != null stex kariq chi lini et toxi, qani vor menq karanq add aneluc stugenq u null add chanenq
+    //bayc et depqum petqa sa replace anel for (Employee employee : this.employees) { hasarak for-ov u minchev current index
     public Employee[] findByProfession(Profession profession) {
         Employee[] employeesSearchByProfession = new Employee[currentEmployeeCount];
         int k = 0;
@@ -65,48 +67,48 @@ public class HRManagementTool {
                 removedEmployeeIndex = i;
             }
         }
-        Employee[] arrayAfterRemoveEmployee = new Employee[currentEmployeeCount-1];
+        Employee[] arrayAfterRemoveEmployee = new Employee[currentEmployeeCount - 1];
         System.arraycopy(this.employees, 0, arrayAfterRemoveEmployee, 0, removedEmployeeIndex);
-        System.arraycopy(this.employees, removedEmployeeIndex+1, arrayAfterRemoveEmployee, removedEmployeeIndex, currentEmployeeCount - removedEmployeeIndex - 1);
+        System.arraycopy(this.employees, removedEmployeeIndex + 1, arrayAfterRemoveEmployee, removedEmployeeIndex, currentEmployeeCount - removedEmployeeIndex - 1);
         this.employees = arrayAfterRemoveEmployee;
         return arrayAfterRemoveEmployee;
     }
 //erb e methodi kanchelu zhamanak fielderi mi masy erevum, mi masy che? orinak system.arraycopy 2rdum destPos: chi grvum
 //chisht em haskanum, vor removeemployeei zhamanak referenceNumbery chenq 0acnum, vorpeszi ete het yndunenq nuyny tramadrenq iren
+//es pahy lav chhaskaca
 
-
-//sranic nerqev der chem veranayel
-    public Employee[] removeByName(String name){
+    //sranic nerqev der chem veranayel
+    public Employee[] removeByName(String name) {
 
         int employeesNewSize = 0;
         Employee[] employeeRemoveByName = new Employee[employees.length];
-        for(int i = 0; i < employees.length; i++){
-            if(employees[i] != null && employees[i].name != (name)){
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].name != (name)) {
                 employeeRemoveByName[employeesNewSize] = employees[i];
-                employeesNewSize ++;
+                employeesNewSize++;
             }
         }
         return employeeRemoveByName;
     }
 
 
-    public Employee[] removeByNames(String name1, String name2, String nameN){
+    public Employee[] removeByNames(String name1, String name2, String nameN) {
         int currentEmployeeCount = 0;
         Employee[] employeesRemoveByNames = new Employee[employees.length];
-        for(int i = 0; i < employees.length; i++){
-            if(employees[i]!= null && !employees[i].name.equals(name1) && !employees[i].name.equals(name2) && !employees[i].name.equals(nameN)){
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && !employees[i].name.equals(name1) && !employees[i].name.equals(name2) && !employees[i].name.equals(nameN)) {
                 employeesRemoveByNames[currentEmployeeCount] = employees[i];
-                currentEmployeeCount ++;
+                currentEmployeeCount++;
             }
         }
         return employeesRemoveByNames;
     }
 
-    public Employee [] removeWithSalaryRange(int from, int to){
+    public Employee[] removeWithSalaryRange(int from, int to) {
         int currentEmployeeCount = 0;
         Employee[] employeesRemoveWithSalaryRange = new Employee[employees.length];
-        for(int i = 0; i < employees.length; i++){
-            if(employees[i] != null && employees[i].getSalaryInfo().getSalary() < from || employees[i]!= null && employees[i].getSalaryInfo().getSalary() > to){
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].getSalaryInfo().getSalary() < from || employees[i] != null && employees[i].getSalaryInfo().getSalary() > to) {
                 employeesRemoveWithSalaryRange[currentEmployeeCount] = employees[i];
                 currentEmployeeCount++;
             }
@@ -114,11 +116,11 @@ public class HRManagementTool {
         return employeesRemoveWithSalaryRange;
     }
 
-    public boolean contains(Employee employee){
+    public boolean contains(Employee employee) {
         int currentEmployeeCount = 0;
         Employee[] employeesWithSameNameSurname = new Employee[employees.length];
-        for(int i = 0;  i < employees.length; i++){
-            if(employees[i] != null && employees[i].name.equals(employee.name) && employees[i].surname.equals(employee.surname)){
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].name.equals(employee.name) && employees[i].surname.equals(employee.surname)) {
                 employees[currentEmployeeCount] = employee;
                 currentEmployeeCount++;
             }
@@ -126,11 +128,11 @@ public class HRManagementTool {
         return true;
     }
 
-    public Employee [] findByName(String employeeName){
+    public Employee[] findByName(String employeeName) {
         int currentEmployeeCount = 0;
         Employee[] employeesFindByName = new Employee[employees.length];
-        for(int i = 0; i < employees.length; i++){
-            if(employees[i]!= null && employees[i].name.equals(employeeName)){
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].name.equals(employeeName)) {
                 employeesFindByName[currentEmployeeCount] = employees[i];
                 currentEmployeeCount++;
             }
@@ -140,10 +142,10 @@ public class HRManagementTool {
 
     public int totalSalary() {
         int salaryTotal = 0;
-        for(int i = 0; i < employees.length; i++){
-           if(employees[i] != null) {
-               salaryTotal += employees[i].getSalaryInfo().getSalary();
-           }
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null) {
+                salaryTotal += employees[i].getSalaryInfo().getSalary();
+            }
         }
         return salaryTotal;
     }

@@ -12,4 +12,16 @@ public class Accounter extends Employee{
     public Profession profession() {
         return this.profession;
     }
+
+    @Override
+    public String toString() {
+        return "Accounter{" +
+                "profession=" + profession +
+                ", info=" + info +
+                ", referenceNumber=" + referenceNumber +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

@@ -28,6 +28,9 @@ public class HRApplication {
         System.out.println("fifth employee added:"+ tool.addEmployee(marketSpecialist2));
         marketSpecialist2.addReferenceNumber(5);
         //inchpes tpem arrays ays pahi drutyamb?
+
+        //Ani jan toString() method-y verasahmanvac chi Accounter class-um dra hamar
+        //Es hima da kanem, bayc vaxy aveli detail kasem sra masin
         System.out.println("Our Accounter(s) is(are):"+ Arrays.toString(tool.findByProfession(accounter.profession())));
         System.out.println("Accounter removed:"+ Arrays.toString(tool.removeEmployee(accounter)));
 

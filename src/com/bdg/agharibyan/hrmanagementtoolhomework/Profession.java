@@ -12,11 +12,18 @@ public class Profession {
         return this.professionName;
     }
 
-    public boolean equals(Object proffesion){
-        if(proffesion == this){
+    public boolean equals(Object profession){
+        if(profession == this){
             return true;
         }
-        Profession that = (Profession)proffesion;
+        Profession that = (Profession)profession;
         return that.name().equals(this.name());
+    }
+
+    @Override
+    public String toString() {
+        return "Profession{" +
+                "professionName='" + professionName + '\'' +
+                '}';
     }
 }
