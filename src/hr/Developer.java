@@ -10,7 +10,7 @@ public class Developer extends Employee {
 
     @Override
     public Profession profession() {
-        return this.profession;
+        return new Profession("Developer");
     }
 
 }
