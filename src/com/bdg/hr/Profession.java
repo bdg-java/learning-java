@@ -12,7 +12,16 @@ public class Profession {
         return this.professionName;
     }
 
-    public String toString(){
-        return  "professionName: " + professionName;
+    public String toString() {
+        return "professionName: " + professionName;
+    }
+
+    @Override
+    public boolean equals(Object profession) {
+        if (profession == this) {
+            return true;
+        }
+
+        return this.professionName == ((Profession) profession).getProfessionName();
     }
 }

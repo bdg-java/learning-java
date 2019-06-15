@@ -10,10 +10,20 @@ public abstract class Employee extends Person {
         this.salaryInfo = info;
     }
 
-    public abstract Profession profession();
+    protected abstract Profession profession();
 
-    public void addReferenceNumber(int ref) {
+    public final void addReferenceNumber(int ref) {
         this.referenceNumber = ref;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this){
+            return  true;
+        }
+        if(this.name == ((Employee)obj).name){
+            return true;
+        }
+        return false;
+    }
 }
