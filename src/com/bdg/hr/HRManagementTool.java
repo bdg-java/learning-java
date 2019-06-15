@@ -101,10 +101,11 @@ public class HRManagementTool {
 //        return null;
 //    }
 
+//inchu a removeByName-i depqum stacvum, isk es depqum voch?
     public Employee[] removeWithSalaryRange(int from, int to) {
         //implement this
         for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null && (from > employees[i].getInfo().getSalary() && employees[i].getInfo().getSalary() > to)) {
+            if (employees[i] != null && (from > employees[i].getInfo().getSalary() && employees[i].getInfo().getSalary() < to)) {
                 employees[i] = null;
             }
         }
@@ -124,25 +125,35 @@ public class HRManagementTool {
         return false;
     }
 
-
-    public Employee findByCardNumber(String cardNumber) {
+    public Employee[] findByCardNumber(String cardNumber) {
         //implement this
+        Employee[] foundEmpl = new Employee[employees.length];
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getInfo().getCardNumber().equals(cardNumber)) {
-                return employees[i];
+                foundEmpl[i] = employees[i];
             }
+        }
+        return foundEmpl;
+    }
+
+    //findByCardNumer gtnum e, isk es deqpum null-er e veradardznum
+    public Employee[] findEmployeeWithSalaryRange(int from, int to) {
+        //implement this
+        Employee[] foundEmpl = new Employee[employees.length];
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null && (from > employees[i].getInfo().getSalary() && employees[i].getInfo().getSalary() < to)) {
+                foundEmpl[i] = employees[i];
+            }
+        }
+        return foundEmpl;
+    }
+
+    public Employee increaseSalary(Employee employee, int newSalarySize) {
+        //implement this
+        for (int i = 0; i < employees.length; i++) {
+
         }
         return null;
     }
-
-//    public Employee[] findEmployeeWithSalaryRange(int from, int to) {
-//        //implement this
-//        return null;
-//    }
-//
-//    public Employee increaseSalary(Employee employee, int newSalarySize) {
-//        //implement this
-//        return null;
-//    }
 
     }

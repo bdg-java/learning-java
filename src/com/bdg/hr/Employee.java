@@ -13,7 +13,7 @@ public abstract class Employee extends Person {
      public abstract Profession profession();
 
     public SalaryInfo getInfo() {
-        return info;
+        return this.info;
     }
 
     public final void addReferenceNumber(int ref) {
