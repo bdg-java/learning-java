@@ -8,8 +8,8 @@ public class Pool {
         for ( speed = 0.1f ; count <= 60  ; speed*=2,count++) {
             waterQty += 2*speed;
             System.out.println("Speed is: "+ speed+ ", timer: "+ count+", "+ waterQty+" liters||");
-            if (speed==0.1) System.out.print(0.20000000298023224*2);
         }
+        System.out.print(4.6116860871468646E17/2);//0.6000000089406967
 
     }
 }

@@ -13,19 +13,18 @@ public class HRManagementTool {
     }
     private int count= 0;
     public boolean addEmployee(Employee employee) {
-        if (count == employees.length){
+        if (employees.length==count){
             this.increaseSize();
         }
-        employees[count] = employee;
+        this.employees[count] = employee;
         count++;
         return true;
     }
 
     private void increaseSize() {
-
-            Employee [] newArray = new Employee[employees.length+employees.length/2];
-            System.arraycopy(employees,0,newArray,this.count,employees.length);
-            this.employees = newArray;
+        Employee [] newArray = new Employee[this.employees.length+this.employees.length/2];
+        System.arraycopy(this.employees,0,newArray,0,this.employees.length);
+        this.employees = newArray;
 
     }
 
@@ -39,10 +38,10 @@ public class HRManagementTool {
     }
 
     public boolean removeEmployee(Employee employee) {
-        Employee [] employee1 = new Employee[employees.length-1];
+        Employee [] newArray = new Employee[employees.length-1];
         for (int i = 0; i < employees.length ; i++) {
             if (!employees[i].equals(employee)){
-                employee1[i] = employees[i];
+                newArray[i] = employees[i];
                 System.out.println("this index is empty : "+i);
             }
         }
@@ -109,8 +108,10 @@ public class HRManagementTool {
 
     public Employee[] findEmployeeWithSalaryRange(int from, int to) {
         for (int i = 0; i <employees.length ; i++) {
-            if (employees[i].info.getSalary()>from && employees[i].info.getSalary() < to ){
-                System.out.println(employees[i]+" ,");
+            if (this.employees[i]!=null){
+                if (this.employees[i].info.getSalary()>from && this.employees[i].info.getSalary() < to ){
+                System.out.println(employees[i].name+" ,"+ employees[i].info.getSalary());
+                }
             }
         }
         return null;
@@ -118,11 +119,13 @@ public class HRManagementTool {
 
     public Employee increaseSalary(Employee employee, int newSalarySize) {
         for (int i = 0; i < employees.length ; i++) {
-            if (employees[i].equals(employee)){
+            if (employees[i]!=null){
+                if (employees[i].name.equals(employee.name) && employees[i].surname.equals(employee.surname) ){
                 new SalaryInfo(employees[i].info.getCardNumber(),newSalarySize);
+                }
             }
         }
-        return employee;
+        return null;
     }
 
     public int totalSalary() {
