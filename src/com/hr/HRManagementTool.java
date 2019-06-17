@@ -5,14 +5,17 @@ public class HRManagementTool {
     private Employee[] employees;
     private static final int DEFAULT_CONTAINER_SIZE = 10;
     private int currentIndex = 0;
-    private int[] freePositionsIds = new int[0];
-    private int retiredEmployeeReferenceIndex;
+    private int[] freePositionsIds = {-1};
+    public int freePositionsIdsCount;
+    int temp = 0;
 
     public HRManagementTool(int initialSize) {
+
         this.employees = new Employee[initialSize];
     }
 
     public HRManagementTool() {
+
         this(DEFAULT_CONTAINER_SIZE);
     }
 
@@ -35,20 +38,36 @@ public class HRManagementTool {
     public boolean addEmployee(Employee employee) {
         //implement this
         if (employee != null) {
-            if (employees.length == currentIndex) {
-                this.increaseSize();
+            if (freePositionsIds[0] == -1) {
+                if (employees.length == currentIndex) {
+                    this.increaseSize();
+                }
+
+                this.employees[currentIndex] = employee;
+
+                employee.addReferenceNumber(currentIndex + 1);
+
+                ++currentIndex;
+                return true;
             }
 
-            if (this.freePositionsIds.length > 0) {
-                currentIndex = this.freePositionsIds[0];
+            if (freePositionsIds.length == 1 && freePositionsIds[0] != -1) {
+                employees[freePositionsIds[0]] = employee;
+                employee.addReferenceNumber(freePositionsIds[0] + 1);
+                freePositionsIds[0] = -1;
+                freePositionsIdsCount = freePositionsIdsCount - 1;
             }
 
-            employee.addReferenceNumber(currentIndex + 1);
+            if (freePositionsIds.length > 1) {
+                employees[freePositionsIds[0]] = employee;
+                employee.addReferenceNumber(freePositionsIds[0] + 1);
 
-            this.employees[currentIndex] = employee;
-            currentIndex = this.employees.length - 1;
-            ++currentIndex;
-            return true;
+                int[] newArray = new int[this.freePositionsIds.length - 1];
+
+                System.arraycopy(this.freePositionsIds, 1, newArray, 0, newArray.length);
+                this.freePositionsIds = newArray;
+                freePositionsIdsCount = freePositionsIdsCount - 1;
+            }
         }
         return false;
     }
@@ -74,19 +93,23 @@ public class HRManagementTool {
         return null;
     }
 
+    public void increaseSizeOfFreePositionsIdsArray() {
+        int[] newArray = new int[this.freePositionsIds.length + 1];
+
+        System.arraycopy(this.freePositionsIds, 0, newArray, 0, this.freePositionsIds.length);
+        this.freePositionsIds = newArray;
+    }
+
     public boolean removeEmployee(Employee employee) {
         //implement this
         if (employee != null) {
-            if (retiredEmployeeReferenceIndex == freePositionsIds.length) {
-                int[] newArray = new int[this.freePositionsIds.length + 1];
-
-                System.arraycopy(this.freePositionsIds, 0, newArray, 0, this.freePositionsIds.length);
-                this.freePositionsIds = newArray;
+            if (freePositionsIdsCount == freePositionsIds.length) {
+                this.increaseSizeOfFreePositionsIdsArray();
             }
 
-            freePositionsIds[retiredEmployeeReferenceIndex] = employee.referenceNumber - 1;
             this.employees[employee.referenceNumber - 1] = null;
-            ++retiredEmployeeReferenceIndex;
+            freePositionsIds[freePositionsIdsCount] = employee.referenceNumber - 1;
+            ++freePositionsIdsCount;
 
             return true;
         }
@@ -96,6 +119,7 @@ public class HRManagementTool {
 
     public Employee[] removeByName(String name) {
         //implement this
+
         return null;
     }
 
