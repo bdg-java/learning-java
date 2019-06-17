@@ -1,7 +1,5 @@
 package ahakobyan.ClassLessons.inheritance;
 
-import javafx.scene.chart.XYChart;
-
 public class Point2D {
 
     protected float x = 0.0f;

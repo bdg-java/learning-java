@@ -13,7 +13,7 @@ public class Employee {
         this.salary =salary;
     }
 
-    public int detID() {
+    public int getID() {
         return id;
     }
 

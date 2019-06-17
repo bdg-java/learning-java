@@ -1,6 +1,6 @@
 package ahakobyan.app_451_460;
 
-import ahakobyan.MatrixDefaultDecleration;
+import ahakobyan.app_421_440.MatrixDefaultDecleration;
 
 import java.util.Arrays;
 

@@ -1,6 +1,6 @@
 package ahakobyan.app_451_460;
 
-import ahakobyan.MatrixDefaultDecleration;
+import ahakobyan.app_421_440.MatrixDefaultDecleration;
 
 import java.util.Arrays;
 
@@ -13,11 +13,12 @@ public class app_460 {
         int a = 1;
 
         for (int i =0; i <c; i++) {
-            for (int f = 0; f < i; f++)
+            for (int f = 0; f < i; f++) {
                 if (m[i][f] % 2 == 0) {
                     a = a * m[i][f] * m[i][f];
                     B[i] = a;
                 }
+            }
         }
         System.out.println(Arrays.toString(B));
     }

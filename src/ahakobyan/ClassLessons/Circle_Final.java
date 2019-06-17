@@ -1,20 +1,18 @@
 package ahakobyan.ClassLessons;
 
-import javafx.scene.shape.Circle;
-
 public class Circle_Final {
 
     private double radius = 1.0;
     private String color = "red";
 
-    public Circle() {
+    public Circle_Final() {
     }
 
-    public  Circle(double radius) {
+    public  Circle_Final(double radius) {
         this.radius = radius;
     }
 
-    public Circle(double radius, String color) {
+    public Circle_Final(double radius, String color) {
         this.radius = radius;
         this.color = color;
     }

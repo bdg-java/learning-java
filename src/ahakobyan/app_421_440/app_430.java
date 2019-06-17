@@ -1,7 +1,5 @@
 package ahakobyan.app_421_440;
 
-import ahakobyan.MatrixDefaultDecleration;
-
 public class app_430 {
     public static void main(String[] args) {
 
