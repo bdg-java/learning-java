@@ -1,10 +1,12 @@
 package com.bdg.agharibyan.bankAccountSystem;
 
+import com.bdg.agharibyan.datewithstaticmethodcreation.DateStatic;
+
 public abstract class AbstractBankEntity {
 
     protected int id;
-    protected Date createdDate;
-    protected Date updatedDate;
+    protected DateStatic createdDate;
+    protected DateStatic updatedDate;
 
     public AbstractBankEntity(int id){
         this.id = id;
@@ -14,11 +16,11 @@ public abstract class AbstractBankEntity {
         return id;
     }
 
-    public Date getCreatedDate() {
+    public DateStatic getCreatedDate() {
         return createdDate;
     }
 
-    public Date getUpdatedDate() {
+    public DateStatic getUpdatedDate() {
         return updatedDate;
     }
 
@@ -26,11 +28,11 @@ public abstract class AbstractBankEntity {
         this.id = id;
     }
 
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(DateStatic createdDate) {
         this.createdDate = createdDate;
     }
 
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(DateStatic updatedDate) {
         this.updatedDate = updatedDate;
     }
 }

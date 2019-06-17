@@ -6,7 +6,8 @@ public class Address extends AbstractBankEntity{
     private String street;
     private PhoneNumber[] phoneNumber; //typen array e, bayc unenq voch array
 
-    public Address(Country country, String street, PhoneNumber[] phoneNumber){
+    public Address(Country country, String street, PhoneNumber[] phoneNumber, int id){
+        super(id);
         this.country = country;
         this.street = street;
         this.phoneNumber = phoneNumber;

@@ -2,12 +2,13 @@ package com.bdg.agharibyan.bankAccountSystem;
 
 public class CreditCard extends AbstractBankEntity{
 
-    private String cardNumber; // random String, find way to generate)
+    private String cardNumber; // random String, find way to generate) -  chem haskanum grvatsu
     private int accountNumber;
     private Date expirationDate;
     private CardType cardType; // enum
 
-    public CreditCard(int accountNumber, Date expDate, CardType cardType){
+    public CreditCard(int accountNumber, Date expDate, CardType cardType, int id){
+        super(id);
         this.accountNumber = accountNumber;
         this.expirationDate = expDate;
         this.cardType = cardType;
