@@ -17,4 +17,16 @@ public class SalaryInfo {
     public int getSalary(){
         return this.salary;
     }
+
+    public void setSalary(int newSalary){
+        this.salary = newSalary;
+    }
+
+    @Override
+    public String toString(){
+        return  "{carrdNumber='" + cardNumber + "\'," +
+                "salary='" + salary + '\'' +
+                '}'
+                ;
+    }
 }

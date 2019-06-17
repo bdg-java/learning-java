@@ -13,4 +13,15 @@ public class Developer extends Employee{
         return this.profession;
     }
 
+    @Override
+    public String toString() {
+        return "Developer{" +
+                "profession=" + profession +
+                ", info=" + info +
+                ", referenceNumber=" + referenceNumber +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

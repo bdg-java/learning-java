@@ -13,4 +13,16 @@ public class HRSpecialist extends Employee {
     public Profession profession() {
         return this.profession;
     }
+
+    @Override
+    public String toString() {
+        return "HR Specialist{" +
+                "profession=" + profession +
+                ", info=" + info +
+                ", referenceNumber=" + referenceNumber +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

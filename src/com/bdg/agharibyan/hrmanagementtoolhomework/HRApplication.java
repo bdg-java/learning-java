@@ -21,30 +21,35 @@ public class HRApplication {
         hrspecialist.addReferenceNumber(3);
 
         MarketSpecialist marketSpecialist1 = new MarketSpecialist(new SalaryInfo("card-4", 2222), "Market Specialist Name", "Market Specialist Surname", 25);
-        MarketSpecialist marketSpecialist2 = new MarketSpecialist(new SalaryInfo("card-4", 2000),"Market Specialist2 Name", "Market Specialist2 Surname", 27);
+        MarketSpecialist marketSpecialist2 = new MarketSpecialist(new SalaryInfo("card-5", 2000),"Market Specialist2 Name", "Market Specialist2 Surname", 27);
 
         System.out.println("fourth employee added:"+ tool.addEmployee(marketSpecialist1));
         marketSpecialist1.addReferenceNumber(4);
         System.out.println("fifth employee added:"+ tool.addEmployee(marketSpecialist2));
         marketSpecialist2.addReferenceNumber(5);
-        //inchpes tpem arrays ays pahi drutyamb?
 
-        //Ani jan toString() method-y verasahmanvac chi Accounter class-um dra hamar
-        //Es hima da kanem, bayc vaxy aveli detail kasem sra masin
         System.out.println("Our Accounter(s) is(are):"+ Arrays.toString(tool.findByProfession(accounter.profession())));
         System.out.println("Accounter removed:"+ Arrays.toString(tool.removeEmployee(accounter)));
 
+        System.out.println("Employee with name Developer Name removed:"+ Arrays.toString(tool.removeByName("Developer Name")));
+        System.out.println("Employees with names XXX, Market Specialist2 Name, YYY removed:"+ Arrays.toString(tool.removeByNames("XXX","Market Specialist2 Name", "YYY")));
 
-        //sranic nerqev der chem veranayel
-        System.out.println("Employee with name Developer Name removed"+ Arrays.toString(tool.removeByName(" Developer Name")));
+//        System.out.println("Employee with salary range removed:"+ Arrays.toString(tool.removeWithSalaryRange(20,999)));
+        System.out.println("first employee = developer Contains:"+ tool.contains(developer));
+        System.out.println("second employee = accounter Contains:"+ tool.contains(accounter));
+        System.out.println("third employee = hrspecialist Contains:"+ tool.contains(hrspecialist));
+        System.out.println("fourth employee = marketSpecialist1 Contains:"+ tool.contains(marketSpecialist1));
+        System.out.println("fifth employee = marketSpecialist2 Contains:"+ tool.contains(marketSpecialist2));
 
-        tool.removeByNames("Developer Name","Account Name", "Ani");
+        System.out.println("first employee added again:"+ tool.addEmployee(developer));
+        System.out.println("second employee added again:"+ tool.addEmployee(accounter));
+        System.out.println("fifth employee added again:"+ tool.addEmployee(marketSpecialist2));
 
-        tool.removeWithSalaryRange(2000,22222222);
-
-        tool.findByName("Account Name");
-
-        tool.totalSalary();
+        System.out.println("find employee(s) with name Accounter Name:"+ Arrays.toString(tool.findByName("Accounter Name")));
+        System.out.println("find employee with card Number 'card-5':"+ tool.findByCardNumber("card-5"));
+        System.out.println("find employee(s) with salary range '20,999':"+ Arrays.toString(tool.findEmployeeWithSalaryRange(20,999)));
+        System.out.println("increaseSalaryForDeveloper:"+ tool.increaseSalary(developer, 600000));
+        System.out.println("totalSalary:"+ tool.totalSalary());
 
     }
 }
