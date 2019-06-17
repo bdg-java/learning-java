@@ -50,20 +50,20 @@ public class HRmanagement {
         Employee[] rememp = new Employee[currentIndex - 1];
         for (int i = 0; i <employees.length ; i++) {
             if (!employees[i].equals(employee)) {
-                rememp = employees;
+                if (employees[i] != null) {
+                    rememp = employees;
+                }
             }
         }
         return rememp;
     }
 
     public Employee[] removeByName(String name) {
-        Employee[] remname = new Employee[currentIndex -1];
-        for (int i = 0; i <employees.length ; i++) {
-            if (employees[i].name.equals(name)) {
-                employees[i] = null;
+        Employee[] employee = findByName(name);
+            for (Employee emp : this.employees) {
+                removeEmployee(emp);
             }
-        }
-        return employees;
+        return this.employees;
     }
 
     public Employee[] removeByNames(String... names) {
@@ -79,7 +79,7 @@ public class HRmanagement {
     public Employee[] removeWithSalaryRange(int from, int to) {
         for (int i = 0; i < employees.length ; i++) {
             if (employees[i].info.getSalary() > from && employees[i].info.getSalary() < to) {
-                employees[i] = null;
+                    employees[i] = null;
             }
         }
         return employees;
@@ -95,7 +95,7 @@ public class HRmanagement {
         return b;
     }
 
-    public Employee findByName(String employeeName) {
+    public Employee[] findByName(String employeeName) {
         Employee[] findname = new Employee[currentIndex];
          int c = 0;
         for (int i = 0; i < employees.length ; i++) {
@@ -103,33 +103,38 @@ public class HRmanagement {
                 c = i;
             }
         }
-        return findname[c];
+        return findname;
     }
 
     public Employee findByCardNumber(String cardNumber) {
-        Employee[] findcard = new Employee[currentIndex];
-        int d = 0;
-        for (int i = 0; i < employees.length ; i++) {
-            if (employees[i].info.getCardNumber().equals(cardNumber)) {
-                d = i;
-            }
-        }
-        return employees[d];
-    }
-
-    public Employee[] findEmployeeWithSalaryRange(int from, int to) {
-        for (int i = 0; i < employees.length ; i++) {
-            if (employees[i].info.getSalary() > from && employees[i].info.getSalary() < to) {
-                return employees;
+        for (Employee employee : this.employees) {
+            if (employees != null) {
+                if (employee.info.getCardNumber() == cardNumber) {
+                    return employee;
+                }
             }
         }
         return null;
     }
 
-    public Employee[] increaseSalary(Employee employee, int newSalary) {
+    public int findEmployeeWithSalaryRange(int from, int to) {
+        int a = 0;
         for (int i = 0; i < employees.length ; i++) {
-            if (employees[i].equals(employee)) {
-                new SalaryInfo(employees[i].info.getCardNumber(), newSalary);
+            if (employees[i] != null) {
+                if (employees[i].info.getSalary() > from && employees[i].info.getSalary() < to) {
+                    a++;
+                }
+            }
+        }
+        return a;
+    }
+
+    public Employee increaseSalary(Employee employee, int newSalary) {
+        for (int i = 0; i < employees.length ; i++) {
+            if (employees[i] != null) {
+                if (employees[i].name.equals(employee.name) && employees[i].surname.equals(employee.surname)) {
+                    new SalaryInfo(employees[i].info.getCardNumber(), newSalary);
+                }
             }
         }
         return null;
@@ -138,7 +143,9 @@ public class HRmanagement {
     public int totalSalary() {
         int total = 0;
         for (int i = 0; i < employees.length ; i++) {
-            total = total + employees[i].info.getSalary();
+            if (employees[i] != null) {
+                total = total + employees[i].info.getSalary();
+            }
         }
         return total;
     }
