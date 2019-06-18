@@ -1,32 +1,32 @@
 package com.bdg.hrmanagmentTool;
 
 public class HRManagementTool {
-    private Employee [] employees;
+    private Employee[] employees;
     public static final int DEFAULT_CONTAINER_SIZE = 10;
 
     private int currentIndex = 0;
     protected int referenceNumber;
 
-    public HRManagementTool(int initialSize){
+    public HRManagementTool(int initialSize) {
         this.employees = new Employee[initialSize];
     }
 
-    public HRManagementTool(){
+    public HRManagementTool() {
         this(DEFAULT_CONTAINER_SIZE);
     }
 
-    public boolean addEmployee (Employee employee){
+    public boolean addEmployee(Employee employee) {
         if (employees.length == currentIndex) {
             this.increaseSize();
         }
-      this.employees[currentIndex] = employee;
+        this.employees[currentIndex] = employee;
         currentIndex++;
         return true;
     }
 
-    public void increaseSize(){
+    public void increaseSize() {
 
-        Employee[] newArray =  new Employee[employees.length + employees.length/2];
+        Employee[] newArray = new Employee[employees.length + employees.length / 2];
 //        for(int i = 0; i< employees.length; i++){
 //            newArray[i] = this.employees[i];
 //        }
@@ -36,19 +36,19 @@ public class HRManagementTool {
     }
 
 
-    public Employee[] findByProfession(Profession profession){
-        Employee [] foundProf = new Employee[this.currentIndex];
+    public Employee[] findByProfession(Profession profession) {
+        Employee[] foundProf = new Employee[this.currentIndex];
         int k = 0;
-        for(Employee employee: this.employees){
-             if(employee.profession().equals(profession)){
-                 foundProf[k] = employees[k];
-                 k++;
-             }
+        for (Employee employee : this.employees) {
+            if (employee.profession().equals(profession)) {
+                foundProf[k] = employees[k];
+                k++;
+            }
         }
 
-        if(k > 0){
-            Employee [] foundProf2 = new Employee[k];
-            for(int i = 0; i< k; i++){
+        if (k > 0) {
+            Employee[] foundProf2 = new Employee[k];
+            for (int i = 0; i < k; i++) {
                 foundProf2[i] = foundProf[i];
             }
             return foundProf2;
@@ -61,7 +61,7 @@ public class HRManagementTool {
     public boolean removeEmployee(Employee employee) {
         //implement this
         Employee[] empArray = new Employee[currentIndex];
-        if(currentIndex < 1  || this.employees == null){
+        if (currentIndex < 1 || this.employees == null) {
             return false;
         }
         this.employees[currentIndex] = employee;
@@ -69,56 +69,80 @@ public class HRManagementTool {
         return true;
     }
 
-    public Employee[] removeEmployee1(Employee employee) {
-        //implement this
-        Employee[] empArray = new Employee[currentIndex];
-        if(currentIndex < 1  || this.employees == null){
-            return null;
-        }
-        this.employees[currentIndex] = employee;
-        currentIndex--;
-        return this.employees;
-    }
-
     public Employee[] removeByName(String name) {
 
         Employee[] nameRemove = new Employee[currentIndex];
         for(Employee employee: employees){
-            if(employee.name == name){
-               this.employees = null;
+            int emploeeNew = 0;
+            if(employee.name.equals(name)){
+//               this.employees = null;
+                System.out.println(name);
+                return this.employees;
             }
         }
 
-        return this.employees;
+//        return this.employees;
+//        int employeesNewSize = 0;
+//        Employee[] employeeRemoveByName = new Employee[employees.length];
+//        for (int i = 0; i < employees.length; i++) {
+//            if (employees[i] != null && employees[i].name != (name)) {
+//                employeeRemoveByName[employeesNewSize] = employees[i];
+//                employeesNewSize++;
+//                Employee[] employeesSearchByName = new Employee[currentIndex];
+//                int z = 0;
+//                for ( i = 0; i < currentIndex; i++) {
+//                    if (!this.employees[i].name.equals(name)) {
+//                        employeesSearchByName[z] = this.employees[i];
+//                        z++;
+//                    }
+//                }
+//                if (z > 0) {
+//                    Employee[] employeesAfterRemovedByName = new Employee[z];
+//                    for (int k = 0; k < z; k++) {
+//                        employeesAfterRemovedByName[k] = employeesSearchByName[k];
+//                    }
+//                    this.employees = employeesAfterRemovedByName;
+//                    currentIndex = employeesAfterRemovedByName.length;
+//                    return employeesAfterRemovedByName;
+//                }
+//                return employeeRemoveByName;
+//
+//            }
+//        }
+        return null;
     }
+
 
 
     public Employee[] removeByNames(String... names) {
         Employee[] namesRemove = new Employee[currentIndex];
         for(Employee employee: employees){
             int k = 0;
-            if(employees[k].name == namesRemove[k].name){
-                   this.employees = null;
+            if(employees[k].name.equals(employees[k].name)){
+                return this.employees;
                }
 //            for(int i = 0 ; i < currentIndex; i++ ){
 //                if(employees[i].name == namesRemove[i].name){
-//                    this.employees = null;
+//
+//                    return  this.employees;
 //                }
-//            }
+            }
 
-        }
-
-        return this.employees;
+        return null;
     }
 
     public Employee[] removeWithSalaryRange(int from, int to) {
                Employee [] empSalaryRange = new Employee[currentIndex];
+
                for (int i = 0; i < employees.length; i++) {
-                   if(employees[i].info.getSalary() > to && employees[i].info.getSalary() < from){
-                       this.employees = null;
+
+                   if(employees[i].info.getSalary() > to && employees[i].info.getSalary() > to){
+                       return this.employees;
+
                    }
         }
-        return this.employees;
+
+        return null;
     }
 
     public boolean contains(Employee employee) {
@@ -133,11 +157,26 @@ public class HRManagementTool {
 
     }
 
+    private int getCountEmployeewithSameName(String employeeName) {
+        int c = 0;
+        for (Employee employee : this.employees) {
+            if (employee != null) {
+                if (employee.name.hashCode() == employeeName.hashCode())
+                    c++;
+            }
+        }
+        return c;
+    }
+
     public Employee[] findByName(String employeeName) {
+        int c = getCountEmployeewithSameName(employeeName);
+        Employee[] newEmployee = new Employee[c];
        Employee[] array = new Employee[currentIndex];
-       for(Employee employee: employees){
-           if(employee.name.equals(employeeName) && employee.name != null){
-               return this.employees;
+       int i =0;
+       for(Employee employee: this.employees){
+           if (employee != null) {
+               if (employee.name.hashCode() == employeeName.hashCode())
+                   newEmployee[i++] = employee;
            }
        }
         return null;
