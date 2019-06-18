@@ -1,7 +1,12 @@
 package com.bdg.agharibyan.bankAccountSystem;
 
 public enum Country {
-    AM("Armenia", "051");
+    AM("Armenia", "051"),
+    BR("Brazil", "076"),
+    LK("Sri Lanka", "144"),
+    FR("France", "250"),
+    GE("Georgia", "268"),
+    GR("Greece", "300");
 
     private String countryName;
     private String numericCode;
