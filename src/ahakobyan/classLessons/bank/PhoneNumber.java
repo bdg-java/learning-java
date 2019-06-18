@@ -1,6 +1,6 @@
 package ahakobyan.classLessons.bank;
 
-public class PhoneNumber {
+public class PhoneNumber extends AbstractBankEntity {
 
     private CountryCode countryCode;
     private String number;
