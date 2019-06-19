@@ -5,12 +5,13 @@ public class Address extends BankEntity {
     private String street;
     private PhoneNumber[] phoneNumber;
 
-    public Address(Country country, String street, PhoneNumber phoneNumber) {
+    public Address(Country country, String street, PhoneNumber[] phoneNumber) {
         int num = 0;
         this.country = country;
         this.street = street;
-        this.phoneNumber[num] = phoneNumber;
-        num++;
+        this.phoneNumber = phoneNumber;
+
+
     }
 
     public Country getCountry() {
