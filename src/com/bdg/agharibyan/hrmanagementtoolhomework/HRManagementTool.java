@@ -93,25 +93,17 @@ public class HRManagementTool {
         return null;
     }
 
-    public Employee[] removeByNames(String name1, String name2, String nameN) {
-        Employee [] employeesSearchByNames = new Employee[currentEmployeeCount];
-        int z = 0;
-        for(int i = 0; i < currentEmployeeCount; i++){
-            if(!this.employees[i].name.equals(name1) && !this.employees[i].name.equals(name2) && !this.employees[i].name.equals(nameN)){
-                employeesSearchByNames[z] = this.employees[i];
-                z++;
+    public Employee[] removeByNames(String... names) {
+        Employee[] removed = new Employee[this.currentEmployeeCount];
+        int k = 0;
+        for (String name : names) {
+            Employee[] employees = removeByName(name);
+            for (Employee employee : employees) {
+                removed[k] = employee;
+                k++;
             }
         }
-        if(z > 0){
-            Employee[] employeesAfterRemovedByNames = new Employee[z];
-            for(int k = 0; k < z; k++){
-                employeesAfterRemovedByNames[k] = employeesSearchByNames[k];
-            }
-            this.employees = employeesAfterRemovedByNames;
-            currentEmployeeCount = employeesAfterRemovedByNames.length;
-            return employeesAfterRemovedByNames;
-        }
-        return null;
+        return removed;
     }
 
     public Employee[] removeWithSalaryRange(int from, int to) {
@@ -209,5 +201,8 @@ public class HRManagementTool {
         return salaryTotal;
     }
 
+    public static void main(String[] args) {
+        new HRManagementTool().removeByNames("anna", "karen");
+    }
 }
 
