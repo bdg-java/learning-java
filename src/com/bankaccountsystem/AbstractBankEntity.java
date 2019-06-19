@@ -1,11 +1,13 @@
 package com.bankaccountsystem;
 
-public abstract class AbstractBankEntity {
-    protected int id;
-    protected Date createdDate;
-    protected Date updatedDate;
+import java.util.Date;
 
-    public AbstractBankEntity(int id) {
+public abstract class AbstractBankEntity {
+    private int id;
+    private Date createdDate;
+    private Date updatedDate;
+
+    AbstractBankEntity(int id) {
         this.id = id;
     }
 

@@ -1,4 +1,5 @@
 package com.bankaccountsystem;
 
-public class PhoneType {
+public enum PhoneType {
+    MOBILE, WORK, HOME
 }

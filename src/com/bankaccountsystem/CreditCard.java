@@ -1,12 +1,15 @@
 package com.bankaccountsystem;
 
-public class CreditCard {
+import java.util.Date;
+
+public class CreditCard extends AbstractBankEntity{
     private String cardNumber;
     private int accountNumber;
     private Date expirationDate;
     private CardType cardType;
 
-    public CreditCard(int accountNumber, Date expirationDate, CardType cardType) {
+    public CreditCard(int id, int accountNumber, Date expirationDate, CardType cardType) {
+        super(id);
         this.accountNumber = accountNumber;
         this.expirationDate = expirationDate;
         this.cardType = cardType;
