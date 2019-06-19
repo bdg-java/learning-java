@@ -5,12 +5,12 @@ public class CreditCard extends AbstractBankEntity {
     private String cardnumber;
     private int accountNumber;
     private Date expirationDate;
-    private enum CardType {cardType};
+    private CardType cardType;
 
     public CreditCard(int accountNumber, Date expDate, CardType cardType) {
         this.accountNumber = accountNumber;
         this.expirationDate = expDate;
-        cardType = cardType;
+        this.cardType = cardType;
     }
 
     public String getCardnumber() {
