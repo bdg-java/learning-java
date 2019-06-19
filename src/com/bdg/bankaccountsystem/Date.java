@@ -1,4 +1,6 @@
 package com.bdg.bankaccountsystem;
 
-public class Date {
+public enum Date {
+    Month,
+    Year;
 }

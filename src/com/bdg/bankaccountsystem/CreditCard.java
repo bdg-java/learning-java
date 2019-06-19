@@ -1,6 +1,6 @@
 package com.bdg.bankaccountsystem;
 
-public class CreditCard {
+public class CreditCard extends AbstractBankEntity{
 
 //    RandomString randomString = new RandomString();
 
@@ -10,7 +10,8 @@ public class CreditCard {
     private Date expirationDate;
     private CardType cardType;
 
-    CreditCard(int accountNumber, Date expirationDate, CardType cardType) {
+    CreditCard(int accountNumber, Date expirationDate, CardType cardType, int id) {
+        super(id);
         this.accountNumber = accountNumber;
         this.expirationDate = expirationDate;
         this.cardType = cardType;

@@ -1,11 +1,12 @@
 package com.bdg.bankaccountsystem;
 
-public class Account {
+public class Account extends AbstractBankEntity {
     private Customer customer;
     private AccountDetail accountDetail;
     private AccountBalance accountBalance;
 
-    public Account(Customer customer, AccountBalance accountBalance, AccountDetail accountDetail) {
+    public Account(Customer customer, AccountBalance accountBalance, AccountDetail accountDetail, int id) {
+        super(id);
         this.customer = customer;
         this.accountBalance = accountBalance;
         this.accountDetail = accountDetail;

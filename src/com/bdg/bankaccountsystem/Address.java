@@ -1,11 +1,12 @@
 package com.bdg.bankaccountsystem;
 
-public class Address {
+public class Address extends AbstractBankEntity{
     private Country country;
     private String street;
     private PhoneNumber[] phoneNumber;
 
-    public Address (Country country, String street, PhoneNumber[] phoneNumber) {
+    public Address (Country country, String street, PhoneNumber[] phoneNumber, int id) {
+        super(id);
         this.country = country;
         this.phoneNumber = phoneNumber;
         this.street = street;
@@ -15,9 +16,7 @@ public class Address {
         return this.country;
     }
 
-    public String getStreet() {
-        return this.street;
-    }
+    public String getStreet() { return this.street; }
 
     public PhoneNumber[] getPhoneNumber() {
         return this.phoneNumber;
