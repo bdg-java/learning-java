@@ -9,7 +9,7 @@ public class BankAccountApplication {
         AccountDetail detail = new AccountDetail("Счет собаки");
         AccountBalance  balance = new AccountBalance(12000);
         Account account = new Account(customer,detail,balance);
-        System.out.println(country.countryName+" "+country.numericCode+" ");
+        System.out.println(country.countryName+" "+country.numericCode+" "+customer.getCustomerName()+" "+ customer.getCustomerSurname()+" "+address.getStreet()+" "+phone.getNumber());
 
     }
 }
