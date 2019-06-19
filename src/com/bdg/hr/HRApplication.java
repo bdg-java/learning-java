@@ -68,8 +68,8 @@ public abstract class HRApplication {
 
         System.out.println(hr.totalSalary());
         System.out.println( hr.findEmployeeWithSalaryRange(300000,2000000));
-        hr.increaseSalary(developer1,3000);
-        System.out.println(hr.findEmployeeWithSalaryRange(1000,4000));
+        hr.increaseSalary(developer1,80000);
+        System.out.println(developer1.info.getSalary());
 
 
 

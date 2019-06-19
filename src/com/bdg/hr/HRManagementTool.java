@@ -51,8 +51,10 @@ public class HRManagementTool {
 
     public Employee[] removeByName(String name) {
         for (int i = 0; i < employees.length ; i++) {
-            if (employees[i].name.equals(name)){
-                employees[i]= null;
+            if (employees[i] != null) {
+                if (employees[i].name.equals(name)) {
+                    employees[i] = null;
+                }
             }
         }
         return employees;
@@ -60,8 +62,10 @@ public class HRManagementTool {
 
     public Employee[] removeByNames(String... names) {
         for (int i = 0; i <employees.length ; i++) {
-            if (employees[i].name.equals(names)){
-                employees[i]= null;
+            if (employees[i] != null) {
+                if (employees[i].name.equals(names)) {
+                    employees[i] = null;
+                }
             }
         }
         return employees;
@@ -69,8 +73,10 @@ public class HRManagementTool {
 
     public Employee[] removeWithSalaryRange(int from, int to) {
         for (int i = 0; i < employees.length ; i++) {
-            if (employees[i].info.getSalary()>from &&employees[i].info.getSalary()<to ){
-                employees[i]=null;
+            if (employees[i] != null) {
+                if (employees[i].info.getSalary() > from && employees[i].info.getSalary() < to) {
+                    employees[i] = null;
+                }
             }
         }
         return employees;
@@ -79,8 +85,10 @@ public class HRManagementTool {
     public boolean contains(Employee employee) {
         boolean bool = false;
         for (int i = 0; i < employees.length ; i++) {
-            if(employees[i].name.equals(employee.name) && employees[i].surname.equals(employee.surname))
-            bool = true;
+            if (employees[i] != null) {
+                if (employees[i].name.equals(employee.name) && employees[i].surname.equals(employee.surname))
+                    bool = true;
+            }
         }
 
         return bool;
@@ -90,8 +98,11 @@ public class HRManagementTool {
         int num = 0;
         boolean bool = false;
         for (int i = 0; i <employees.length ; i++) {
-            if (employees[i].name.equals(employeeName)){
-                num = i;}
+            if (employees[i] != null) {
+                if (employees[i].name.equals(employeeName)) {
+                    num = i;
+                }
+            }
         }
 
         return new Employee[]{employees[num]};
@@ -100,8 +111,11 @@ public class HRManagementTool {
     public Employee findByCardNumber(String cardNumber) {
         int num= 0;
         for (int i = 0; i < employees.length ; i++) {
-            if (employees[i].info.getCardNumber().equals(cardNumber))
-                num = i;
+            if (employees[i] != null) {
+                if (employees[i].info.getCardNumber().equals(cardNumber)) {
+                    num = i;
+                }
+            }
         }
         return employees[num];
     }
@@ -121,7 +135,7 @@ public class HRManagementTool {
         for (int i = 0; i < employees.length ; i++) {
             if (employees[i]!=null){
                 if (employees[i].name.equals(employee.name) && employees[i].surname.equals(employee.surname) ){
-                new SalaryInfo(employees[i].info.getCardNumber(),newSalarySize);
+//                employee.info.;
                 }
             }
         }
@@ -130,7 +144,6 @@ public class HRManagementTool {
 
     public int totalSalary() {
         int total = 0;
-
         for (int i = 0; i <employees.length ; i++) {
             if (employees[i] != null) {
                 total += employees[i].info.getSalary();
