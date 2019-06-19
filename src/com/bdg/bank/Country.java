@@ -1,7 +1,8 @@
 package com.bdg.bank;
 
 public enum Country {
-    AM("Armenia", "051");
+    AM("Armenia", "051"),
+    UK("UNnited Kingdom", "051");
     private String countryName;
     private String numericCode;
 
