@@ -1,5 +1,7 @@
 package com.bdg.composition;
 
+import com.bdg.enums.DayOfWeek;
+
 public class DateDemo {
 
     public static void main(String[] args) {
@@ -13,5 +15,8 @@ public class DateDemo {
         if (rangedDate != null) {
             System.out.println(rangedDate);
         }
+
+        DayOfWeek monday = DayOfWeek.MONDAY;
+        System.out.println(monday.shortName());
     }
 }
