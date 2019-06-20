@@ -1,6 +1,6 @@
 package com.bdg.interfaces.homework;
 
-interface GeometricObject {
+public interface GeometricObject {
     double getPerimeter();
     double getArea();
 }
