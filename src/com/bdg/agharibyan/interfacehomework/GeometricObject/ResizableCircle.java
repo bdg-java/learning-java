@@ -7,7 +7,11 @@ public class ResizableCircle extends Circle implements Resizable{
     }
 
     @Override
-    public int resize(int percent) {
-        return 0;
+    public boolean resize(int percent) {
+        if(percent != 0) {
+            radius = radius + radius * percent / 100;
+            return true;
+        }
+        return false;
     }
 }
