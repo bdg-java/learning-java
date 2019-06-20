@@ -1,36 +1,39 @@
 package com.bdg.agharibyan.interfacehomework.Movable;
 
-public class MovableCircle extends MovablePoint implements Movable {
+public class MovableCircle implements Movable {
 
     private int radius;
-    private MovablePoint center;
+    private MovablePoint center = new MovablePoint(10, 10, 1, 1);
 
     public MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius){
-        super(x, y, xSpeed, ySpeed);
+        this.center.x = x;
+        this.center.y = y;
+        this.center.xSpeed = xSpeed;
+        this.center.ySpeed = ySpeed;
         this.radius = radius;
     }
 
     public String toString(){
-        return " MovableCircle's center's coordinats (" + this.x + "," + this.y + ")";
+        return " MovableCircle [center's coordinats: (" + this.center.x + "," + this.center.y + ") , radius: " + this.radius +"]";
     }
 
     @Override
     public void moveUp(){
-        super.moveUp();
+        center.moveUp();
     }
 
     @Override
     public void moveDown(){
-        super.moveDown();
+        center.moveDown();
     }
 
     @Override
     public void moveLeft() {
-        super.moveLeft();
+        center.moveLeft();
     }
 
     @Override
     public void moveRight() {
-        super.moveRight();
+        center.moveRight();
     }
 }
