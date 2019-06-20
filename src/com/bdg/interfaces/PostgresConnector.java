@@ -8,14 +8,5 @@ public class PostgresConnector implements DatabaseConnector{
     public DatabaseConnection connect() {
         return new DatabaseConnection();
     }
-
-    @Override
-    public void save(Group group) {
-
-    }
-
-    @Override
-    public void save(User user) {
-
-    }
+    
 }

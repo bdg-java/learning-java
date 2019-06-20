@@ -10,7 +10,7 @@ public class GroupCreationService {
 
     public Group createGroup(String groupName) {
         Group group = new Group(groupName);
-        connector.save(group);
+      //  connector.save(group);
         return group;
     }
 }
