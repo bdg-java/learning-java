@@ -15,7 +15,7 @@ public class MovablePoint implements Movable {
     }
 
     public String toString(){
-        return "MovablePoint has coordintans(" + this.x + "," + this.y + ")";
+        return "(" + this.x + "," + this.y + ")";
     }
 
     @Override
