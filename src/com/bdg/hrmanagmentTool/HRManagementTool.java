@@ -76,39 +76,11 @@ public class HRManagementTool {
             int emploeeNew = 0;
             if(employee.name.equals(name)){
 //               this.employees = null;
-                System.out.println(name);
+                System.out.println(employee.name);
                 return this.employees;
             }
         }
 
-//        return this.employees;
-//        int employeesNewSize = 0;
-//        Employee[] employeeRemoveByName = new Employee[employees.length];
-//        for (int i = 0; i < employees.length; i++) {
-//            if (employees[i] != null && employees[i].name != (name)) {
-//                employeeRemoveByName[employeesNewSize] = employees[i];
-//                employeesNewSize++;
-//                Employee[] employeesSearchByName = new Employee[currentIndex];
-//                int z = 0;
-//                for ( i = 0; i < currentIndex; i++) {
-//                    if (!this.employees[i].name.equals(name)) {
-//                        employeesSearchByName[z] = this.employees[i];
-//                        z++;
-//                    }
-//                }
-//                if (z > 0) {
-//                    Employee[] employeesAfterRemovedByName = new Employee[z];
-//                    for (int k = 0; k < z; k++) {
-//                        employeesAfterRemovedByName[k] = employeesSearchByName[k];
-//                    }
-//                    this.employees = employeesAfterRemovedByName;
-//                    currentIndex = employeesAfterRemovedByName.length;
-//                    return employeesAfterRemovedByName;
-//                }
-//                return employeeRemoveByName;
-//
-//            }
-//        }
         return null;
     }
 
@@ -132,18 +104,22 @@ public class HRManagementTool {
     }
 
     public Employee[] removeWithSalaryRange(int from, int to) {
-               Employee [] empSalaryRange = new Employee[currentIndex];
+        int i = 0;
+        Employee[] empSalaryRange = new Employee[currentIndex];
+        for (i = 0; i < employees.length; i++) {
+            if (employees[i].info.getSalary() >= from && employees[i].info.getSalary() <= to) {
+                System.out.println(employees[i].info.getSalary());
+                int k = 0;
+                empSalaryRange[k] = employees[i];
+                return empSalaryRange;
 
-               for (int i = 0; i < employees.length; i++) {
-
-                   if(employees[i].info.getSalary() > to && employees[i].info.getSalary() > to){
-                       return this.employees;
-
-                   }
+            }
         }
 
-        return null;
+        return empSalaryRange;
+
     }
+
 
     public boolean contains(Employee employee) {
         Employee[] array = new Employee[currentIndex];
