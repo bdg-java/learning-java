@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.bankAccountSystem;
+package com.bdg.agharibyan.bankaccountsystem;
 
 public class Account extends AbstractBankEntity{
     private Customer customer;

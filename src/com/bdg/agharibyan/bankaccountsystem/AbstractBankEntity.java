@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.bankAccountSystem;
+package com.bdg.agharibyan.bankaccountsystem;
 
 import com.bdg.agharibyan.datewithstaticmethodcreation.DateStatic;
 
