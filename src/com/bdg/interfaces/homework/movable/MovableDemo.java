@@ -9,5 +9,9 @@ public class MovableDemo {
         System.out.println(movablePoint);
         movablePoint.moveUp();
         System.out.println(movablePoint);
+        MovableRectangle movableRectangle = new MovableRectangle(5,8,43,4,3,3);
+        System.out.println(movableRectangle);
+        movableRectangle.moveDown();
+        System.out.println(movableRectangle);
     }
 }
