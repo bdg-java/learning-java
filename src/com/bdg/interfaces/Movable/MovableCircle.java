@@ -1,10 +1,11 @@
-package com.bdg.interfaces;
+package com.bdg.interfaces.Movable;
 
-public class MovableCircle extends MovablePoint implements Movable   {
+public class MovableCircle extends MovablePoint implements Movable {
     int radius;
     MovablePoint center;
 
     public MovableCircle(int x, int y, int xSpeed, int ySpeed) {
+
         super(x, y, xSpeed, ySpeed);
     }
 

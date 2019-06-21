@@ -1,4 +1,4 @@
-package com.bdg.interfaces;
+package com.bdg.interfaces.Movable;
 
 public interface Movable {
     void moveUp();

@@ -1,4 +1,6 @@
-package com.bdg.interfaces;
+package com.bdg.interfaces.Movable;
+
+import com.bdg.interfaces.Movable.Movable;
 
 public class MovablePoint implements Movable {
     int x;
@@ -11,6 +13,10 @@ public class MovablePoint implements Movable {
         this.y = y;
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
+    }
+
+    public MovablePoint() {
+
     }
 
     @Override
