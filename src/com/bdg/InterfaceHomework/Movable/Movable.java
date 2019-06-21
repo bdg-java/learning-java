@@ -1,4 +1,4 @@
-package com.bdg.InterfaceHomework.GeometricObjects.Movable;
+package com.bdg.InterfaceHomework.Movable;
 
 interface Movable {
     void moveUp();

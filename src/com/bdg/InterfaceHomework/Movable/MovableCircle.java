@@ -1,4 +1,4 @@
-package com.bdg.InterfaceHomework.GeometricObjects.Movable;
+package com.bdg.InterfaceHomework.Movable;
 
 
 public class MovableCircle implements Movable {
@@ -23,7 +23,7 @@ public class MovableCircle implements Movable {
     }
 
     public void moveRight(){
-        center.x -= center.xSpeed;
+        center.x += center.xSpeed;
     }
 
     public String toString(){

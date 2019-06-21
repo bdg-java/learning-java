@@ -1,5 +1,8 @@
 package com.bdg.InterfaceHomework.GeometricObjects;
 
+import com.bdg.InterfaceHomework.GeometricObjects.Circal;
+import com.bdg.InterfaceHomework.GeometricObjects.Resizable;
+
 public class ResizableCircal extends Circal implements Resizable {
 
     public ResizableCircal(double radius) {

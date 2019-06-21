@@ -1,4 +1,4 @@
-package com.bdg.InterfaceHomework.GeometricObjects.Movable;
+package com.bdg.InterfaceHomework.Movable;
 
 public class MovablePoint implements Movable {
     public int x;
