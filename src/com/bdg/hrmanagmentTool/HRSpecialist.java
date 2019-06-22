@@ -6,6 +6,10 @@ public class HRSpecialist extends Employee{
     }
 
     public Profession profession(){
-        return new Profession("Accounter");
+        return new Profession("HRSpecialist");
+    }
+
+    public String toString(){
+        return "HRSpecialist";
     }
 }

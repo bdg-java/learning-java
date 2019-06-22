@@ -8,4 +8,8 @@ public class Accounter extends  Employee{
     public Profession profession(){
         return new Profession("Accounter");
     }
+
+    public String toString(){
+        return "Accounter" + name;
+    }
 }
