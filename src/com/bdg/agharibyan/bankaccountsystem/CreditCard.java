@@ -1,19 +1,21 @@
 package com.bdg.agharibyan.bankaccountsystem;
 
-import com.bdg.agharibyan.datewithstaticmethodcreation.DateStatic;
+import java.time.LocalDate;
 
 public class CreditCard extends AbstractBankEntity{
 
-    private String cardNumber; // random String, find way to generate) -  chem haskanum grvatsu
+    private String cardNumber; // random String, find way to generate) -  chem haskanum grvatsy
     private int accountNumber;
-    private DateStatic expirationDate;
+    private LocalDate expirationDate;
     private CardType cardType; // enum
 
-    public CreditCard(int accountNumber, DateStatic expDate, CardType cardType, int id){
+    public CreditCard(String cardNumber, int accountNumber, LocalDate expDate, CardType cardType, int id){
         super(id);
+        this.cardNumber = cardNumber;
         this.accountNumber = accountNumber;
         this.expirationDate = expDate;
         this.cardType = cardType;
+        this.createdDate = LocalDate.now();
     }
 
     public String getCardNumber() {
@@ -24,7 +26,7 @@ public class CreditCard extends AbstractBankEntity{
         return accountNumber;
     }
 
-    public DateStatic getExpirationDate() {
+    public LocalDate getExpirationDate() {
         return expirationDate;
     }
 
@@ -40,7 +42,7 @@ public class CreditCard extends AbstractBankEntity{
         this.accountNumber = accountNumber;
     }
 
-    public void setExpirationDate(DateStatic expirationDate) {
+    public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
     }
 

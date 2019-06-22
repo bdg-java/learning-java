@@ -4,7 +4,7 @@ public class Address extends AbstractBankEntity{
 
     private Country country;
     private String street;
-    private PhoneNumber[] phoneNumber; //typen array e, bayc unenq voch array
+    private PhoneNumber[] phoneNumber;
 
     public Address(Country country, String street, PhoneNumber[] phoneNumber, int id){
         super(id);
