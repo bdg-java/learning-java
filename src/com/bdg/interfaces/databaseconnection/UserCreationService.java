@@ -9,7 +9,6 @@ public class UserCreationService {
 
     public User createUser(String name, String surname) {
         User user = new User(name, surname);
-
         connector.save(user);
         return user;
     }

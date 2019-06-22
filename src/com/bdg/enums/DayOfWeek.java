@@ -36,6 +36,17 @@ public enum DayOfWeek {
         return DayOfWeek.valueOf(enumName);
     }
 
+    public static DayOfWeek find(String weekName) {
+        DayOfWeek found = null;
+
+        for (DayOfWeek value : values()) {
+            if (value.weekName == weekName) {
+                found = value;
+            }
+        }
+        throw new DayOfWeekNotFoundException(weekName);
+    }
+
     public String toString() {
         return this.weekName;
     }

@@ -6,4 +6,6 @@ import com.bdg.interfaces.databaseconnection.Group;
 public interface DatabaseConnector {
 
     DatabaseConnection connect();
+
+    void save(Group group);
 }
