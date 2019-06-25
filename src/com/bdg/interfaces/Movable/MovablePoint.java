@@ -21,22 +21,22 @@ public class MovablePoint implements Movable {
 
     @Override
     public void moveUp() {
-            x++;
+            this.x += this.xSpeed;
     }
 
     @Override
-    public void moveDown() {
-        x--;
+    public void moveDown()  {
+        this.x -= this.xSpeed ;
     }
 
     @Override
-    public void moveLeft() {
-        y--;
+    public void moveLeft()   {
+        this.y-=this.ySpeed;
     }
 
     @Override
-    public void moveRight() {
-        y++;
+    public void moveRight()   {
+          this.y+=this.ySpeed;
     }
 
     @Override
