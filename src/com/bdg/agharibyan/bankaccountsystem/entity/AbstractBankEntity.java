@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.bankaccountsystem;
+package com.bdg.agharibyan.bankaccountsystem.entity;
 
 import java.time.LocalDate;
 
@@ -9,9 +9,11 @@ public abstract class AbstractBankEntity {
     protected LocalDate deletedDate;
     protected LocalDate updatedDate;
 
-    public AbstractBankEntity(int id){
-        this.id = id;
-    }
+
+    // nman constructori kariq chka, qani vor mer object-y id stanum a menak save linelis
+//    public AbstractBankEntity(int id){
+//        this.id = id;
+//    }
 
     public int getId() {
         return id;

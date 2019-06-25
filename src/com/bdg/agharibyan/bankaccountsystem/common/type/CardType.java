@@ -1,9 +1,11 @@
-package com.bdg.agharibyan.bankaccountsystem;
+package com.bdg.agharibyan.bankaccountsystem.common.type;
+
+import com.bdg.agharibyan.bankaccountsystem.common.exception.InvalidCardTypeException;
 
 public enum CardType {
     VISA,
-    MasterCard,
-    ARCA,
+    MASTERCARD,
+    ARCA, //inchu e yndgtsum taky?
     AmericanExpress;
 
 

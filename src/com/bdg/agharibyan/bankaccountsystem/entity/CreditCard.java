@@ -1,21 +1,21 @@
-package com.bdg.agharibyan.bankaccountsystem;
+package com.bdg.agharibyan.bankaccountsystem.entity;
+
+import com.bdg.agharibyan.bankaccountsystem.common.type.CardType;
 
 import java.time.LocalDate;
 
-public class CreditCard extends AbstractBankEntity{
+public final class CreditCard extends AbstractBankEntity { // inchu e final?
 
-    private String cardNumber; // random String, find way to generate) -  chem haskanum grvatsy
+    private String cardNumber; // random String, find way to generate
     private int accountNumber;
     private LocalDate expirationDate;
-    private CardType cardType; // enum
+    private CardType cardType;
 
-    public CreditCard(String cardNumber, int accountNumber, LocalDate expDate, CardType cardType, int id){
-        super(id);
+    public CreditCard(String cardNumber, int accountNumber, LocalDate expDate, CardType cardType){
         this.cardNumber = cardNumber;
         this.accountNumber = accountNumber;
         this.expirationDate = expDate;
         this.cardType = cardType;
-        this.createdDate = LocalDate.now();
     }
 
     public String getCardNumber() {
@@ -48,5 +48,19 @@ public class CreditCard extends AbstractBankEntity{
 
     public void setCardType(CardType cardType) {
         this.cardType = cardType;
+    }
+
+    @Override
+    public String toString(){
+        return "CreditCard: {" +
+                "cardNumber: '" + cardNumber + '\'' +
+                ", accountNumber: " + accountNumber +
+                ", expirationDate: " + expirationDate +
+                ", cardType: " + cardType +
+                ", id: " + id +
+                ", createdDate: " + createdDate +
+                ", updatedDate: " + updatedDate +
+                ", deletedDate: " + deletedDate +
+                "}";
     }
 }

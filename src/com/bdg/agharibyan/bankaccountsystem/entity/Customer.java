@@ -1,12 +1,11 @@
-package com.bdg.agharibyan.bankaccountsystem;
+package com.bdg.agharibyan.bankaccountsystem.entity;
 
-public class Customer extends AbstractBankEntity{
+public class Customer extends AbstractBankEntity {
     private String customerName;
     private String customerSurname;
     private Address customerAddress;
 
-    public Customer(String customerName, String customerSurname, Address customerAddress, int id){
-        super(id);
+    public Customer(String customerName, String customerSurname, Address customerAddress){
         this.customerName = customerName;
         this.customerSurname = customerSurname;
         this.customerAddress = customerAddress;
@@ -34,5 +33,13 @@ public class Customer extends AbstractBankEntity{
 
     public void setCustomerAddress(Address customerAddress) {
         this.customerAddress = customerAddress;
+    }
+
+    public String toString(){
+        return "Customer: {" +
+                "CustomerName: '" + customerName + '\'' +
+                "CustomerSurname: '" + customerSurname + '\'' +
+                "CustomerAddress: " + customerAddress + '\'' +
+                "}";
     }
 }

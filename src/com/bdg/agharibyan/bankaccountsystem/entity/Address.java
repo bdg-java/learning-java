@@ -1,13 +1,14 @@
-package com.bdg.agharibyan.bankaccountsystem;
+package com.bdg.agharibyan.bankaccountsystem.entity;
 
-public class Address extends AbstractBankEntity{
+import com.bdg.agharibyan.bankaccountsystem.common.type.Country;
+
+public class Address extends AbstractBankEntity {
 
     private Country country;
     private String street;
     private PhoneNumber[] phoneNumber;
 
-    public Address(Country country, String street, PhoneNumber[] phoneNumber, int id){
-        super(id);
+    public Address(Country country, String street, PhoneNumber[] phoneNumber){
         this.country = country;
         this.street = street;
         this.phoneNumber = phoneNumber;
@@ -35,5 +36,14 @@ public class Address extends AbstractBankEntity{
 
     public void setPhoneNumber(PhoneNumber[] phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString(){
+        return "Address: {"+
+                "Country: '" + country + '\'' +
+                "Street: '" + street + '\'' +
+                "PhoneNumber: '" + phoneNumber + '\'' +
+                "}";
     }
 }
