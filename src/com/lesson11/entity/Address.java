@@ -1,4 +1,8 @@
-package com.lesson11;
+package com.lesson11.entity;
+
+import com.lesson11.PhoneNumber;
+import com.lesson11.entity.AbstractBankEntity;
+import com.lesson11.enumentity.Country;
 
 import java.util.Arrays;
 
@@ -7,8 +11,7 @@ public class Address extends AbstractBankEntity {
     private String street;
     private PhoneNumber phonenumber[];
 
-    public Address(int id, Country country, String street, PhoneNumber[] phonenumber) {
-        super(id);
+    public Address(Country country, String street, PhoneNumber[] phonenumber) {
         this.country = country;
         this.street = street;
         this.phonenumber = phonenumber;
@@ -40,7 +43,7 @@ public class Address extends AbstractBankEntity {
 
     @Override
     public String toString() {
-        return this.country + ", " + this.street + " , " + Arrays.toString(phonenumber);
+        return "Address [" + this.getId() + this.country + ", " + this.street + " , " + Arrays.toString(phonenumber) + " UpdateDate " + this.updateDate + " DeleteDate " + this.deleteDate + "]";
     }
 }
 

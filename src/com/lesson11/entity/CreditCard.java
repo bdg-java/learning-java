@@ -1,16 +1,19 @@
-package com.lesson11;
+package com.lesson11.entity;
 
+import com.lesson11.enumentity.CardType;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 public class CreditCard extends AbstractBankEntity {
 
     private String cardNumber;
     private int accountNumber;
-    private Date expirationDate;
+    private LocalDate expirationDate;
     private CardType cardType;
 
-    public CreditCard(int id, int accountNamber, Date expirationDate, CardType cardType) {
-        super(id);
+    public CreditCard(String cardNumber, int accountNamber, LocalDate expirationDate, CardType cardType) {
+        this.cardNumber = cardNumber;
         this.accountNumber = accountNamber;
         this.expirationDate = expirationDate;
         this.cardType = cardType;
@@ -24,7 +27,7 @@ public class CreditCard extends AbstractBankEntity {
         return this.accountNumber;
     }
 
-    public Date getExpirationDate() {
+    public LocalDate getExpirationDate() {
         return this.expirationDate;
     }
 
@@ -40,12 +43,26 @@ public class CreditCard extends AbstractBankEntity {
         this.accountNumber = accountNumber;
     }
 
-    public void setExpirationDate(Date expirationDate) {
+    public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
     }
 
     public void setCardType(CardType cardType) {
         this.cardType = cardType;
+    }
+
+    @Override
+    public String toString() {
+        return "CreditCard{" +
+                "cardNumber='" + cardNumber + '\'' +
+                ", accountNumber=" + accountNumber +
+                ", expDate=" + expirationDate +
+                ", cardType=" + cardType +
+                ", id=" + id +
+                ", created=" + creditDate +
+                ", updated=" + updateDate +
+                ", deleted=" + deleteDate +
+                '}';
     }
 
 

@@ -1,4 +1,4 @@
-package com.lesson11;
+package com.lesson11.enumentity;
 
 public enum Country {
 
