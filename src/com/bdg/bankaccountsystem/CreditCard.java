@@ -1,14 +1,14 @@
 package com.bdg.bankaccountsystem;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class CreditCard extends BankEntity {
     private String cardNumber;
     private int accountNumber;
-    private Date expirationDate;
+    private LocalDate expirationDate;
     private CardType cardType;
 
-    public CreditCard(String cardNumber, int accountNumber, Date expirationDate, CardType cardType) {
+    public CreditCard(String cardNumber, int accountNumber, LocalDate expirationDate, CardType cardType) {
         this.cardNumber = cardNumber;
         this.accountNumber = accountNumber;
         this.expirationDate = expirationDate;
@@ -31,11 +31,11 @@ public class CreditCard extends BankEntity {
         this.accountNumber = accountNumber;
     }
 
-    public Date getExpirationDate() {
+    public LocalDate getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(Date expirationDate) {
+    public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
     }
 

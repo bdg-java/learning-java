@@ -3,23 +3,11 @@ package com.bdg.bankaccountsystem;
 import java.util.Date;
 
 public abstract class BankEntity {
-    protected int id;
     protected Date createDate;
     protected Date updateDate;
+    protected Date deleted;
 
     public BankEntity() {
-    }
-
-    public  BankEntity(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public Date getCreateDate() {

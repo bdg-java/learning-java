@@ -1,5 +1,7 @@
 package com.bdg.bankaccountsystem;
 
+import java.time.LocalDate;
+
 public class BankAccountApplication {
     public static void main(String[] args)  {
         Country country = Country.RU ;
@@ -9,7 +11,14 @@ public class BankAccountApplication {
         AccountDetail detail = new AccountDetail("Счет собаки");
         AccountBalance  balance = new AccountBalance(12000);
         Account account = new Account(customer,detail,balance);
-        System.out.println(country.countryName+" "+country.numericCode+" "+customer.getCustomerName()+" "+ customer.getCustomerSurname()+" "+address.getStreet()+" "+phone.getNumber());
-
+        /*System.out.println(country.countryName+" "+country.numericCode+" "
+                +customer.getCustomerName()+" "+ customer.getCustomerSurname()+" "
+                +address.getStreet()+" "+phone.getNumber());*/
+        String card="";
+        CreditCardServiceImpl sample= new CreditCardServiceImpl();
+        int numb=0;
+        sample.create(card,numb,"25/06/2019","Visa");
+        sample.saveBankAccount();
+        System.out.println("account number "+sample.accountNumb()+",card number "+sample.cardNumber());
     }
 }
