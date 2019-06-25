@@ -14,7 +14,6 @@ public class PostgresConnector implements DatabaseConnector{
 
     }
 
-    @Override
     public void save(User user) {
 
     }
