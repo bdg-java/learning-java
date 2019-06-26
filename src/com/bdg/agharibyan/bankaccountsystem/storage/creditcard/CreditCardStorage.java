@@ -7,7 +7,7 @@ import com.bdg.agharibyan.bankaccountsystem.storage.Storage;
 
 import java.time.LocalDate;
 
-public final class CreditCardStorage implements Storage { // inchu e final?
+public final class CreditCardStorage implements Storage { // inchu e final? vor chjarangen
 
     private static final int DEFAULT_STORAGE_SIZE = 10;
     private CreditCard[] container;
