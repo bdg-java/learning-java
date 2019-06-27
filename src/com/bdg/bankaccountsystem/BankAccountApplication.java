@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 public class BankAccountApplication {
     public static void main(String[] args)  {
-        Country country = Country.RU ;
-        PhoneNumber phone = new PhoneNumber(CountryCode.RUS,"123124",PhoneType.Mobile) ;
+        Country country = Country.AM ;
+        PhoneNumber phone = new PhoneNumber(CountryCode.ARM,"123124",PhoneType.Mobile) ;
         Address address = new Address(country,"Duryan",new PhoneNumber[10]);
         Customer customer = new Customer("Полиграф "," Полиграфович",address);
         AccountDetail detail = new AccountDetail("Счет собаки");
@@ -16,7 +16,7 @@ public class BankAccountApplication {
                 +address.getStreet()+" "+phone.getNumber());*/
         String card="";
         CreditCardServiceImpl sample= new CreditCardServiceImpl();
-        int numb=0;
+        int numb = 0;
         sample.create(card,numb,"25/06/2019","Visa");
         sample.saveBankAccount();
         System.out.println("account number "+sample.accountNumb()+",card number "+sample.cardNumber());

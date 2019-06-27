@@ -12,26 +12,27 @@ public class Account extends BankEntity {
     }
 
     public Customer getCustomer() {
+
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(Customer customer)   {
         this.customer = customer;
     }
 
-    public AccountDetail getAccountDetail() {
+    public AccountDetail getAccountDetail()  {
         return accountDetail;
     }
 
     public void setAccountDetail(AccountDetail accountDetail) {
-        this.accountDetail = accountDetail;
+          this.accountDetail = accountDetail;
     }
 
-    public AccountBalance getAccountBalance() {
+    public AccountBalance getAccountBalance()  {
         return accountBalance;
     }
 
-    public void setAccountBalance(AccountBalance accountBalance) {
+    public void setAccountBalance(AccountBalance accountBalance)  {
         this.accountBalance = accountBalance;
     }
 }
