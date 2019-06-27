@@ -12,7 +12,7 @@
 //    public class Main {
 //
 //        // Driver Code
-//        public static void main(String[] args) {
+//        public static void Main(String[] args) {
 //
 //            // all objects are dynamically
 //            // allocated

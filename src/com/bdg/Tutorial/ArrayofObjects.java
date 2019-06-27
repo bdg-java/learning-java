@@ -9,7 +9,7 @@
 //}
 //public class ArrayofObjects {
 //
-//    public static void main(String[] args) {
+//    public static void Main(String[] args) {
 //        Student[] arr;
 //        arr = new Student[2];
 //        arr[0] = new Student(1,"SEDA");

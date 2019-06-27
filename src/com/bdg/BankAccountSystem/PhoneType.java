@@ -4,4 +4,5 @@ enum PhoneType {
     MOBILE,
     WORK,
     HOME,
+
 }

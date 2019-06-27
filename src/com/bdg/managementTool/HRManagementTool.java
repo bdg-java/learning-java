@@ -65,7 +65,7 @@ public class HRManagementTool {
 
     public Employee[] findByProfession(Profession profession) {
 
-        ArrayList<Employee> professionOfemployee = new ArrayList<>();
+        Employee[] professionOfemployee= new Employee[this.employees.length];
         for(Employee i: professionOfemployee){
             if(i == null){
                 return null;

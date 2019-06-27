@@ -1,7 +1,7 @@
 //package com.bdg.Tutorial;
 // class ReturnArraysfromMethods {
 //
-//     public static void main(String args[]) {
+//     public static void Main(String args[]) {
 //         int arr = ff();
 //         for(int i =0; i<arr; i++){
 //             System.out.println(arr[i]+"");
