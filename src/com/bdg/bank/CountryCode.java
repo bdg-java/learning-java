@@ -2,7 +2,7 @@ package com.bdg.bank;
 
 public enum  CountryCode {
     ARM("+374", Country.AM),
-    UK("+45", Country.UK);
+    UK("+44", Country.UK);
 
 
     private String countryCode;
