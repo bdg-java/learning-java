@@ -1,4 +1,7 @@
-package ahakobyan.classLessons.bank;
+package ahakobyan.classLessons.bank.phone;
+
+import ahakobyan.classLessons.bank.bankSystem.AbstractBankEntity;
+import ahakobyan.classLessons.bank.country.CountryCode;
 
 public class PhoneNumber extends AbstractBankEntity {
 

@@ -1,4 +1,7 @@
-package ahakobyan.classLessons.bank;
+package ahakobyan.classLessons.bank.country;
+
+import ahakobyan.classLessons.bank.bankSystem.AbstractBankEntity;
+import ahakobyan.classLessons.bank.phone.PhoneNumber;
 
 public class Address extends AbstractBankEntity {
     

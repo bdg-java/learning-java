@@ -1,4 +1,4 @@
-package ahakobyan.classLessons.bank;
+package ahakobyan.classLessons.bank.country;
 
 public enum Country {
 

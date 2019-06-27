@@ -1,4 +1,7 @@
-package ahakobyan.classLessons.bank;
+package ahakobyan.classLessons.bank.Customer;
+
+import ahakobyan.classLessons.bank.bankSystem.AbstractBankEntity;
+import ahakobyan.classLessons.bank.country.Address;
 
 public class Customer extends AbstractBankEntity {
 

@@ -1,4 +1,7 @@
-package ahakobyan.classLessons.bank;
+package ahakobyan.classLessons.bank.account;
+
+import ahakobyan.classLessons.bank.bankSystem.AbstractBankEntity;
+import ahakobyan.classLessons.bank.Customer.Customer;
 
 public class Account extends AbstractBankEntity {
 
