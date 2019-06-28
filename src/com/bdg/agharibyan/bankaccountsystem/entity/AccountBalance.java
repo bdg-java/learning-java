@@ -1,14 +1,14 @@
 package com.bdg.agharibyan.bankaccountsystem.entity;
 
-public class AccountBalance {
-    private int accountBalance;
+public final class AccountBalance extends AbstractBankEntity{ // petq e zharangi AbstractBankEntityic?
+    private double accountBalance;
 
     private AccountBalance(int accountBalance)
     {
         this.accountBalance = accountBalance;
     }
 
-    public int getAccountBalance()
+    public double getAccountBalance()
     {
         return accountBalance;
     }

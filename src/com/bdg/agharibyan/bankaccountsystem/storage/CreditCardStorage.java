@@ -1,13 +1,12 @@
-package com.bdg.agharibyan.bankaccountsystem.storage.creditcard;
+package com.bdg.agharibyan.bankaccountsystem.storage;
 
 import com.bdg.agharibyan.bankaccountsystem.common.exception.CreditCardNotFoundException;
 import com.bdg.agharibyan.bankaccountsystem.entity.AbstractBankEntity;
 import com.bdg.agharibyan.bankaccountsystem.entity.CreditCard;
-import com.bdg.agharibyan.bankaccountsystem.storage.Storage;
 
 import java.time.LocalDate;
 
-public final class CreditCardStorage implements Storage { // inchu e final? vor chjarangen
+public final class CreditCardStorage implements Storage {
 
     private static final int DEFAULT_STORAGE_SIZE = 10;
     private CreditCard[] container;
@@ -38,7 +37,7 @@ public final class CreditCardStorage implements Storage { // inchu e final? vor 
     }
 
     @Override
-    public boolean add(AbstractBankEntity entity){ // chem haskanum entity- i tak inch e mtnum..
+    public boolean add(AbstractBankEntity entity){
         if(this.storageSize == currentStorageIndex){
             incStorageSize();
         }
@@ -51,14 +50,13 @@ public final class CreditCardStorage implements Storage { // inchu e final? vor 
     }
 
     @Override
-    public boolean remove(int id){ //
-        AbstractBankEntity removableCreditCard = this.get(id);
-
-//       te petq e ciklov ifov gtnem nshvats idi objecty?
+    public boolean remove(int id){
 
         CreditCard[] creditCardsAfterRemove = new CreditCard[currentStorageIndex-1];
         System.arraycopy(this.container, 0, creditCardsAfterRemove, 0, id-1);
         System.arraycopy(this.container, id, creditCardsAfterRemove, id-1, currentStorageIndex - id-1 - 1);
+        currentStorageIndex--;
+        this.container = creditCardsAfterRemove;
 
         return true;
     }

@@ -1,15 +1,35 @@
 package com.bdg.agharibyan.bankaccountsystem;
 
-import com.bdg.agharibyan.bankaccountsystem.entity.CreditCard;
+import com.bdg.agharibyan.bankaccountsystem.common.type.Country;
+import com.bdg.agharibyan.bankaccountsystem.common.type.PhoneType;
+import com.bdg.agharibyan.bankaccountsystem.entity.Address;
+import com.bdg.agharibyan.bankaccountsystem.entity.PhoneNumber;
 import com.bdg.agharibyan.bankaccountsystem.service.creditcard.CreditCardCrudService;
 import com.bdg.agharibyan.bankaccountsystem.service.creditcard.CreditCardNumberGenerator;
+import com.bdg.agharibyan.bankaccountsystem.service.customer.CustomerCrudService;
 
 public class BankAccountSystem {
 
     public static void main(String[] args) {
-        CreditCardCrudService service = new CreditCardCrudService(); // dzakh masum chisht em che type grel CreditCardCrudService ?
+        CreditCardCrudService firstCard = new CreditCardCrudService();
         CreditCardNumberGenerator generator = new CreditCardNumberGenerator();
-        service.create(generator.generate(), 10, "25-06-2019", "VISA");
-        System.out.println(service.get(1));
+        firstCard.create(generator.generate(), 10, "25-06-2019", "VISA");
+        System.out.println(firstCard.get(1));
+
+        CreditCardCrudService secondCard = new CreditCardCrudService();
+        secondCard.create(generator.generate(), 15, "27-06-2019", "Arca");
+        System.out.println(secondCard.get(1));
+    //    System.out.println(secondCard.delete(1));
+
+        //arden quns tanum e, chem haskanum voch mi ban verevum gratsneric u error unem deletei patcharov ArrayIndexOutOfBoundsException, inchi hamar commentel em .. erefvi removes skhal e :)
+
+
+//        CustomerCrudService customerservice = new CustomerCrudService();
+//        customerservice.create("first customer Name", "first customer Surname", new Address("AM","North.Avenue", PhoneType.values(<1>));
+//        System.out.println(customerservice.get(1));
+
+        //vaghy knayem..
+
+       // petq e sksem PhoneNumberic hasneem Accountin,
     }
 }

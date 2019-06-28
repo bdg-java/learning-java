@@ -3,7 +3,7 @@ package com.bdg.agharibyan.bankaccountsystem.service.customer;
 import com.bdg.agharibyan.bankaccountsystem.entity.Address;
 import com.bdg.agharibyan.bankaccountsystem.entity.Customer;
 import com.bdg.agharibyan.bankaccountsystem.storage.Storage;
-import com.bdg.agharibyan.bankaccountsystem.storage.customer.CustomerStorage;
+import com.bdg.agharibyan.bankaccountsystem.storage.CustomerStorage;
 
 public class CustomerCrudService implements CustomerService {
 
@@ -20,8 +20,7 @@ public class CustomerCrudService implements CustomerService {
     }
 
     @Override
-    public Customer get(){
-        //es chem haskanum inch fieldov e petq get anel customerin
+    public Customer get(int id){
 
         return null;
     }

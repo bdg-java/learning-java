@@ -2,9 +2,8 @@ package com.bdg.agharibyan.bankaccountsystem.entity;
 
 import com.bdg.agharibyan.bankaccountsystem.common.type.CountryCode;
 import com.bdg.agharibyan.bankaccountsystem.common.type.PhoneType;
-import com.bdg.agharibyan.bankaccountsystem.entity.AbstractBankEntity;
 
-public class PhoneNumber extends AbstractBankEntity {
+public final class PhoneNumber extends AbstractBankEntity {
 
     private CountryCode countryCode;
     private String number;

@@ -1,8 +1,9 @@
-package com.bdg.agharibyan.bankaccountsystem.storage.customer;
+package com.bdg.agharibyan.bankaccountsystem.storage;
 
 import com.bdg.agharibyan.bankaccountsystem.entity.AbstractBankEntity;
 import com.bdg.agharibyan.bankaccountsystem.entity.Customer;
-import com.bdg.agharibyan.bankaccountsystem.storage.Storage;
+
+import java.time.LocalDate;
 
 public final class CustomerStorage implements Storage {
 
@@ -40,10 +41,12 @@ public final class CustomerStorage implements Storage {
             this.incStorageSize();
         }
 
-        //es chem haskanum inchu e Storage interfaceum fieldy AbstractBankEntity type-i
-        //chem haskanum inchpes em get anum customerin unenalov entityn
+        entity.setId(currentStorageIndex+1);
+        entity.setCreatedDate(LocalDate.now());
 
-        return false;
+        this.container[currentStorageIndex] = (Customer) entity;
+        currentStorageIndex++;
+        return true;
     }
 
     @Override

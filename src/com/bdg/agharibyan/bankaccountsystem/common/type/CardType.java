@@ -5,7 +5,7 @@ import com.bdg.agharibyan.bankaccountsystem.common.exception.InvalidCardTypeExce
 public enum CardType {
     VISA,
     MASTERCARD,
-    ARCA, //inchu e yndgtsum taky?
+    ARCA, // inchu e takn yndgtsum ?
     AmericanExpress;
 
 

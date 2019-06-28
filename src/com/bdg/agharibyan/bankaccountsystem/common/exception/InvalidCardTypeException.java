@@ -6,7 +6,7 @@ public class InvalidCardTypeException extends RuntimeException{
     private final String message;
 
     public InvalidCardTypeException(String cardType){
-        this.message = String.format(DEFAULT_MESSAGE, cardType);
+        this.message = String.format(DEFAULT_MESSAGE, cardType); //artatpvelu e DEFAULT_MESSAGEy ev cardTypen aranc storaketi?
     }
 
     public String getMessage(){

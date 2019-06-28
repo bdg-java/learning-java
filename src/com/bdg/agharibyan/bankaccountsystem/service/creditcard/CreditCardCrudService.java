@@ -5,14 +5,14 @@ import com.bdg.agharibyan.bankaccountsystem.common.exception.CreditCardNotFoundE
 import com.bdg.agharibyan.bankaccountsystem.entity.AbstractBankEntity;
 import com.bdg.agharibyan.bankaccountsystem.entity.CreditCard;
 import com.bdg.agharibyan.bankaccountsystem.storage.Storage;
-import com.bdg.agharibyan.bankaccountsystem.storage.creditcard.CreditCardStorage;
+import com.bdg.agharibyan.bankaccountsystem.storage.CreditCardStorage;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class CreditCardCrudService implements CreditCardService{
 
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy"); //inchi hamar e sa?
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy"); //inchi hamar e sa? stacats amsativy nuyn formati berelu hamar?
     private final Storage creditCardStorage = new CreditCardStorage();
 
     @Override
@@ -34,5 +34,13 @@ public class CreditCardCrudService implements CreditCardService{
             throw new CreditCardNotFoundException(id);
         }
         return (CreditCard)card;
+    }
+
+    @Override
+    public CreditCard delete(int id){
+        if(creditCardStorage.remove(id)){
+            return this.get(id);
+        }
+        return null;
     }
 }

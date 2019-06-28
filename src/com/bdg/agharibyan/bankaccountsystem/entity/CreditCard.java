@@ -4,7 +4,7 @@ import com.bdg.agharibyan.bankaccountsystem.common.type.CardType;
 
 import java.time.LocalDate;
 
-public final class CreditCard extends AbstractBankEntity { // inchu e final?
+public final class CreditCard extends AbstractBankEntity {
 
     private String cardNumber; // random String, find way to generate
     private int accountNumber;

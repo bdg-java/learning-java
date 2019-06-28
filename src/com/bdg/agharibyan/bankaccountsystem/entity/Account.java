@@ -1,6 +1,6 @@
 package com.bdg.agharibyan.bankaccountsystem.entity;
 
-public class Account extends AbstractBankEntity {
+public final class Account extends AbstractBankEntity {
     private Customer customer;
     private AccountDetail accountDetail;
     private AccountBalance accountBalance;

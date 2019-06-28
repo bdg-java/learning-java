@@ -2,11 +2,11 @@ package com.bdg.agharibyan.bankaccountsystem.entity;
 
 import com.bdg.agharibyan.bankaccountsystem.common.type.Country;
 
-public class Address extends AbstractBankEntity {
+public final class Address extends AbstractBankEntity {
 
     private Country country;
     private String street;
-    private PhoneNumber[] phoneNumber;
+    private PhoneNumber[] phoneNumber; // indz anhangstacnum e aystegh array linelu pasty
 
     public Address(Country country, String street, PhoneNumber[] phoneNumber){
         this.country = country;
