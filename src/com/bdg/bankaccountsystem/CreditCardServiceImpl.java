@@ -10,9 +10,14 @@ public class CreditCardServiceImpl implements CreditCardService {
     private  String cardNumber;
     private   int accountNumber;
     private CardType cardType;
+    private   int defaultSize = 100;
+    public CreditCard [] accountList = new CreditCard[defaultSize];
+    private int id = 0;
+
 
     @Override
     public CreditCard create(String cardNumber, int accountNumber, String expDate, String cardType) {
+        id++;
         lunch = true;
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
@@ -39,29 +44,21 @@ public class CreditCardServiceImpl implements CreditCardService {
             String bankCode = "4355";
             Random random = new Random();
             Integer rand = random.nextInt(1000_001-1);
-            String cardNum = bankCode+rand.toString();
-            cardNumber =cardNum;
+            cardNumber = bankCode+rand.toString();
         return cardNumber;
     }
 
 
     public int accountNumb(){
         Random r = new Random();
-        Integer n = r.nextInt(10000001);
-        accountNumber = n;
+        accountNumber = r.nextInt(10000001);
         return accountNumber;
     }
 
     public void saveBankAccount(){
-        int id;
         if(lunch){
-            Random random = new Random();
-            id = 1;
-            int defaultSize = 100;
-            CreditCard [] accountList = new CreditCard[defaultSize];
             CreditCard card = new CreditCard(cardNumber, accountNumber ,exp,cardType );
             accountList[id] = card;
-            id++;
             lunch = false;
         }
     }
