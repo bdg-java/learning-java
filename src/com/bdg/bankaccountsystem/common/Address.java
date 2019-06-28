@@ -5,10 +5,9 @@ import com.bdg.bankaccountsystem.AbstractBankEntity;
 public class Address extends AbstractBankEntity {
     private Country country;
     private String street;
-    private PhoneNumber[] phoneNumber;
+    private String phoneNumber;
 
-    public Address (Country country, String street, PhoneNumber[] phoneNumber, int id) {
-        super(id);
+    public Address (Country country, String street, String phoneNumber) {
         this.country = country;
         this.phoneNumber = phoneNumber;
         this.street = street;
@@ -20,7 +19,7 @@ public class Address extends AbstractBankEntity {
 
     public String getStreet() { return this.street; }
 
-    public PhoneNumber[] getPhoneNumber() {
+    public String getPhoneNumber() {
         return this.phoneNumber;
     }
 
@@ -32,7 +31,7 @@ public class Address extends AbstractBankEntity {
         this.street = street;
     }
 
-    public void setPhoneNumber(PhoneNumber[] phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

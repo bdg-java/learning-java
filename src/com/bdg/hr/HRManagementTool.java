@@ -53,13 +53,13 @@ public class HRManagementTool {
 
     public Employee[] removeByName(String name) {
         //implement this
-//        Employee[] newArray = new Employee [employees.length];
+        Employee[] newArray = new Employee [employees.length];
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && name.equals(employees[i].name)) {
                 employees[i] = null;
             }
-        }
-        return employees;
+        } newArray = employees;
+        return newArray;
     }
 
 

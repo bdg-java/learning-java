@@ -2,6 +2,7 @@ package com.bdg.bankaccountsystem.storage.creditcard;
 
 import com.bdg.bankaccountsystem.AbstractBankEntity;
 import com.bdg.bankaccountsystem.CreditCard;
+import com.bdg.bankaccountsystem.exceptions.CreditCardNotFoundException;
 import com.bdg.bankaccountsystem.storage.Storage;
 
 import java.time.LocalDate;
@@ -51,16 +52,25 @@ public class CreditCardStorage implements Storage {
 
     @Override
     public boolean remove(int id) {
-//        CreditCard[] newcontainer = new CreditCard[storageSize];
-//        this.container[i] = this.container[storageSize-1];
-
-        return false;
+        CreditCard[] newcontainer = new CreditCard[container.length-1];
+        for (int i = 0;i<container.length;i++) {
+            if(this.container[i] != null && id == this.container[i].getId()) {
+                this.container[i] = null;
+            }
+        } newcontainer = container;
+        return true;
     }
 
     @Override
     public AbstractBankEntity get(int id) {
-        return null;
+
+        if (id - 1 > this.currentStorageIndex) {
+            throw new CreditCardNotFoundException(id);
+        }
+        return this.container[id - 1];
     }
+
+
     public void incStorageSize(){
         CreditCard[] cards = new CreditCard[currentStorageIndex + (int) (currentStorageIndex * incSize)];
         System.arraycopy(this.container, 0, cards, 0, this.container.length);

@@ -14,6 +14,20 @@ public class Customer extends AbstractBankEntity{
         this.customerAddress = customerAddress;
     }
 
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerName='" + customerName + '\'' +
+                ", customerSurname=" + customerSurname +
+                ", customerAddress=" + customerAddress +
+                ", id=" + id +
+                ", created=" + created +
+                ", updated=" + updated +
+                ", deleted=" + deleted +
+                '}';
+    }
+
     public Address getCustomerAddress() {
         return this.customerAddress;
     }

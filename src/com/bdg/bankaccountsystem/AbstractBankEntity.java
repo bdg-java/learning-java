@@ -16,7 +16,7 @@ public class AbstractBankEntity {
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(int id) {
