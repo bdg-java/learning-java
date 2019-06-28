@@ -12,6 +12,6 @@ public interface AddressService {
 
     boolean remove(int id);
 
-    AbstractBankEntity getId(int id);
+    Address getId(int id);
 
 }

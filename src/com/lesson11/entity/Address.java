@@ -43,7 +43,7 @@ public class Address extends AbstractBankEntity {
 
     @Override
     public String toString() {
-        return "Address [" + this.getId() + this.country + ", " + this.street + " , " + Arrays.toString(phonenumber) + " UpdateDate " + this.updateDate + " DeleteDate " + this.deleteDate + "]";
+        return "Address [" + this.getId() + this.country + ", " + this.street + " , " + Arrays.toString(phonenumber) + " DeleteDate " + this.deleteDate + "]";
     }
 }
 

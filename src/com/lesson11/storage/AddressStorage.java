@@ -36,7 +36,6 @@ public final class AddressStorage implements Storage {
             incStorageSize();
         entity.setId(currentStorageIndex + 1);
         entity.setCreditDate(LocalDate.now());
-
         this.container[currentStorageIndex] = (Address) entity;
         currentStorageIndex++;
         return true;
@@ -56,7 +55,7 @@ public final class AddressStorage implements Storage {
             address.setDeleteDate(LocalDate.now());
             return true;
         }
-        throw new AddressNotFound(id);
+        return false;
     }
 
 

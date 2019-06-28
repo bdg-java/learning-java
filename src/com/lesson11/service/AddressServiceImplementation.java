@@ -26,14 +26,14 @@ public class AddressServiceImplementation implements AddressService {
         Address address = (Address) getId(id);
         boolean result = false;
         if (address != null) {
-            if (address.getCountry().name().equalsIgnoreCase(country.name())
-                    || address.getStreet().equalsIgnoreCase(street)
-                    || address.getPhonenumber().equals(phoneNumbers)) {
-                address.setCountry(country);
-                address.setStreet(street);
-                address.setPhonenumber(phoneNumbers);
-                address.setUpdateDate(LocalDate.now());
-                result = true;
+            if (address.getDeleteDate() == null) {
+                if (address.getCountry().name().equalsIgnoreCase(country.name())
+                        || address.getStreet().equalsIgnoreCase(street)
+                        || address.getPhonenumber().equals(phoneNumbers)) {
+                    address.setDeleteDate(LocalDate.now());
+                    create(country, street, phoneNumbers);
+                    result = true;
+                }
             }
         }
         return result;
@@ -45,7 +45,7 @@ public class AddressServiceImplementation implements AddressService {
     }
 
     @Override
-    public AbstractBankEntity getId(int id) {
-        return addressStorage.get(id);
+    public Address getId(int id) {
+        return (Address) addressStorage.get(id);
     }
 }

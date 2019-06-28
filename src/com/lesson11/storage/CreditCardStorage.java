@@ -56,7 +56,7 @@ public final class CreditCardStorage implements Storage {
             bank.setDeleteDate(LocalDate.now());
             return true;
         }
-        throw new CreditCardNotFoundException(id);
+        return false;
     }
 
 
