@@ -6,7 +6,7 @@ public class Customer extends AbstractBankEntity {
     private Address customerAddress;
 
     public Customer(int id, String customerName, String customerSurname, Address customerAddress) {
-        super(id);
+        this.id = (id);
         this.customerName = customerName;
         this.customerSurname = customerSurname;
         this.customerAddress = customerAddress;

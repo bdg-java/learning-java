@@ -1,30 +1,41 @@
 package banksystem;
 import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class AbstractBankEntity {
     protected int id;
-    protected Date createdDate;
-    protected Date updatedDate;
+    protected LocalDate created;
+    protected LocalDate deleted;
+    protected LocalDate updated;
 
-    public AbstractBankEntity(int id) {
-        this.id = id;
-    }
-    public Date getCreatedDate() {
-        return this.createdDate;
-    }
-    public Date getUpdatedDate() {
-        return this.updatedDate;
-    }
     public int getId() {
-        return this.id;
+        return id;
     }
-    public void setCreatedDate() {
-        this.createdDate = createdDate;
-    }
-    public void setUpdatedDate() {
-        this.updatedDate = updatedDate;
-    }
-    public void setId() {
+
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public LocalDate getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDate created) {
+        this.created = created;
+    }
+    public LocalDate getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(LocalDate deleted) {
+        this.deleted = deleted;
+    }
+
+    public LocalDate getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(LocalDate updated) {
+        this.updated = updated;
     }
 }

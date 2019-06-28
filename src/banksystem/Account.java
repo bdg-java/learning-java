@@ -6,7 +6,7 @@ public class Account extends AbstractBankEntity {
     private AccountBalance accountBalance;
 
     public Account(int id, Customer customer, AccountDetail accountDetail, AccountBalance accountBalance) {
-        super(id);
+       this.id = id;
         this.customer = customer;
         this.accountDetail = accountDetail;
         this.accountBalance = accountBalance;

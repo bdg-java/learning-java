@@ -6,7 +6,7 @@ public class Address extends AbstractBankEntity {
     private PhoneNumber phonenumber[];
 
     public Address(int id, Country country, String street, PhoneNumber[] phonenumber) {
-        super(id);
+        this.id = id;
         this.country = country;
         this.street = street;
         this.phonenumber = phonenumber;
