@@ -1,9 +1,12 @@
 package com.bdg.bankaccountsystem;
 
+import java.time.LocalDate;
+
 public class AbstractBankEntity {
     protected int id;
-    protected Date createdDate;
-    protected Date updatedDate;
+    protected LocalDate created;
+    protected LocalDate deleted;
+    protected LocalDate updated;
 
     public AbstractBankEntity() {
     }
@@ -20,19 +23,19 @@ public class AbstractBankEntity {
         this.id = id;
     }
 
-    public Date getCreatedDate() {
-        return this.createdDate;
+    public LocalDate getCreated() {
+        return this.created;
     }
 
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
+    public void setCreated(LocalDate createdDate) {
+        this.created = created;
     }
 
-    public Date getUpdatedDate() {
-        return this.updatedDate;
+    public LocalDate getUpdated() {
+        return this.updated;
     }
 
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
+    public void setUpdated(LocalDate updatedDate) {
+        this.updated = updated;
     }
 }

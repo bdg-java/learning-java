@@ -10,14 +10,11 @@ public class CreditCardServiceImpl implements CreditCardService {
         LocalDate exp = LocalDate.parse(expDate);
         CardType type = CardType.find(cardType);
 
-        if (type == null) {
-            throw new CreditCardCreationException();
-        }
+//        if (type == null) {
+//            throw new CreditCardCreationException();
+//        }
 
         CreditCard card = new CreditCard(cardNumber, accountNumber, exp, type);
-
-
-
 
         return card;
     }

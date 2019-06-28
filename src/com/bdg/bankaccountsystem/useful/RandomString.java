@@ -1,4 +1,4 @@
-package com.bdg.bankaccountsystem;
+package com.bdg.bankaccountsystem.useful;
 
 import java.util.Random;
 
@@ -6,7 +6,7 @@ public class RandomString {
 
     private static final char[] CARDNUMBER = ("0123456789").toCharArray();
 
-    public static String generateRandomCardNumber(int lenght) {
+    public String generateRandomCardNumber(int lenght) {
         StringBuilder result = new StringBuilder();
 
         for (int i = 0; i<lenght; i++) {

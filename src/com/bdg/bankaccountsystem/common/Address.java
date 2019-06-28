@@ -1,6 +1,8 @@
-package com.bdg.bankaccountsystem;
+package com.bdg.bankaccountsystem.common;
 
-public class Address extends AbstractBankEntity{
+import com.bdg.bankaccountsystem.AbstractBankEntity;
+
+public class Address extends AbstractBankEntity {
     private Country country;
     private String street;
     private PhoneNumber[] phoneNumber;

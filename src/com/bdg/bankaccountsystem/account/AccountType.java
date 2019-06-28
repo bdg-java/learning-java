@@ -1,6 +1,8 @@
-package com.bdg.bankaccountsystem;
+package com.bdg.bankaccountsystem.account;
 
-public class AccountType extends BankAccountSystemApplication{
+import com.bdg.bankaccountsystem.BankAccountSystemApplication;
+
+public class AccountType extends BankAccountSystemApplication {
     private String deposit;
     private String credit;
 

@@ -1,4 +1,6 @@
-package com.bdg.bankaccountsystem;
+package com.bdg.bankaccountsystem.account;
+
+import com.bdg.bankaccountsystem.AbstractBankEntity;
 
 public class AccountBalance extends AbstractBankEntity {
     private int balance;

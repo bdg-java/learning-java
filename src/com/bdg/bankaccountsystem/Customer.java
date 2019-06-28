@@ -1,5 +1,7 @@
 package com.bdg.bankaccountsystem;
 
+import com.bdg.bankaccountsystem.common.Address;
+
 public class Customer extends AbstractBankEntity{
     private String customerName;
     private String customerSurname;

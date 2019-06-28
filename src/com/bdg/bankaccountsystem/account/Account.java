@@ -1,4 +1,7 @@
-package com.bdg.bankaccountsystem;
+package com.bdg.bankaccountsystem.account;
+
+import com.bdg.bankaccountsystem.AbstractBankEntity;
+import com.bdg.bankaccountsystem.Customer;
 
 public class Account extends AbstractBankEntity {
     private Customer customer;

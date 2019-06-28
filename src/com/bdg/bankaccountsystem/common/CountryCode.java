@@ -1,4 +1,4 @@
-package com.bdg.bankaccountsystem;
+package com.bdg.bankaccountsystem.common;
 
 public enum CountryCode {
     ARM ("+374", Country.AM),

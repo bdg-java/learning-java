@@ -1,6 +1,8 @@
-package com.bdg.bankaccountsystem;
+package com.bdg.bankaccountsystem.account;
 
-public class AccountDetail extends AbstractBankEntity{
+import com.bdg.bankaccountsystem.AbstractBankEntity;
+
+public class AccountDetail extends AbstractBankEntity {
 
     private AccountType accountType;
 

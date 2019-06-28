@@ -1,20 +1,22 @@
 package com.bdg.bankaccountsystem;
 
+import java.time.LocalDate;
+
 public class CreditCard extends AbstractBankEntity{
 
 //    RandomString randomString = new RandomString();
 
-    private String cardNumber = RandomString.generateRandomCardNumber(16);
-
-    int accountNumber;
-    private Date expirationDate;
+    private String cardNumber;
+    private int accountNumber;
+    private LocalDate expDate;
     private CardType cardType;
 
-    CreditCard(int accountNumber, Date expirationDate, CardType cardType, int id) {
-        super(id);
+    public CreditCard(int accountNumber, LocalDate expDate, CardType cardType, String cardNumber) {
+        this.cardNumber = cardNumber;
         this.accountNumber = accountNumber;
-        this.expirationDate = expirationDate;
+        this.expDate = expDate;
         this.cardType = cardType;
+        this.created = LocalDate.now();
     }
 
     public CardType getCardType() {
@@ -25,12 +27,12 @@ public class CreditCard extends AbstractBankEntity{
         this.cardType = cardType;
     }
 
-    public Date getExpirationDate() {
-        return expirationDate;
+    public LocalDate getExpirationDate() {
+        return this.expDate;
     }
 
-    public void setExpirationDate(Date expirationDate) {
-        this.expirationDate = expirationDate;
+    public void setExpirationDate(LocalDate expDate) {
+        this.expDate = expDate;
     }
 
     public int getAccountNumber() {
