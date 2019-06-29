@@ -10,6 +10,7 @@ import com.bdg.agharibyan.bankaccountsystem.service.customer.CustomerCrudService
 
 public class BankAccountSystem {
 
+
     public static void main(String[] args) {
         CreditCardCrudService firstCard = new CreditCardCrudService();
         CreditCardNumberGenerator generator = new CreditCardNumberGenerator();
@@ -21,14 +22,11 @@ public class BankAccountSystem {
         System.out.println(secondCard.get(1));
     //    System.out.println(secondCard.delete(1));
 
-        //arden quns tanum e, chem haskanum voch mi ban verevum gratsneric u error unem deletei patcharov ArrayIndexOutOfBoundsException, inchi hamar commentel em .. erefvi removes skhal e :)
 
 
 //        CustomerCrudService customerservice = new CustomerCrudService();
 //        customerservice.create("first customer Name", "first customer Surname", new Address("AM","North.Avenue", PhoneType.values(<1>));
 //        System.out.println(customerservice.get(1));
-
-        //vaghy knayem..
 
        // petq e sksem PhoneNumberic hasneem Accountin,
     }

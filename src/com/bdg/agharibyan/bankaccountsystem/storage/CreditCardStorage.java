@@ -11,7 +11,7 @@ public final class CreditCardStorage implements Storage {
     private static final int DEFAULT_STORAGE_SIZE = 10;
     private CreditCard[] container;
     private int storageSize;
-    private final double incSize;
+    private final double incSize; //chem haskanum inch e aystegh double, isk erkrord constructorum int
 
     private int currentStorageIndex = 0;
 
