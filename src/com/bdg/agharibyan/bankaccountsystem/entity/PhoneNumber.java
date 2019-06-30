@@ -16,7 +16,6 @@ public final class PhoneNumber extends AbstractBankEntity {
     }
 
     public String toString(){
-        return "PhoneNumber: {"+ type + '\'' + countryCode + number + '\'' +
-                "}";
+        return " "+ type + ": '" + countryCode + number + "'";
     }
 }

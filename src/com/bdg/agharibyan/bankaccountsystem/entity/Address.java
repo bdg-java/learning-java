@@ -2,6 +2,8 @@ package com.bdg.agharibyan.bankaccountsystem.entity;
 
 import com.bdg.agharibyan.bankaccountsystem.common.type.Country;
 
+import java.util.Arrays;
+
 public final class Address extends AbstractBankEntity {
 
     private Country country;
@@ -40,10 +42,10 @@ public final class Address extends AbstractBankEntity {
 
     @Override
     public String toString(){
-        return "Address: {"+
-                "Country: '" + country + '\'' +
-                "Street: '" + street + '\'' +
-                "PhoneNumber: '" + phoneNumber + '\'' +
+        return "CustomerAddress: {"+
+                "Country: '" + country + "', " +
+                "Street: '" + street + "', " +
+                "PhoneNumbers: " + Arrays.toString(phoneNumber) +
                 "}";
     }
 }

@@ -37,9 +37,8 @@ public final class Customer extends AbstractBankEntity {
 
     public String toString(){
         return "Customer: {" +
-                "CustomerName: '" + customerName + '\'' +
-                "CustomerSurname: '" + customerSurname + '\'' +
-                "CustomerAddress: " + customerAddress + '\'' +
+                "CustomerName: '" + customerName + "', " +
+                "CustomerSurname: '" + customerSurname + "', " +  customerAddress +
                 "}";
     }
 }
