@@ -7,13 +7,14 @@ import java.time.LocalDate;
 public final class CreditCard extends AbstractBankEntity {
 
     private String cardNumber; // random String, find way to generate
-    private int accountNumber;
+    //private int accountNumber; //pohum em AccountDetailov
+    private AccountDetail accountDetail;
     private LocalDate expirationDate;
     private CardType cardType;
 
-    public CreditCard(String cardNumber, int accountNumber, LocalDate expDate, CardType cardType){
+    public CreditCard(String cardNumber, AccountDetail accountDetail, LocalDate expDate, CardType cardType){
         this.cardNumber = cardNumber;
-        this.accountNumber = accountNumber;
+        this.accountDetail = accountDetail;
         this.expirationDate = expDate;
         this.cardType = cardType;
     }
@@ -22,8 +23,8 @@ public final class CreditCard extends AbstractBankEntity {
         return cardNumber;
     }
 
-    public int getAccountNumber() {
-        return accountNumber;
+    public AccountDetail getAccountDetail() {
+        return accountDetail;
     }
 
     public LocalDate getExpirationDate() {
@@ -38,8 +39,8 @@ public final class CreditCard extends AbstractBankEntity {
         this.cardNumber = cardNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setAccountDetail(AccountDetail accountDetail) {
+        this.accountDetail = accountDetail;
     }
 
     public void setExpirationDate(LocalDate expirationDate) {
@@ -54,7 +55,7 @@ public final class CreditCard extends AbstractBankEntity {
     public String toString(){
         return "CreditCard: {" +
                 "cardNumber: '" + cardNumber + '\'' +
-                ", accountNumber: " + accountNumber +
+                ", accountDetail: " + accountDetail +
                 ", expirationDate: " + expirationDate +
                 ", cardType: " + cardType +
                 ", id: " + id +

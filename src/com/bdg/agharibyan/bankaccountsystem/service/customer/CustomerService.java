@@ -8,4 +8,6 @@ public interface CustomerService {
     Customer create(String customerName, String customerSurname, Address customerAddress);
 
     Customer get(int id);
+
+    Customer delete(int id);
 }

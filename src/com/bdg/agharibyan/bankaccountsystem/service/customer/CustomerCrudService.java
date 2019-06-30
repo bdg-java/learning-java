@@ -1,5 +1,6 @@
 package com.bdg.agharibyan.bankaccountsystem.service.customer;
 
+import com.bdg.agharibyan.bankaccountsystem.common.exception.CustomerNotFoundException;
 import com.bdg.agharibyan.bankaccountsystem.entity.Address;
 import com.bdg.agharibyan.bankaccountsystem.entity.Customer;
 import com.bdg.agharibyan.bankaccountsystem.storage.Storage;
@@ -21,7 +22,18 @@ public class CustomerCrudService implements CustomerService {
 
     @Override
     public Customer get(int id){
+        Customer customer = (Customer) customerStorage.get(id);
+        if(customer == null){
+            throw new CustomerNotFoundException(id);
+        }
+        return customer;
+    }
 
+    @Override
+    public Customer delete(int id) {
+        if(customerStorage.remove(id)){
+            return this.get(id);
+        }
         return null;
     }
 }

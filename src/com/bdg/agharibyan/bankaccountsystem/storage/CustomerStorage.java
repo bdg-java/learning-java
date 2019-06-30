@@ -1,5 +1,6 @@
 package com.bdg.agharibyan.bankaccountsystem.storage;
 
+import com.bdg.agharibyan.bankaccountsystem.common.exception.CustomerNotFoundException;
 import com.bdg.agharibyan.bankaccountsystem.entity.AbstractBankEntity;
 import com.bdg.agharibyan.bankaccountsystem.entity.Customer;
 
@@ -32,7 +33,7 @@ public final class CustomerStorage implements Storage {
 
     @Override
     public int storageSize(){
-        return storageSize;
+        return this.storageSize;
     }
 
     @Override
@@ -51,12 +52,20 @@ public final class CustomerStorage implements Storage {
 
     @Override
     public boolean remove (int id){
-        return false;
+        Customer [] customersAfterRemove = new Customer[currentStorageIndex-1];
+        System.arraycopy(this.container,0,customersAfterRemove,0,id-1);
+        System.arraycopy(this.container,id,customersAfterRemove,id-1,currentStorageIndex - id-1 -1);
+        currentStorageIndex--;
+        this.container = customersAfterRemove;
+        return true;
     }
 
     @Override
     public AbstractBankEntity get(int id){
-        return null;
+        if(id - 1 > this.currentStorageIndex){
+            throw new CustomerNotFoundException(id);
+        }
+        return this.container[id-1];
     }
 
     public void incStorageSize(){

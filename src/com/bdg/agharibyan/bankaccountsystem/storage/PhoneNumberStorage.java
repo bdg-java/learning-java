@@ -6,7 +6,7 @@ import com.bdg.agharibyan.bankaccountsystem.entity.PhoneNumber;
 
 import java.time.LocalDate;
 
-public class PhoneNumberStorage implements Storage{
+public final class PhoneNumberStorage implements Storage{
 
     private static final int DEFAULT_STORAGE_SIZE = 10;
     private PhoneNumber[] container;
