@@ -1,6 +1,7 @@
-package com.lesson11;
+package com.BankAccount.entity;
 
-import com.lesson11.entity.AbstractBankEntity;
+import com.BankAccount.common.CountryCode;
+import com.BankAccount.common.PhoneType;
 
 public class PhoneNumber extends AbstractBankEntity {
     private CountryCode countryCode;

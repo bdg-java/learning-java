@@ -1,6 +1,6 @@
-package com.lesson11.enumentity;
+package com.BankAccount.common;
 
-import com.lesson11.exception.CardTypeNotFoundException;
+import com.BankAccount.exception.CardTypeNotFoundException;
 
 public enum CardType {
     VISA,

@@ -1,6 +1,4 @@
-package com.lesson11;
-
-import com.lesson11.enumentity.Country;
+package com.BankAccount.common;
 
 public enum CountryCode {
     ARM("+374", Country.AM),

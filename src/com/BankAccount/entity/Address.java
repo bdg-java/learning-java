@@ -1,8 +1,6 @@
-package com.lesson11.entity;
+package com.BankAccount.entity;
 
-import com.lesson11.PhoneNumber;
-import com.lesson11.entity.AbstractBankEntity;
-import com.lesson11.enumentity.Country;
+import com.BankAccount.common.Country;
 
 import java.util.Arrays;
 

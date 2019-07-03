@@ -1,13 +1,11 @@
-package com.lesson11;
-
-import com.lesson11.entity.AbstractBankEntity;
+package com.BankAccount.entity;
 
 public class Account extends AbstractBankEntity {
     private Customer customer;
     private AccountDetail accountDetails;
     private AccountBalance accountBalance;
 
-    public Account(int id, Customer customer, AccountDetail accountDetails, AccountBalance accountBalance) {
+    public Account(Customer customer, AccountDetail accountDetails, AccountBalance accountBalance) {
         this.customer = customer;
         this.accountDetails = accountDetails;
         this.accountBalance = accountBalance;

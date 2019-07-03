@@ -1,4 +1,4 @@
-package com.lesson11.exception;
+package com.BankAccount.exception;
 
 public class CardTypeNotFoundException extends RuntimeException {
 

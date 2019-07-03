@@ -1,6 +1,6 @@
-package com.lesson11;
+package com.BankAccount.entity;
 
-public class AccountBalance {
+public class AccountBalance extends AbstractBankEntity {
     private double balance;
 
     public AccountBalance(double balance) {

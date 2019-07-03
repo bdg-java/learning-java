@@ -1,4 +1,4 @@
-package com.lesson11.enumentity;
+package com.BankAccount.common;
 
 public enum Country {
 

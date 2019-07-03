@@ -1,14 +1,11 @@
-package com.lesson11;
-
-import com.lesson11.entity.AbstractBankEntity;
-import com.lesson11.entity.Address;
+package com.BankAccount.entity;
 
 public class Customer extends AbstractBankEntity {
     private String customerName;
     private String customerSurname;
     private Address customerAddress;
 
-    public Customer(int id, String customerName, String customerSurname, Address customerAddress) {
+    public Customer(String customerName, String customerSurname, Address customerAddress) {
         this.customerName = customerName;
         this.customerSurname = customerSurname;
         this.customerAddress = customerAddress;

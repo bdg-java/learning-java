@@ -1,9 +1,8 @@
-package com.lesson11.entity;
+package com.BankAccount.entity;
 
-import com.lesson11.enumentity.CardType;
+import com.BankAccount.common.CardType;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class CreditCard extends AbstractBankEntity {
 
@@ -31,7 +30,7 @@ public class CreditCard extends AbstractBankEntity {
         return this.expirationDate;
     }
 
-    public CardType cardType() {
+    public CardType getCardType() {
         return this.cardType;
     }
 

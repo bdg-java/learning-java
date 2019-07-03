@@ -1,4 +1,4 @@
-package com.lesson11;
+package com.BankAccount.entity;
 
 public class AccountDetail {
     private String accountDeatils;

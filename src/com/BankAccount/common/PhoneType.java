@@ -1,4 +1,4 @@
-package com.lesson11;
+package com.BankAccount.common;
 
 public enum PhoneType {
     MOBILE {

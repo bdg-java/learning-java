@@ -1,7 +1,6 @@
-package com.lesson11.entity;
+package com.BankAccount.entity;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public abstract class AbstractBankEntity {
     protected int id;
