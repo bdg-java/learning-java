@@ -28,8 +28,34 @@ public class OrderedArrayApp {
         }
 
         array.delete(66);
-        array.delete(0);
         array.delete(33);
+        array.delete(0);
+
         array.display();
+
+        OrderedArray firstArray = new OrderedArray(10);
+        OrderedArray secondArray = new OrderedArray(5);
+        firstArray.insert(0);
+        firstArray.insert(5);
+        firstArray.insert(6);
+        firstArray.insert(8);
+        firstArray.insert(9);
+        firstArray.insert(11);
+        firstArray.insert(15);
+        firstArray.insert(17);
+        firstArray.insert(18);
+        firstArray.insert(20);
+        secondArray.insert(1);
+        secondArray.insert(2);
+        secondArray.insert(4);
+        secondArray.insert(7);
+        secondArray.insert(10);
+
+        System.out.println();
+        firstArray.display();
+        System.out.println();
+        secondArray.display();
+        OrderedArray.merge(firstArray,secondArray);
+
     }
 }
