@@ -15,7 +15,7 @@ public class OrderedArray {
     }
 
     public int find(long searchKey){
-        int lowerBound = 0; // che vor ete 0n chgrem, petq e hasacvi 0, apa inchu em error unenum?
+        int lowerBound = 0;
         int upperBound = nElements - 1;
         int currentIndex;
 
@@ -35,6 +35,7 @@ public class OrderedArray {
         }
     }
 
+
     public void insert(long value){
         int j;
         for(j = 0; j < nElements; j++){
@@ -42,9 +43,16 @@ public class OrderedArray {
                 break;
             }
         }
-        for(int k = j+1; k <= nElements; k++){
+
+//        for(int k = j+1; k <= nElements; k++){     //1.
+//            array[k] = array[k-1];
+//        }
+
+
+        for(int k = nElements; k > j; k--){          //2.
             array[k] = array[k-1];
         }
+
         array[j] = value;
         nElements++;
     }
@@ -56,8 +64,8 @@ public class OrderedArray {
         } else{
             for(int k = j; k < nElements; k++){
                 array[k] = array[k+1];
-                nElements--;
             }
+            nElements--;
             return true;
         }
     }
