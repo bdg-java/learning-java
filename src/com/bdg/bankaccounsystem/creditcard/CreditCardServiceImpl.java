@@ -11,7 +11,7 @@ public class CreditCardServiceImpl implements CreditCardService {
         CardType type = CardType.find(cardType);
 
         if (type == null) {
-            throw new CreditCardCreationException();
+          //  throw new CreditCardCreationException();
         }
 
         CreditCard card = new CreditCard(cardNumber, accountNumber, exp, type);
