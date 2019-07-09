@@ -7,13 +7,23 @@ public class HighArrayApp {
         int maxSize = 100;
         HighArray array = new HighArray(maxSize);
 
-        array.insert(11);
+        array.insert(77);
         array.insert(0);
         array.insert(22);
         array.insert(66);
         array.insert(44);
         array.insert(99);
-        array.insert(55);
+        array.insert(77);
+        array.insert(77);
+        array.insert(33);
+        array.insert(88);
+        array.insert(77);
+        array.insert(0);
+        array.insert(22);
+        array.insert(66);
+        array.insert(44);
+        array.insert(99);
+        array.insert(77);
         array.insert(77);
         array.insert(33);
         array.insert(88);
@@ -29,10 +39,30 @@ public class HighArrayApp {
         }
         System.out.println();
 
+        System.out.println("after remove some elements");
         array.delete(0);
         array.delete(66);
-        array.delete(99);
-
+        array.delete(33);
         array.display();
+        System.out.println();
+
+        System.out.println("after remove max element");
+        array.removeMax();
+        array.display();
+        System.out.println();
+
+        System.out.println("after remove duplicates");
+        array.noDups();
+        array.display();
+        System.out.println();
+
+        System.out.println("array is ordered from max to min");
+        int nElements = 8;
+        HighArray newOrderedArray = new HighArray(nElements);
+        for(int i = 0; i < nElements; i++) {
+            newOrderedArray.insert(array.getMax());
+            array.removeMax();
+        }
+        newOrderedArray.display();
     }
 }
