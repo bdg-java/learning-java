@@ -37,7 +37,7 @@ public class OrderedArray {
     }
 
 
-    public void insert(long value){                 //mutq enq anum arrayi mej vazelu tarberakov
+    public void insert(long value){                 //mutq em anum arrayi mej vazelu tarberakov
         int j;
         for(j = 0; j < nElements; j++){
             if(array[j] > value){
@@ -57,7 +57,7 @@ public class OrderedArray {
         nElements++;
     }
 
-//    public void insert(long value){              //mutq enq anum kiselu tarberakov, sakayn khndir unem amenaarajin andami mutqagrman het..uzum em nayenq Williami het(
+//    public void insert(long value){              //mutq em anum kiselu tarberakov, sakayn khndir unem amenaarajin andami mutqagrman het(
 //
 //        int lowerBound = 0;
 //        int upperBound = nElements-1;

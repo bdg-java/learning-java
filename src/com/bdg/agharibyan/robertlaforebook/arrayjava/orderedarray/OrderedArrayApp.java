@@ -27,11 +27,13 @@ public class OrderedArrayApp {
             System.out.println(searchKey + " found");
         }
 
+        System.out.println("After deletion some elements");
         array.delete(66);
         array.delete(33);
         array.delete(0);
 
         array.display();
+        System.out.println();
 
         OrderedArray firstArray = new OrderedArray(10);
         OrderedArray secondArray = new OrderedArray(5);
@@ -51,9 +53,10 @@ public class OrderedArrayApp {
         secondArray.insert(7);
         secondArray.insert(10);
 
-        System.out.println();
+        System.out.println("first array ");
         firstArray.display();
         System.out.println();
+        System.out.println("second array ");
         secondArray.display();
         OrderedArray.merge(firstArray,secondArray);
 
