@@ -14,4 +14,8 @@ public class LinkedListImplementation {
         System.out.println(linkedList);
         System.out.println(index);
     }
+
+    public LinkedListImplementation(){
+
+    }
 }

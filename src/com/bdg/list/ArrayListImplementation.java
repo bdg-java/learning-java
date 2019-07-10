@@ -44,19 +44,19 @@ public class ArrayListImplementation<T> {
 
     }
 
-    public Object get(int index) {
+    public T get(int index) {
         checkIndex(index);
-        return elementData[index];
+        return (T) elementData[index];
     }
 
-    public Object remove(int index) {
+    public T[] remove(int index) {
         checkIndex(index);
         for (int i = index; i < currentIndex; i++) {
 
             elementData[i] = elementData[i + 1];
         }
         currentIndex--;
-        return elementData;
+        return (T[]) elementData;
     }
 
 
