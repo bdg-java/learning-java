@@ -1,6 +1,9 @@
 package com.bdg.collections;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author William Arustamyan
  */
