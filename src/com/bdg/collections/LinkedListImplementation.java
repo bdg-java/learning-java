@@ -37,27 +37,12 @@ public class LinkedListImplementation<E> implements Collection<E> {
     }
 
     @Override
-    public Iterator<E> iterator() {
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        return new Object[0];
-    }
-
-    @Override
-    public <T> T[] toArray(T[] a) {
-        return null;
-    }
-
-    @Override
-    public boolean  add(E e) {
-        Node<E> l= last;
-        last =  new Node<>(l, e, null);
-        if(l == null){
+    public boolean add(E e) {
+        Node<E> l = last;
+        last = new Node<>(l, e, null);
+        if (l == null) {
             head = last;
-        }else {
+        } else {
             l.next = last;
         }
         size++;
@@ -78,30 +63,11 @@ public class LinkedListImplementation<E> implements Collection<E> {
     }
 
     @Override
-    public boolean containsAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends E> c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
     public void clear() {
+        size = 0;
+        head = last = null;
 
     }
-
 
     public int indexOf(Object o) {
         int index = 0;
@@ -142,10 +108,69 @@ public class LinkedListImplementation<E> implements Collection<E> {
     }
 
     private void checkElementIndex(int index) {
-        if(index<0 || index>=size){
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
 
+    }
+
+    public String toString() {
+
+        StringBuilder out = new StringBuilder("[ ");
+        if(head == null){
+            return null;
+        }
+        out.append(this.head.element.toString());
+        out.append(", ");
+
+        Node<E> current = this.head;
+        while (current.next != null) {
+            out.append(current.next.element.toString());
+            current = current.next;
+            if (current.next != null) {
+                out.append(", ");
+            }
+        }
+        out.append(" ]");
+
+        return out.toString();
+    }
+
+
+    @Override
+    public Iterator<E> iterator() {
+        return null;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    @Override
+    public <T> T[] toArray(T[] a) {
+        return null;
+    }
+
+
+    @Override
+    public boolean containsAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(Collection<? extends E> c) {
+        return false;
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        return false;
     }
 
 }
