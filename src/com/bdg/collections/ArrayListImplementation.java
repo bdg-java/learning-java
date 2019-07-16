@@ -1,8 +1,12 @@
-package com.bdg.list;
+package com.bdg.collections;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-public class ArrayListImplementation<T> {
+public class ArrayListImplementation<T> implements Collection<T> {
+
 
     private static final int DEFAULT_CAPACITY = 10;
     private Object[] elementData;
@@ -17,6 +21,65 @@ public class ArrayListImplementation<T> {
         elementData = new Object[size];
     }
 
+    @Override
+    public boolean isEmpty() {
+        return currentIndex == 0;
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        for (Object element : elementData) {
+            if (element == o) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return null;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return Arrays.copyOf(elementData, currentIndex);
+    }
+
+    @Override
+    public <T1> T1[] toArray(T1[] a) {
+
+
+        return Arrays.copyOf(a, currentIndex);
+    }
+
+    @Override
+    public boolean containsAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(Collection<? extends T> c) {
+        return false;
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public void clear() {
+        currentIndex = 0;
+        elementData = null;
+    }
+
+    @Override
     public boolean add(Object o) {
         if (elementData.length == currentIndex) {
             increaseSize();
@@ -62,8 +125,8 @@ public class ArrayListImplementation<T> {
 
     public boolean remove(Object object) {
 
-        for (int i =0;i<elementData.length;i++) {
-            if(elementData[i] == object){
+        for (int i = 0; i < elementData.length; i++) {
+            if (elementData[i] == object) {
                 remove(i);
                 return true;
             }
@@ -91,6 +154,27 @@ public class ArrayListImplementation<T> {
     private void checkIndex(int index) throws IndexOutOfBoundsException {
         if (index > currentIndex) {
             throw new IndexOutOfBoundsException();
+        }
+    }
+
+
+    private final class ArrayListIterator<E> implements Iterator<E> {
+        int nextElementIndex;
+        int lastReturnedIndex = -1;
+
+        @Override
+        public boolean hasNext() {
+
+            return nextElementIndex != currentIndex;
+        }
+
+        @Override
+        public E next() {
+            if (nextElementIndex >= currentIndex) {
+                throw new NoSuchElementException();
+            }
+            lastReturnedIndex = nextElementIndex;
+            return (E) elementData[nextElementIndex++];
         }
     }
 }
