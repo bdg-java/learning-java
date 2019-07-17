@@ -1,4 +1,4 @@
-package com.bdg.Lesson_12.Geometric_Object;
+package com.bdg.Lesson_12.Geometric_Ojbect;
 
 public interface Resizeable {
 

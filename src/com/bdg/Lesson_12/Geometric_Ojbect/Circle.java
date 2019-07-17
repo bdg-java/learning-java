@@ -1,8 +1,8 @@
-package com.bdg.Lesson_12.Geometric_Object;
+package com.bdg.Lesson_12.Geometric_Ojbect;
 
 public class Circle implements GeometricObject {
 
-    private double radius = 1.0;
+    protected double radius = 1.0;
 
     public Circle(double radius) {
         this.radius = radius;

@@ -1,4 +1,4 @@
-package com.bdg.New_Bank_Account_System.Common.extention;
+package com.bdg.New_Bank_Account_System.Common.exception;
 
 public class CardTypeNotFoundException extends RuntimeException {
 

@@ -1,4 +1,9 @@
 package com.bdg.Bank_Account_System;
 
-public class CardType {
+public enum CardType {
+    VISA,
+    MasterCard,
+    ARCA,
+    MAESTRO,
+
 }
