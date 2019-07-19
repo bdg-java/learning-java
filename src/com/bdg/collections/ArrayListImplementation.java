@@ -36,15 +36,6 @@ public class ArrayListImplementation<T> implements Collection<T> {
         return false;
     }
 
-    @Override
-    public Iterator<T> iterator() {
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        return Arrays.copyOf(elementData, currentIndex);
-    }
 
     @Override
     public <T1> T1[] toArray(T1[] a) {
@@ -157,6 +148,15 @@ public class ArrayListImplementation<T> implements Collection<T> {
         }
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return null;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return Arrays.copyOf(elementData, currentIndex);
+    }
 
     private final class ArrayListIterator<E> implements Iterator<E> {
         int nextElementIndex;
