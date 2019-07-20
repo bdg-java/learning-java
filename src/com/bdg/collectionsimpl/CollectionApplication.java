@@ -1,9 +1,6 @@
 package com.bdg.collectionsimpl;
-
 import java.util.*;
-
 public class CollectionApplication {
-
     public static void main(String[] args) {
         User u1 = new User("abc", 10);
         User u2 = new User("abc", 5);
@@ -38,3 +35,20 @@ public class CollectionApplication {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
