@@ -1,4 +1,4 @@
-package com.jsonParsing.entity;
+package com.jsonParsing.entity.address;
 
 
 import com.jsonParsing.enums.Country;

@@ -2,8 +2,8 @@ package com.jsonParsing.service;
 
 
 import com.jsonParsing.JsonParser;
-import com.jsonParsing.entity.Address;
-import com.jsonParsing.entity.PhoneNumber;
+import com.jsonParsing.entity.address.Address;
+import com.jsonParsing.entity.address.PhoneNumber;
 import com.jsonParsing.enums.Country;
 import com.jsonParsing.enums.CountryCode;
 import com.jsonParsing.enums.PhoneType;
@@ -12,7 +12,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
