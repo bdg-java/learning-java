@@ -7,7 +7,7 @@ import java.io.IOException;
 public class ReadFileToString {
     public static void main(String[] args)
     {
-        String filePath = "c:/temp/address.json";
+        String filePath = "c:/temp/data.txt";
 
         System.out.println( usingBufferedReader( filePath ) );
     }
@@ -15,7 +15,7 @@ public class ReadFileToString {
     //Read file content into string with - using BufferedReader and FileReader
     //You can use this if you are still not using Java 8
 
-    private static String usingBufferedReader(String filePath)
+    public static String usingBufferedReader(String filePath)   //pokhel em publici
     {
         StringBuilder contentBuilder = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath)))
