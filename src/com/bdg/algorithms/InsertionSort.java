@@ -1,6 +1,6 @@
 package src.com.bdg.algorithms;
 
-import com.bdg.nhakobyan.getArrayRandomNumbers;
+import src.com.bdg.other.getArrayRandomNumbers;
 
 import java.util.Arrays;
 

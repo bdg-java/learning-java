@@ -1,4 +1,4 @@
-package com.bdg.other;
+package src.com.bdg.other;
 
 public class CharArrayApp {
 

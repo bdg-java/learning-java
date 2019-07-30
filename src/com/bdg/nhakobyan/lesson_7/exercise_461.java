@@ -1,6 +1,6 @@
 package com.bdg.nhakobyan.lesson_7;
 
-import static com.bdg.nhakobyan.getArrayRandomNumbers.randomArrayNumbers;
+import static src.com.bdg.other.getArrayRandomNumbers.randomArrayNumbers;
 
 public class exercise_461 {
     public static void main(String[] args) {

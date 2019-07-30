@@ -1,4 +1,4 @@
-package com.bdg.nhakobyan;
+package src.com.bdg.other;
 
 import java.sql.Array;
 import java.util.Arrays;

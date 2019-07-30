@@ -1,4 +1,4 @@
-package com.bdg.other;
+package src.com.bdg.other;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
@@ -9,7 +9,7 @@ public class App {
     public static void main(String[] args) {
 
 
-        Point point = new Point();
+        com.bdg.Inheritance.Point.Point point = new com.bdg.Inheritance.Point.Point();
         int intSum = IntStream.of(1, 2).sum(); // 3
         long longSum = LongStream.of(3, 4).sum(); // 7
         double doubleSum = DoubleStream.of(5, 6).sum(); // 11

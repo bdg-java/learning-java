@@ -1,5 +1,5 @@
 package com.bdg.nhakobyan.lesson_7;
-import static com.bdg.nhakobyan.getArrayRandomNumbers.randomArrayNumbers;
+import static src.com.bdg.other.getArrayRandomNumbers.randomArrayNumbers;
 import static com.bdg.nhakobyan.arrayPrint.printArray;
 public class exercise_451 {
     public static void main(String[] args) {
