@@ -7,6 +7,7 @@ public class Consumer extends Thread {
     }
 
     public void run(){
+        //NUYNEL ESTEX amen consumer ira Quen uni
         Queue newQueue = new Queue(10);
 
         if(newQueue.isFull()) {
