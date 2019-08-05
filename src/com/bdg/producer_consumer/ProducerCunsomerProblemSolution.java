@@ -1,10 +1,7 @@
 package src.com.bdg.producer_consumer;
 
-import javax.management.Query;
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.PriorityQueue;
-import java.util.Queue;
+
 import java.util.Random;
 
 public class ProducerCunsomerProblemSolution extends Thread {
