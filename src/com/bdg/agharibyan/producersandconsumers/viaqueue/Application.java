@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.producersandconsumers;
+package com.bdg.agharibyan.producersandconsumers.viaqueue;
 
 public class Application {
     public static void main(String[] args) {
