@@ -60,8 +60,6 @@ public class ProducerCunsomerProblemSolution extends Thread {
             }
         }
     }
-
-
 }
 
 
