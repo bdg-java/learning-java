@@ -32,14 +32,13 @@ public class ProducerCunsomerProblemSolution extends Thread {
     static class Produce extends Thread {
         @Override
         public void run() {
-//            while (true) {
                 int min = 1;
                 int max = 99;
                 int diff = max - min;
                 Random random = new Random();
                 int num = random.nextInt(diff + 1);
                 num += min;
-                for (int i = 0; i < 20; i++) {
+                for (int i = 0; i < 10; i++) {
                     synchronized (currentThread()) {
                         num = random.nextInt(diff + 1);
                         resource.add(num);//poxel poll-i
@@ -58,9 +57,10 @@ public class ProducerCunsomerProblemSolution extends Thread {
                         }
                     }
                 }
-            }
+
         }
-//    }
+    }
+
 
     static class Consume extends Thread {
         @Override
