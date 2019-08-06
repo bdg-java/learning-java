@@ -2,11 +2,11 @@ package com.bdg.agharibyan.producersandconsumers.viaqueue;
 
 public class Queue {
 
-    private int maxSize;
-    private long[] queueArray;
-    private int front;
-    private int rear;
-    private int nElements;
+    private static int maxSize;
+    private static long[] queueArray;
+    private static int front;
+    private static int rear;
+    private static int nElements;
 
     public Queue(int size){
         this.maxSize = size;
@@ -16,47 +16,7 @@ public class Queue {
         this.nElements = 0;
     }
 
-    public int getMaxSize(){
-        return this.maxSize;
-    }
-
-    public void setMaxSize(int maxSize) {
-        this.maxSize = maxSize;
-    }
-
-    public long[] getQueueArray(){
-        return this.queueArray;
-    }
-
-    public void setQueueArray(long[] queArray){
-        this.queueArray = queArray;
-    }
-
-    public int getFront(){
-        return this.front;
-    }
-
-    public void setFront(int front){
-        this.front = front;
-    }
-
-    public int getRear(){
-        return this.rear;
-    }
-
-    public void setRear(int rear){
-        this.rear = rear;
-    }
-
-    public int getnElements(){
-        return this.nElements;
-    }
-
-    public void setnElements(int nElements){
-        this.nElements = nElements;
-    }
-
-    public void insert(long number){
+    public static synchronized void insert(long number){
         if(rear == maxSize - 1){
             rear = -1;
         }
@@ -64,16 +24,17 @@ public class Queue {
         nElements++;
     }
 
-    public long remove(){
+    public static synchronized long remove(){
         long temp = queueArray[front++];
         if(front == maxSize) {
             front = 0;
         }
+        nElements--;
         return temp;
     }
 
-    public boolean isFull(){
-        return ((this.rear + 2 == this.front) || (this.front + this.maxSize - 2 == this.rear)) ;
+    public static boolean isFull(){
+        return (nElements == maxSize) ;
     }
 
     public String toString() {

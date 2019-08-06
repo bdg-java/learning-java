@@ -1,19 +1,22 @@
 package com.bdg.agharibyan.producersandconsumers.viaqueue;
 
-public class Producer extends Thread{
+import java.util.Random;
 
-    Producer (String name){
-        super(name);
+public class Producer implements Runnable{
+
+    private Thread thread;
+    private Queue queue;
+    static Random rnd = new Random();
+
+    public Producer(Queue queue){
+        this.queue = queue;
+        thread = new Thread();
+        thread.start();
     }
 
-    public void run(long j){
-        Queue newQueue = new Queue(10); //Amen angam nor Queue es sarqum, Harkavora ogtagorcel nuyn queue
-        //Amen Producer ira sephakan Queue-n uni es depqum SXALA :D
-//        if(newQueue.getRear() == newQueue.getMaxSize()-1){
-//            newQueue.setRear(-1);
-//        }
-//        newQueue.setQueueArray(); //pordzeci insert methodn amboghjutyamb aystegh grel, chstacvec, ays toghum kang ara :(
-
-        newQueue.insert((long)Math.random());
+    @Override
+    public void run() {
+            System.out.println("inserting is done");
+            Queue.insert(rnd.nextLong());
     }
 }

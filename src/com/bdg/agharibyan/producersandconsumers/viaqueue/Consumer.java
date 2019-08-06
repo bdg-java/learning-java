@@ -1,17 +1,21 @@
 package com.bdg.agharibyan.producersandconsumers.viaqueue;
 
-public class Consumer extends Thread {
+public class Consumer implements Runnable {
 
-    Consumer (String name){
-        super(name);
+    private Thread thread;
+    private Queue queue;
+
+    public Consumer(Queue queue){
+        this.queue = queue;
+        thread = new Thread();
+        thread.start();
     }
 
-    public void run(){
-        //NUYNEL ESTEX amen consumer ira Quen uni
-        Queue newQueue = new Queue(10);
-
-        if(newQueue.isFull()) {
-            newQueue.remove();
+    @Override
+    public void run() {
+        if (Queue.isFull()) {
+            System.out.println("removing is done");
+            Queue.remove();
         }
     }
 }
