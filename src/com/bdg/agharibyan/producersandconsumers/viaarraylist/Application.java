@@ -20,14 +20,14 @@ public class Application {
             for (int j = 0; j < sizeOfArray/countOfThread; j++) {
                 for(int i = 0; i < countOfThread; i++){
                     ProducersArray[i].run();
-                //    ProducersArray[i].notifyAll(); //notyfyAll kancheri depqum IllegalMonitorStateException em unenum, miguce Applicationum chem da grelu, chgitem
+                    //    ProducersArray[i].notifyAll(); //notyfyAll kancheri depqum IllegalMonitorStateException em unenum, miguce Applicationum chem da grelu, chgitem
                 }
             }
 
             for (int k = 0; k < sizeOfArray/countOfThread; k++) {
                 for(int f = 0; f < countOfThread; f++) {
                     ConsumersArray[k].run();
-                //    ConsumersArray[f].notifyAll();
+                    //    ConsumersArray[f].notifyAll();
                 }
             }
             System.out.println(myArray);
