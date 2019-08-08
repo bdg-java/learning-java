@@ -10,7 +10,7 @@ public class ProduceAndConsumeMethods{
                 wait();
             }
             Resource.arrayList.add(rnd.nextLong());
-            System.out.println("inserting is done" + Resource.arrayList);
+            System.out.println("inserting is done" + Thread.currentThread() + Resource.arrayList); //inchu e anyndhat nuyn thready insert anum?
             notifyAll();
             Thread.sleep(500);
         }
@@ -22,7 +22,7 @@ public class ProduceAndConsumeMethods{
                 wait();
             }
             Resource.arrayList.remove(Resource.arrayList.size()-1);
-            System.out.println("removing is done" + Resource.arrayList);
+            System.out.println("removing is done" + Thread.currentThread() + Resource.arrayList);
             notifyAll();
             Thread.sleep(500);
         }
