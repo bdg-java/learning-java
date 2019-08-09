@@ -1,4 +1,5 @@
 package com.bdg.Json_Lesson.json.Validator;
 
-public class JsonValidator {
+public interface JsonValidator {
+    boolean isValid (String jsonContent);
 }
