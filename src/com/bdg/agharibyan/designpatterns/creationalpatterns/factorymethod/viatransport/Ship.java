@@ -1,0 +1,8 @@
+package com.bdg.agharibyan.designpatterns.creationalpatterns.factorymethod.viatransport;
+
+public class Ship implements Transport {
+    @Override
+    public void deliver() {
+        System.out.println("Deliver by sea in a container.");
+    }
+}
