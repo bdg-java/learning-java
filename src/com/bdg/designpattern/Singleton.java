@@ -4,7 +4,7 @@ public class Singleton {
     private String name;
 
 
-    private static Singleton singleton = null;
+    private static volatile Singleton singleton = null;
 
     private Singleton() {
     }
@@ -20,3 +20,20 @@ public class Singleton {
         return singleton;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
