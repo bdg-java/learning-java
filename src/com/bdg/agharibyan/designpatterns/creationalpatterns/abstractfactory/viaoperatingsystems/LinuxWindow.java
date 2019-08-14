@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS;
+package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaoperatingsystems;
 
 public class LinuxWindow implements Window{
 

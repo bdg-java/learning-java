@@ -1,8 +1,8 @@
-package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.mixwithfactorymethod;
+package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaoperatingsystems.mixwithfactorymethod;
 
-import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.Button;
-import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.OSType;
-import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.UIComponentsFactory;
+import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaoperatingsystems.Button;
+import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaoperatingsystems.OSType;
+import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaoperatingsystems.UIComponentsFactory;
 
 public class Application {
 

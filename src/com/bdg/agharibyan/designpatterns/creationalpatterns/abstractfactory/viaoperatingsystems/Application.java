@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS;
+package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaoperatingsystems;
 
 import java.util.EnumMap;
 import java.util.Map;

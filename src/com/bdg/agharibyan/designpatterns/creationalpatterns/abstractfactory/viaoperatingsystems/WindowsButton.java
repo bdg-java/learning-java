@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS;
+package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaoperatingsystems;
 
 public class WindowsButton implements Button {
 
