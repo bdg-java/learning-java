@@ -1,6 +1,10 @@
 package com.bdg;
 
 
+import com.bdg.questions.Mutable;
+
+import java.util.Arrays;
+
 /**
  * @author William Arustamyan
  */
@@ -8,6 +12,10 @@ package com.bdg;
 
 public class App_53 {
 
+    public static void change(Mutable mutable){
+        mutable.setName("new name");
+        mutable.setAddresses(Arrays.asList(new Address(), new Address()));
+    }
 
     public static void main(String[] args) {
 
