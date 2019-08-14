@@ -38,14 +38,15 @@ public class ProducerCunsomerProblemSolution extends Thread {
                 Random random = new Random();
                 int num = random.nextInt(diff + 1);
                 num += min;
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 100; i++) {
                     synchronized (currentThread()) {
                         num = random.nextInt(diff + 1);
-                        resource.add(num);//poxel poll-i
+                        resource.offer(num);//poxel poll-i
                         ProducerCunsomerProblemSolution.holdsLock(resource);
                         count++;
 
                         System.out.println(resource.toString() + " " + count);
+
                         if (count == 10) {
                             i = 0;
                             try {
