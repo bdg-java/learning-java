@@ -1,9 +1,9 @@
-package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.mixwithfactorymethod;
+package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaos.mixwithfactorymethod;
 
-import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.LinuxUIComponentsFactory;
-import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.OSType;
-import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.UIComponentsFactory;
-import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS.WindowsUIComponentsFactory;
+import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaos.LinuxUIComponentsFactory;
+import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaos.OSType;
+import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaos.UIComponentsFactory;
+import com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaos.WindowsUIComponentsFactory;
 
 import java.util.EnumMap;
 import java.util.Map;
