@@ -1,4 +1,4 @@
-package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaOS;
+package com.bdg.agharibyan.designpatterns.creationalpatterns.abstractfactory.viaos;
 
 public class LinuxButton implements Button {
 
