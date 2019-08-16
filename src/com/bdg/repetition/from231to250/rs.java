@@ -8,7 +8,7 @@ public class rs {
     static int n = 10;
     static int[] array = new int[n];
 
-    static int[] buildIntegerArray(){
+    public static int[] buildIntegerArray(){
         for(int i = 0; i < n; i++ ){
         array[i] = new Random().nextInt(100);
         }
