@@ -1,4 +1,15 @@
 package com.bdg.Pattern.Behavioral.Cain_Of_Responsibility;
 
 public class Number {
+
+    private int number;
+
+    public Number(int number) {
+        this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
+    }
 }
+
