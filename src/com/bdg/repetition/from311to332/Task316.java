@@ -19,12 +19,11 @@ public class Task316 {
             if(X[i] > max){
                 max = X[i];
             }
-        }
-        for(int i = 0; i < X.length; i++){
             if(X[i] < min){
                 min = X[i];
             }
         }
+
         System.out.println("Max element is " + max + ", Min element is " + min);
 
         for(int i = 0; i < X.length; i++){

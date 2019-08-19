@@ -7,7 +7,7 @@ public class Task311 {
     public static void main(String[] args) {
 
         int n = 10;
-        int[] X = {0, -5, 28, -10, 9, -16, 0, 25, -7, 100};
+        int[] X = {1000, -5, 28, -10, 9, -16, 0, 25, -7, 100};
 
         System.out.println("Array is " + Arrays.toString(X));
 
@@ -18,9 +18,6 @@ public class Task311 {
             if(X[i] > 0){
                 quantity++;
             }
-        }
-
-        for(int i = 1; i < X.length; i++){
             if(X[i] > max){
                 max = X[i];
             }
