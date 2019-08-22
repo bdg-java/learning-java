@@ -48,7 +48,7 @@ public class ATM {
     private int requestonehundredbanknotes;
     private int requestfiftybanknotes;
 
-    private int countnecessarybills(int requestamount){
+    private int countnecessarybanknots(int requestamount){
 
         if(requestamount/5000 <= this.fivethousandbanknotes){
             requestfivethousandbanknotes = requestamount/5000;
@@ -89,7 +89,7 @@ public class ATM {
     }
 
     private boolean ispossiblegetmoney(int requestamount){
-        return(this.countnecessarybills(requestamount) == 0);
+        return(this.countnecessarybanknots(requestamount) == 0);
     }
 
     public void getmoney(int requestamount){
@@ -102,7 +102,7 @@ public class ATM {
                     + requestfiftybanknotes + " fifty banknotes.");
             this.refreshATMaftergettingmoney();
         } else{
-            System.out.println("The ATM cannot issued entered amount.");
+            System.out.println("The ATM can not issue entered amount.");
         }
     }
 

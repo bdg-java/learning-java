@@ -4,8 +4,9 @@ public class Application {
 
     public static void main(String[] args) {
 
-        ATM newATM = ATM.createATM(100,80,60,40, 20);
+        ATM newATM = ATM.createATM(0,0,0,0,0);
 
+        newATM.inputmoney(100,80,60,40, 20);
         newATM.balancecheck();
         newATM.getmoney(101150);
         newATM.balancecheck();
