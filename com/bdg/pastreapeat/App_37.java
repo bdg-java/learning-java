@@ -1,6 +1,6 @@
-package src.pastreapeat;
+package com.bdg.pastreapeat;
 
-import static src.pastreapeat.App_27.arithmeticalProgressionTest;
+import static com.bdg.pastreapeat.App_27.arithmeticalProgressionTest;
 
 public abstract class App_37 {
     public static void main(String[] args) {

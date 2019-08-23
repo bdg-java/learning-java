@@ -1,4 +1,4 @@
-package src.pastreapeat;
+package com.bdg.pastreapeat;
 
 public class App_23 {
     public static void main(String[] args) {
