@@ -1,10 +1,10 @@
-package com.bdg.repetition.bankaccount.request;
+package com.bdg.repetition.bankaccount.bankaccountservice.request;
 
 public class CustomerCreationRequest {
 
-    private String firstName;
-    private String lastName;
-    private AddressCreationRequest addressCreationRequest;
+    public String firstName;
+    public String lastName;
+    public AddressCreationRequest addressCreationRequest;
 
     public CustomerCreationRequest(String firstName, String lastName, AddressCreationRequest addressCreationRequest){
         this.firstName = firstName;

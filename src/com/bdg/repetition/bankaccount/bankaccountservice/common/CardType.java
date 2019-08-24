@@ -1,4 +1,4 @@
-package com.bdg.repetition.bankaccount.common;
+package com.bdg.repetition.bankaccount.bankaccountservice.common;
 
 public enum CardType {
     VISA,

@@ -1,12 +1,12 @@
-package com.bdg.repetition.bankaccount.request;
+package com.bdg.repetition.bankaccount.bankaccountservice.request;
 
 public class AddressCreationRequest {
 
-    private String countryName;
-    private String cityName;
-    private String street;
-    private int homeNumber;
-    private String phoneNumber;
+    public String countryName;
+    public String cityName;
+    public String street;
+    public int homeNumber;
+    public String phoneNumber;
 
     public AddressCreationRequest(String countryName, String cityName, String street, int homeNumber, String phoneNumber){
         this.countryName = countryName;

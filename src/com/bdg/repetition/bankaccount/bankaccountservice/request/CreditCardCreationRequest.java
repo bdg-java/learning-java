@@ -1,8 +1,8 @@
-package com.bdg.repetition.bankaccount.request;
+package com.bdg.repetition.bankaccount.bankaccountservice.request;
 
 public class CreditCardCreationRequest {
 
-    private String cardType;
+    public String cardType;
 
     public CreditCardCreationRequest(String cardType){
         this.cardType = cardType;
