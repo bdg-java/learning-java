@@ -10,7 +10,10 @@ public class CountNonUniqueElements {
 
         int count = 0;
         int nonUniqueElement = 0;
-        int[] nonUniqueElementArray = new int[array.length];
+
+        System.out.println(Arrays.toString(array));
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
 
         if(array.length >= 1 && array.length <= 1000){
             boolean isArrayValid = true;
@@ -22,19 +25,16 @@ public class CountNonUniqueElements {
                 }
             }
             if(isArrayValid){
-                for(int i = 0; i < array.length; i++){
+                for(int i = 0; i < array.length; i++) {
                     for(int j = i+1; j < array.length; j++){
-                        if(array[i] == array[j] && array[i] != nonUniqueElementArray[i]){ // wrong solution
+                        if(array[i] == array[j] && array[i] != nonUniqueElement){
                             nonUniqueElement = array[i];
                             count++;
-                            nonUniqueElementArray[i] = nonUniqueElement;
                             System.out.print(nonUniqueElement + " -> ");
                             System.out.println(count);
                         }
                     }
                 }
-                System.out.println(Arrays.toString(nonUniqueElementArray));
-                System.out.println("Count of NonUnique Elements is " + count);
             }
         }
     }
