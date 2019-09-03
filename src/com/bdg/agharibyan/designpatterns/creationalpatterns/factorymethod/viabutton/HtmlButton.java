@@ -3,7 +3,7 @@ package com.bdg.agharibyan.designpatterns.creationalpatterns.factorymethod.viabu
 public class HtmlButton implements Button{
     @Override
     public void render() {
-        System.out.println("<button>test button</button>");
+        System.out.println("<button>CountWordsInSentenceAndReverseWord button</button>");
         onClick();
     }
 
