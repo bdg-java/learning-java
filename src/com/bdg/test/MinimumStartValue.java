@@ -2,11 +2,10 @@ package com.bdg.test;
 
 public class MinimumStartValue {
 
-    private static int x = 11;
-    private static int[] arr = {-9, 5, 0, 1, -1, 6, 1, -3, 15, 30};
+    private static int x = 8;
+    private static int[] arr = {10, -5, 4, -2, 3, 1, -1, -6, -1, 0, 5};
 
     public static void main(String[] args) {
-
         int[] array = new int[arr.length];
         int min = x;
 
