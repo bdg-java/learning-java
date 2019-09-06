@@ -2,10 +2,8 @@ package com.bdg.test;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-
 
 public class BigNumber {
 
@@ -36,7 +34,6 @@ public class BigNumber {
             System.out.println("A+B " + C.get(i));
         }
         return C;
-
     }
 
     public static void main(String[] args) {
@@ -55,13 +52,5 @@ public class BigNumber {
         multiply(A,b);
         System.out.println();
         add(A,B);
-
-
-
-
-
-
-
-
     }
 }
