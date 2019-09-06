@@ -5,7 +5,7 @@ import java.util.List;
 
 public class TripleProduct {
 
-    static int tripleProduct(List<Integer> array){
+    private static int tripleProduct(List<Integer> array){
 
         int max = array.get(0)*array.get(1)*array.get(2);
         for(int i = 0; i < array.size(); i++) {
@@ -17,7 +17,6 @@ public class TripleProduct {
                 }
             }
         }
-        System.out.println(max);
         return max;
     }
 
@@ -42,7 +41,7 @@ public class TripleProduct {
         }
 
         if(isOk){
-            tripleProduct(array);
+            System.out.println(tripleProduct(array));
         }
     }
 }
