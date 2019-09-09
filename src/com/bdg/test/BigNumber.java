@@ -12,12 +12,9 @@ public class BigNumber {
         List<BigInteger> multiplyArray = new ArrayList<>();
         BigInteger multiplyAB;
 
-        for(int i = 0; i < 9; i++){
+        for(int i = 0; i < b.size(); i++){
             multiplyAB = A.get(i).multiply(BigInteger.valueOf(b.get(i)));
             multiplyArray.add(multiplyAB);
-            System.out.println("A " + A.get(i));
-            System.out.println("b " + b.get(i));
-            System.out.println("A*b " + multiplyArray.get(i));
         }
         return multiplyArray;
     }
@@ -26,12 +23,9 @@ public class BigNumber {
         List<BigInteger> C = new ArrayList<>();
         BigInteger addAB;
 
-        for(int i = 0; i < 9; i++){
+        for(int i = 0; i < A.size(); i++){
             addAB = A.get(i).add(B.get(i));
             C.add(addAB);
-            System.out.println("A " + A.get(i));
-            System.out.println("B " + B.get(i));
-            System.out.println("A+B " + C.get(i));
         }
         return C;
     }
@@ -42,6 +36,7 @@ public class BigNumber {
         List<BigInteger> A = new ArrayList<>();
         List<Integer> b = new ArrayList<>();
         List<BigInteger> B = new ArrayList<>();
+
         int i = 0;
         while (i < 9) {
             A.add(BigInteger.valueOf(rnd.nextLong()).abs());
@@ -49,8 +44,18 @@ public class BigNumber {
             B.add(BigInteger.valueOf(rnd.nextLong()));
             i++;
         }
-        multiply(A,b);
-        System.out.println();
-        add(A,B);
+
+        System.out.println("Array A");
+        System.out.println(A);
+        System.out.println("Array b");
+        System.out.println(b);
+        System.out.println("Array A*b");
+        System.out.println(multiply(A,b));
+        System.out.println("Array A");
+        System.out.println(A);
+        System.out.println("Array B");
+        System.out.println(B);
+        System.out.println("Array A+B");
+        System.out.println(add(A,B));
     }
 }
